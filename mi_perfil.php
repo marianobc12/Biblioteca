@@ -62,7 +62,7 @@
 </nav>
 <div class="container-fluid">
 	<div class="row">
-		<form class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 form-perfil">
+		<form class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 form-perfil" action="" method="post">
 			<h1><i class="fas fa-user"></i> Mis Datos</h1>
 			<div class="row">
 				<div class="col-md-6">
@@ -95,15 +95,50 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6 menu-perfil">
-					<button><i class="fas fa-lock"></i> Cambiar Contraseña</button>
+					<button type="button" onclick="cambio_contraseña();"><i class="fas fa-lock"></i> Cambiar Contraseña</button>
 				</div>
 				<div class="col-md-6 menu-perfil">
-					<button><i class="fas fa-user-cog"></i> Modificar</button>
+					<button type="button"><i class="fas fa-user-cog"></i> Modificar</button>
 				</div>
 			</div>
 		</form>
 	</div>
 </div>
-
+<div id="Modal-Contraseña" class="modal fade modal-contraseña" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><i class="fas fa-lock"></i> Cambio de contraseña</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+        	<div class="row">
+        		<form action="" method="" class="col-md-12 modal-body form-cambiocontra">
+		        	<div class="col-md-12">
+		        		<h2>Contraseña Actual</h2>
+		        		<input type="password" name="Contraseña_Actual" placeholder="Ingresar Contraseña Actual">
+		        	</div>
+		        	<div class="col-md-12">
+		        		<h2>Nueva Contraseña</h2>
+		        		<input type="password" name="Contraseña_Nueva1" placeholder="Ingresar Contraseña Nueva">
+		        	</div>
+		        	<div class="col-md-12">
+		        		<h2>Repita Contraseña Nueva</h2>
+		        		<input type="password" name="Contraseña_Nueva2" placeholder="Ingresar Contraseña Nueva">
+		        	</div>
+		        	<div class="col-md-12">
+		        		<button class="guardar">Guardar</button>
+		        	</div>
+	        	</form>
+        	</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

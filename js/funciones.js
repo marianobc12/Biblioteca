@@ -26,3 +26,6 @@ function verificar_login() {
 	}
 
 }
+function cambio_contraseña(){
+	$('#Modal-Contraseña').modal();
+}
