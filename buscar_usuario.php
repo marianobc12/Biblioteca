@@ -60,10 +60,10 @@
     </div>
   </div>
 </nav>
-		<form class="col-md-4  col-md-offset-1 form-busquedausuario" action="" method="post">
+		<form class="col-md-4  col-md-offset-1 form-busquedausuario" action="" method="post" >
 			<h1>Buscar Usuario</h1>
 			<h2>Ingresar nombre y apellido</h2>
-			<input list="browsers" name="Nom_Ape" placeholder="Ej: Juan Perez">
+			<input list="browsers" name="Nom_Ape" placeholder="Ej: Juan Perez" autocomplete="off">
 			<datalist id="browsers">
 				<option value="Crhome"></option>
 				<option value="Firefox"></option>

@@ -242,6 +242,11 @@ body{
 	border: none;
 	margin-top: 10px;	
 }
+.tarjeta-usuario .contenedor-menu button:hover{
+	box-shadow: 0px 5px 40px black;
+    outline: 0;
+    border: 0px;	
+}
 .tarjeta-usuario .contenedor-menu button i{
 	color: #EBEBD3;	
 }
@@ -309,6 +314,11 @@ body{
 	border: none;
 	margin-top: 20px;
 	margin-bottom: 20px;	
+}
+.menu-perfil button:hover{
+	box-shadow: 0px 5px 40px black;
+    outline: 0;
+    border: 0px;	
 }
 .menu-perfil button i{
 	color: #EBEBD3;	

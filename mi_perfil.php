@@ -62,7 +62,7 @@
 </nav>
 <div class="container-fluid">
 	<div class="row">
-		<form class="col-md-4 col-md-offset-4 form-perfil">
+		<form class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 form-perfil">
 			<h1><i class="fas fa-user"></i> Mis Datos</h1>
 			<div class="row">
 				<div class="col-md-6">
