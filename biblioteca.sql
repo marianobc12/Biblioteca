@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   KEY `Dni` (`Dni`)
 ) ENGINE=InnoDB AUTO_INCREMENT=202 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de los usuarios';
 
--- Volcando datos para la tabla biblioteca.usuario: ~117 rows (aproximadamente)
+-- Volcando datos para la tabla biblioteca.usuario: ~101 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`Id_Usuario`, `Dni`, `Nom_Ape`, `Fec_Nac`, `Nacionalidad`, `Telefono`, `Celular`, `Domicilio`, `Domicilio_Seg`, `Email`, `Fecha_Alta`) VALUES
 	(1, '40714396', 'Mariano Flores', '1997-10-24', 'Argentina', '4253165', '2216779986', '120 y 65', '17 y 65', 'Mariano@gmail.com', '2018-06-22'),
