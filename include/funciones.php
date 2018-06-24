@@ -5,5 +5,10 @@ function Conexion(){
 	return $link;
 }
 
-
+function Traer_Nombres_Usuarios(){
+	$link=Conexion();
+	$sql="SELECT * FROM usuario";
+	$res=mysqli_query($link,$sql);
+	return $res;
+}
 ?>

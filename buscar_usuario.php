@@ -1,3 +1,7 @@
+<?php
+	include('include/funciones.php');
+	$res=Traer_Nombres_Usuarios();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,13 +66,16 @@
 </nav>
 		<form class="col-md-4  col-md-offset-1 form-busquedausuario" action="" method="post" >
 			<h1>Buscar Usuario</h1>
-			<h2>Ingresar nombre y apellido</h2>
-			<input list="browsers" name="Nom_Ape" placeholder="Ej: Juan Perez" autocomplete="off">
+			<h2>D.N.I</h2>
+			<input list="browsers" name="Nom_Ape" placeholder="Escriba nombre" autocomplete="off">
 			<datalist id="browsers">
-				<option value="Crhome"></option>
-				<option value="Firefox"></option>
-				<option value="Internet explore"></option>
-				<option value="OPERA"></option>
+			<?php
+				while ($row=$res->fetch_assoc()) {
+			?>
+				<option value="<?php echo $row['Dni']; ?>"><?php echo $row['Nom_Ape']; ?></option>
+			<?php
+				}
+			?>
 			</datalist>
 			<button class="buscar"><i class="fas fa-search"></i> Buscar</button>
 		</form>
