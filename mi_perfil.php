@@ -63,7 +63,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<form class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 form-perfil" action="" method="post">
-			<h1><i class="fas fa-user"></i> Mis Datos</h1>
+			<h1><i class="fas fa-user"></i> HOLA</h1>
 			<div class="row">
 				<div class="col-md-6">
 					<h2><i class="fas fa-id-card"></i> D.N.I</h2>
