@@ -1,3 +1,12 @@
+<?php
+	session_start();
+	$Acceso=$_SESSION['Acceso'];
+	if ($Acceso!="true") {
+		header('Location:index.php');	
+	}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +62,7 @@
 	        <ul class="dropdown-menu">
 			    <li><a href="mi_perfil.php"><i class="fas fa-address-card"></i> Ver Datos</a></li>
 			    <li><a href="#"><i class="fas fa-plus"></i> Agregar Cuenta</a></li>
-			    <li><a href="#"><i class="fas fa-sign-out-alt"></i>  Cerrar Cuenta</a></li>
+			    <li><a href="cerrar_sesion.php"><i class="fas fa-sign-out-alt"></i>  Cerrar Cuenta</a></li>
 		  	</ul>
         </li>
       </ul>

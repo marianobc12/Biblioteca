@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	$Acceso=$_SESSION['Acceso'];
+	if ($Acceso=="true") {
+		header('Location: menu_principal.php');
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +18,7 @@
 	<title>Acceso - Biblioteca Adolfo Alsina</title>
 </head>
 <body style="background-image:url(img/fondo-inicio.jpg);">
-	<form action="" method="post" class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 formulario-login" onsubmit="return verificar_login();">
+	<form action="verificar_login.php" method="post" class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 formulario-login" onsubmit="return verificar_login();">
 		<h1><i class="fas fa-book"></i> Biblioteca</h1>
 		<h1>Adolfo Alsina</h1>
 		<h1>Club Mayo</h1>
@@ -23,6 +30,15 @@
 		<div class="col-md-12 col-sm-12 campos-login">
 			<h1><i class="fas fa-unlock-alt"></i> Contraseña</h1>
 			<input type="password" name="Contraseña" id="Contraseña">
+		</div>
+		<div class="col-md-12">
+			<h4 class="msj-incorrecto">
+				<?php
+					if ($Acceso=="false"){
+						echo "¡Datos Incorrectos!";
+					}
+				?>
+			</h4>
 		</div>
 		<div class="col-md-12 col-sm-12 campos-login">
 			<button class="entrar"><i class="fas fa-sign-in-alt"></i> Entrar</button>

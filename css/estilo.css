@@ -40,7 +40,7 @@ body{
 /* formulario login*/
 .formulario-login{
 	background-color:#683D2C;
-	margin-top: 200px;
+	margin-top: 150px;
 	border: 2px solid #EE964B;
 	animation: zoomIn 1s forwards;
 	box-shadow: 0px 5px 40px black;
@@ -75,7 +75,7 @@ body{
 .formulario-login .campos-login .entrar{
 	display: block;
 	margin: auto;
-	margin-top: 30px;
+	margin-top: 10px;
 	margin-bottom: 30px;
 	font-size: 20px;
 	width: 50%;
@@ -89,8 +89,11 @@ body{
     outline: 0;
     border: 0px;	
 }
-
-
+.formulario-login .msj-incorrecto{
+	padding-top: 10px;
+	color:#EE964B;
+	text-align: center;
+}
 
 /* MENU PRINCIPAL */
 .menu-principal{
