@@ -27,6 +27,11 @@
 		header('Location: menu_principal.php');
 		$_SESSION['Id_Cuenta']=$row['Id_Cuenta'];
 		$_SESSION['Acceso']="true";
+		if ($row['Tipo']=="Admin") {
+			$_SESSION['TipoAcceso']="Admin";
+		}else{
+			$_SESSION['TipoAcceso']="Usuario";
+		}
 	}else{
 		header('Location: index.php');
 		$_SESSION['Acceso']="false";

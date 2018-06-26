@@ -17,7 +17,7 @@
 	<script type="text/javascript" src="js/funciones.js"></script>
 	<title>Acceso - Biblioteca Adolfo Alsina</title>
 </head>
-<body style="background-image:url(img/fondo-inicio.jpg);">
+<body style="background-image:url(img/fondo-sistema.jpg);">
 	<form action="verificar_login.php" method="post" class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 formulario-login" onsubmit="return verificar_login();">
 		<h1><i class="fas fa-book"></i> Biblioteca</h1>
 		<h1>Adolfo Alsina</h1>
@@ -30,6 +30,9 @@
 		<div class="col-md-12 col-sm-12 campos-login">
 			<h1><i class="fas fa-unlock-alt"></i> Contraseña</h1>
 			<input type="password" name="Contraseña" id="Contraseña">
+		</div>
+		<div class="col-md-12 campos-login">
+			<p>¿Olvidaste tu contraseña?<a href="recuperar_cuenta.php"> ¡Presioná aquí!</a></p>
 		</div>
 		<div class="col-md-12">
 			<h4 class="msj-incorrecto">

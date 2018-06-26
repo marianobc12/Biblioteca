@@ -7,7 +7,10 @@
 ?>
 <?php
 	include('include/funciones.php');
-	$res=Traer_Nombres_Usuarios();
+	$resnombres=Traer_Nombres_Usuarios();
+?>
+<?php
+    $resdatos=Traer_Datos_Usuarios();
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +31,7 @@
         });
     </script>
 </head>
-<body style="background-image:url(img/fondo-inicio.jpg);">
+<body style="background-image:url(img/fondo-sistema.jpg);">
     <nav class="navbar navbar-inverse menu-principal">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -70,7 +73,11 @@
                     <li><a href="" class="dropdown" data-toggle="dropdown"><i class="fas fa-user-circle"></i> Mi Cuenta <i class="fas fa-caret-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="mi_perfil.php"><i class="fas fa-address-card"></i> Ver Datos</a></li>
-                            <li><a href="#"><i class="fas fa-plus"></i> Agregar Cuenta</a></li>
+                            <li style="display:<?php if ($_SESSION['TipoAcceso']=="Admin"){
+                                echo "block";
+                            }else{
+                                echo "none";
+                            } ?>"><a href="#"><i class="fas fa-plus"></i> Agregar Cuenta</a></li>
                             <li><a href="cerrar_sesion.php"><i class="fas fa-sign-out-alt"></i>  Cerrar Cuenta</a></li>
                         </ul>
                     </li>
@@ -81,10 +88,10 @@
 		<form class="col-md-4  col-md-offset-1 form-busquedausuario" action="" method="post" >
 			<h1>Buscar Usuario</h1>
 			<h2>D.N.I</h2>
-			<input list="browsers" name="Nom_Ape" placeholder="Escriba nombre" autocomplete="off">
+			<input list="browsers" name="Dni" placeholder="Escriba nombre" autocomplete="off">
 			<datalist id="browsers">
 			<?php
-				while ($row=$res->fetch_assoc()) {
+				while ($row=$resnombres->fetch_assoc()) {
 			?>
 				<option value="<?php echo $row['Dni']; ?>"><?php echo $row['Nom_Ape']; ?></option>
 			<?php
@@ -95,7 +102,7 @@
     </form>
     <form class="col-md-5 col-md-offset-1 tarjeta-usuario" method="post" action="">
         <div class="col-md-12">
-            <h1><i class="fas fa-user"></i> Mariano Flores</h1>
+            <h1><i class="fas fa-user"></i> <?php echo $resdatos['Nom_Ape']; ?></h1>
         </div>
         <div class="row">
             <div class="col-md-6 contenedor-menu">
@@ -115,39 +122,39 @@
         </div>
         <div class="col-md-12">
             <h2><i class="fas fa-id-card"></i> D.N.I</h2>
-            <input type="number" name="Dni">
+            <input type="number" name="Dni" value="<?php echo $resdatos['Dni']; ?>">
         </div>
         <div class="col-md-12">
             <h2><i class="fas fa-user"></i> Nombre</h2>
-            <input type="text" name="Nombre">
+            <input type="text" name="Nom_Ape" value="<?php echo $resdatos['Nom_Ape']; ?>" >
         </div>
         <div class="col-md-12">
             <h2><i class="fas fa-calendar-alt"></i> Fecha de nacimiento</h2>
-            <input type="date" name="Fec_Nac">
+            <input type="date" name="Fec_Nac" value="<?php echo $resdatos['Fec_Nac']; ?>">
         </div>
         <div class="col-md-12">
             <h2><i class="far fa-flag"></i> Nacionalidad</h2>
-            <input type="text" name="Nacionalidad">
+            <input type="text" name="Nacionalidad" value="<?php echo $resdatos['Nacionalidad']; ?>">
         </div>
         <div class="col-md-12">
             <h2><i class="fas fa-phone-volume"></i> Teléfono</h2>
-            <input type="text" name="Teléfono">
+            <input type="text" name="Teléfono" value="<?php echo $resdatos['Telefono']; ?>">
         </div>
         <div class="col-md-12">
             <h2><i class="fas fa-mobile-alt"></i> Celular</h2>
-            <input type="text" name="Celular">
+            <input type="text" name="Celular" value="<?php echo $resdatos['Celular']; ?>">
         </div>
         <div class="col-md-12">
             <h2><i class="fas fa-map-marker-alt"></i> Domicilio</h2>
-            <input type="text" name="Domicilio">
+            <input type="text" name="Domicilio" value="<?php echo $resdatos['Domicilio']; ?>">
         </div>
         <div class="col-md-12">
             <h2><i class="fas fa-map-marker-alt"></i> Escuela o Lugar de trabajo</h2>
-            <input type="text" name="Escuela_Trabajo">
+            <input type="text" name="Escuela_Trabajo" value="<?php echo $resdatos['Domicilio_Seg']; ?>">
         </div>
         <div class="col-md-12">
             <h2><i class="fas fa-envelope"></i> Email</h2>
-            <input type="text" name="Email">
+            <input type="text" name="Email" value="<?php echo $resdatos['Email']; ?>">
         </div>
     </form>
 </body>

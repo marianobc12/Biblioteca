@@ -94,7 +94,14 @@ body{
 	color:#EE964B;
 	text-align: center;
 }
-
+.formulario-login .campos-login p{
+	text-align: center;
+	margin-top: 10px;
+	color:#EBEBD3;
+}
+.formulario-login .campos-login p>a{
+	color:#EE964B;	
+}
 /* MENU PRINCIPAL */
 .menu-principal{
 	background-color:#683D2C;
@@ -360,4 +367,46 @@ body{
 	box-shadow: 0px 5px 40px black;
     outline: 0;
     border: 0px;	
+}
+
+
+/* RECUPERACION DE CUENTA */
+.form-recuperar-cuenta{
+	background-color:#683D2C;
+	margin-top: 250px;
+	border: 2px solid #EE964B;
+	animation: zoomIn 1s forwards;
+	box-shadow: 0px 5px 40px black;
+}
+.form-recuperar-cuenta h1{
+	text-align: center;
+	color: #EBEBD3;
+}
+.form-recuperar-cuenta h2{
+	text-align: center;
+	color: #EE964B;	
+}
+.form-recuperar-cuenta input{
+	display: block;
+	margin: auto;
+	width: 70%;
+	font-size: 25px;
+	text-align: center;
+}
+.form-recuperar-cuenta .recuperar {
+	display: block;
+	margin: auto;
+	margin-top:20px;
+	margin-bottom:20px;
+	height: 100%;
+	padding: 10px;
+	width: 50%;
+	font-size: 20px;
+	background: #EE964B;
+	border: none;	
+}
+.form-recuperar-cuenta .recuperar:hover{
+	box-shadow: 0px 5px 40px black;
+    outline: 0;
+    border: 0px;
 }

@@ -21,13 +21,17 @@ CREATE TABLE IF NOT EXISTS `cuenta` (
   `Email` varchar(45) COLLATE utf8_bin NOT NULL,
   `Clave` varchar(45) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`Id_Cuenta`),
-  KEY `Dni` (`Dni`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de las cuentas de acceso';
+  UNIQUE KEY `Dni` (`Dni`),
+  UNIQUE KEY `Email` (`Email`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de las cuentas de acceso';
 
--- Volcando datos para la tabla biblioteca.cuenta: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla biblioteca.cuenta: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `cuenta` DISABLE KEYS */;
 INSERT INTO `cuenta` (`Id_Cuenta`, `Dni`, `Nom_Ape`, `Tipo`, `Email`, `Clave`) VALUES
-	(1, '1', 'Mariano Martin', 'Admin', 'mutant@hotmail.com', 'admin');
+	(1, '40714396', 'Mariano Flores', 'Admin', 'mariano2@hotmail.com', 'admin'),
+	(2, '34376661', 'Martin Comito', 'Admin', 'martincomito2@hotmail.com', 'admin'),
+	(3, '40714397', 'Mariano Flores', 'Usuario', 'mariano1@hotmail.com', 'usuario'),
+	(4, '34376662', 'Martin Comito', 'Admin', 'martincomito1@hotmail.com', 'usuario');
 /*!40000 ALTER TABLE `cuenta` ENABLE KEYS */;
 
 -- Volcando estructura para tabla biblioteca.devolucion
@@ -60,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `libro` (
   `Genero` varchar(5) COLLATE utf8_bin NOT NULL,
   `Disponibilidad` varchar(20) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`Id_Libro`),
-  KEY `Num_Inventario` (`Num_Inventario`)
+  UNIQUE KEY `Num_Inventario` (`Num_Inventario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de los libros';
 
 -- Volcando datos para la tabla biblioteca.libro: ~1 rows (aproximadamente)

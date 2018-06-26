@@ -17,7 +17,7 @@
 	<script type="text/javascript" src="js/funciones.js"></script>
 	<title>Menú Principal - Biblioteca Adolfo Alsina</title>
 </head>
-<body style="background-image:url(img/fondo-inicio.jpg);">
+<body style="background-image:url(img/fondo-sistema.jpg);">
 <nav class="navbar navbar-inverse menu-principal">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -59,7 +59,11 @@
         <li><a href="" class="dropdown" data-toggle="dropdown"><i class="fas fa-user-circle"></i> Mi Cuenta <i class="fas fa-caret-down"></i></a>
 	        <ul class="dropdown-menu">
 			    <li><a href="mi_perfil.php"><i class="fas fa-address-card"></i> Ver Datos</a></li>
-			    <li><a href="#"><i class="fas fa-plus"></i> Agregar Cuenta</a></li>
+			    <li style="display:<?php if ($_SESSION['TipoAcceso']=="Admin") {
+			    	echo "block";
+			    }else{
+			    	echo "none";
+			    } ?>"><a href="#"><i class="fas fa-plus"></i> Agregar Cuenta</a></li>
 			    <li><a href="cerrar_sesion.php"><i class="fas fa-sign-out-alt"></i>  Cerrar Cuenta</a></li>
 		  	</ul>
         </li>
