@@ -41,7 +41,7 @@
         </li>
         <li><a href="" class="dropdown" data-toggle="dropdown"><i class="fas fa-book"></i> Libros <i class="fas fa-caret-down"></i></a>
 	        <ul class="dropdown-menu">
-			    <li><a href="#"><i class="fas fa-user-plus"></i> Nuevo</a></li>
+			    <li><a href="alta_libro.php"><i class="fas fa-user-plus"></i> Nuevo</a></li>
 			    <li><a href="#"><i class="fas fa-search"></i> Buscar</a></li>
 		  	</ul>
         </li>

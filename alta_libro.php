@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    $Acceso=$_SESSION['Acceso'];
+    if ($Acceso!="true") {
+        header('Location:index.php');   
+    }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -49,7 +56,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#">
+                                <a href="alta_libro.php">
                                     <i class="fas fa-user-plus"></i> Nuevo</a>
                             </li>
                             <li>
