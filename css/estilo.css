@@ -409,3 +409,72 @@ body{
     outline: 0;
     border: 0px;
 }
+
+
+
+
+/* MEDIA CELULAR */
+@media screen and (max-width: 600px) {
+	.formulario-login{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.formulario-login h1{
+		font-size: 35px;
+	}
+	.formulario-login h2{
+		font-size: 20px;
+	}
+	.formulario-login .campos-login h1{
+		font-size: 20px;
+	}
+	.formulario-login .campos-login input{
+		width: 90%;
+	}
+	.formulario-login .campos-login input:focus{
+	    box-shadow: 0px 5px 40px black;
+	    outline: 0;
+	    border: 0px;
+	}
+	.formulario-login .campos-login .entrar{
+		width: 70%;
+	}
+
+
+
+	.form-recuperar-cuenta{
+		margin-top: 80px;
+	}
+	.form-recuperar-cuenta h1{
+		font-size: 25px;
+	}
+	.form-recuperar-cuenta h2{
+		font-size: 20px;
+	}
+	.form-recuperar-cuenta input{
+		width: 100%;
+		font-size: 20px;
+	}
+	.form-recuperar-cuenta .recuperar {
+		width: 80%;
+	}
+
+
+	.menu-principal .navbar-brand{
+		font-size: 15px;
+		color:white;
+	}
+	.menu-principal .navbar-nav li>a{
+		font-size: 15px;
+		color:white;
+	}
+	.menu-principal .navbar-nav li:hover{
+		background-color:transparent;
+	}
+	.menu-principal  .navbar-nav>.open>a, .menu-principal .navbar-nav>.open>a:focus, .menu-principal .navbar-nav>.open>a:hover:focus{
+		background: #EE964B;
+	}
+	.menu-principal .dropdown-menu li a:hover{
+		color: white;
+	}
+}

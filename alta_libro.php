@@ -10,6 +10,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
@@ -109,11 +110,11 @@
                                 <a href="mi_perfil.php">
                                     <i class="fas fa-address-card"></i> Ver Datos</a>
                             </li>
-                            <li style="display:<?php if ($_SESSION['TipoAcceso']==" Admin ") {
-			    	echo "block ";
-			    }else{
-			    	echo "none ";
-			    } ?>">
+                            <li style="display:<?php if ($_SESSION['TipoAcceso']=="Admin") {
+                			    	echo "block ";
+                			    }else{
+                			    	echo "none ";
+                			    } ?>">
                                 <a href="#">
                                     <i class="fas fa-plus"></i>Agregar Cuenta</a>
                             </li>
@@ -139,9 +140,13 @@
                         <input type="number" name="Num_inventario" required="" maxlength="5" placeholder="Hasta 5 dígitos" minlength="1">
                     </div>
                     <div class="col-md-6 col-sm-6  contenedor-campos">
+                        <?php
+                            date_default_timezone_set("America/Buenos_Aires");
+                            $fecha_actual=date("Y-m-d");
+                        ?>
                         <h2>
                             <i class="fas fa-calendar-alt"></i> Fecha de entrada </h2>
-                        <input type="date" name="Fecha_entrada" required="" required="" placeholder="dd/mm/aaaa">
+                        <input type="date" name="Fecha_entrada" required="" value="<?php echo $fecha_actual; ?>" disabled="">
                     </div>
                 </div>
                 <div class="row">
@@ -169,12 +174,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 col-sm-6 contenedor-campos">
-                        <h2>
-                            <i class="far fa-question-circle"></i> Disponibilidad </h2>
-                        <input type="text" name="Disponibilidad" required="" placeholder="MOSTRAR LOS DISPONIBLES">
-                    </div>
-                    <div class="col-md-6 col-sm-6 contenedor-campos">
+                    <div class="col-md-12 col-sm-12 contenedor-campos">
                         <button type="submit" class="guardar">
                         <i class="fas fa-save fa-lg"></i> Guardar</button>
                     </div>
