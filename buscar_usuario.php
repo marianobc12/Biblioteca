@@ -17,6 +17,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
@@ -87,7 +88,7 @@
     </nav>
 		<form class="col-md-4  col-md-offset-1 form-busquedausuario" action="" method="post" >
 			<h1>Buscar Usuario</h1>
-			<h2>D.N.I</h2>
+			<h2><i class="fas fa-id-card"></i> D.N.I</h2>
 			<input list="browsers" name="Dni" placeholder="Escriba nombre" autocomplete="off">
 			<datalist id="browsers">
 			<?php
@@ -100,7 +101,7 @@
 			</datalist>
         <button class="buscar"><i class="fas fa-search"></i> Buscar</button>
     </form>
-    <form class="col-md-5 col-md-offset-1 tarjeta-usuario" method="post" action="">
+    <form class="col-md-5 col-md-offset-1 tarjeta-usuario" method="post" action="" id="tarjeta-usuario">
         <div class="col-md-12">
             <h1><i class="fas fa-user"></i> <?php echo $resdatos['Nom_Ape']; ?></h1>
         </div>
@@ -120,35 +121,35 @@
                 <button id="cancelar-mod-cliente" style="display: none;" onclick="cancelar_cliente();"><i class="fas fa-times fa-lg"></i> Cancelar</button>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> D.N.I</h2>
             <input type="number" name="Dni" value="<?php echo $resdatos['Dni']; ?>">
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2><i class="fas fa-user"></i> Nombre</h2>
             <input type="text" name="Nom_Ape" value="<?php echo $resdatos['Nom_Ape']; ?>" >
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2><i class="fas fa-calendar-alt"></i> Fecha de nacimiento</h2>
             <input type="date" name="Fec_Nac" value="<?php echo $resdatos['Fec_Nac']; ?>">
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2><i class="far fa-flag"></i> Nacionalidad</h2>
             <input type="text" name="Nacionalidad" value="<?php echo $resdatos['Nacionalidad']; ?>">
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2><i class="fas fa-phone-volume"></i> Teléfono</h2>
             <input type="text" name="Teléfono" value="<?php echo $resdatos['Telefono']; ?>">
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2><i class="fas fa-mobile-alt"></i> Celular</h2>
             <input type="text" name="Celular" value="<?php echo $resdatos['Celular']; ?>">
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2><i class="fas fa-map-marker-alt"></i> Domicilio</h2>
             <input type="text" name="Domicilio" value="<?php echo $resdatos['Domicilio']; ?>">
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2><i class="fas fa-map-marker-alt"></i> Escuela o Lugar de trabajo</h2>
             <input type="text" name="Escuela_Trabajo" value="<?php echo $resdatos['Domicilio_Seg']; ?>">
         </div>

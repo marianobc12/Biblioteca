@@ -1,7 +1,7 @@
 <?php
 mb_internal_encoding("UTF-8");
 function Conexion(){
-	$link	= mysqli_connect('localhost', 'root','root','biblioteca')or die('No se pudo conectar a la DB'. mysqli_error($link));
+	$link	= mysqli_connect('localhost', 'id6360398_root','biblioteca1234','id6360398_biblioteca')or die('No se pudo conectar a la DB'. mysqli_error($link));
 	return $link;
 }
 
@@ -49,6 +49,5 @@ function Recuperar_Cuenta(){
 		$cuenta="false";
 		echo "NO EXISTE ESA CUENTA";
 	}
-	return $cuenta;
 }
 ?>
