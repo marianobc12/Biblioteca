@@ -4,6 +4,7 @@ function Conexion(){
 	$link	= mysqli_connect('localhost', 'root','root','biblioteca')or die('No se pudo conectar a la DB'. mysqli_error($link));
 	return $link;
 }
+/*('localhost', 'id6360398_root','biblioteca1234','id6360398_biblioteca')*/
 
 function Traer_Nombres_Usuarios(){
 	$link=Conexion();
@@ -51,4 +52,21 @@ function Recuperar_Cuenta(){
 	}
 	return $cuenta;
 }
+
+function Modificar_Cuenta(){
+	$Id_Cuenta=$_SESSION['Id_Cuenta'];
+	$Dni=$_POST['Dni'];
+	$Nom_Ape=$_POST['Nom_Ape'];
+	$Email=$_POST['Email'];
+
+	if ($Dni==null || $Nom_Ape==null || $Email==null) {
+		header('Location:mi_perfil.php');	
+	}else{
+		$link=Conexion();
+		$sql="UPDATE cuenta SET Dni='$Dni',Nom_Ape='$Nom_Ape',Email='$Email' WHERE Id_Cuenta='$Id_Cuenta'";
+		$res=mysqli_query($link,$sql);
+		header('Location:mi_perfil.php'); 
+	}
+}
+
 ?>

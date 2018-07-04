@@ -78,7 +78,7 @@
 </nav>
 <div class="container-fluid">
 	<div class="row">
-		<form class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 form-perfil" action="" method="post">
+		<form class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 form-perfil" action="modificar_perfil.php" method="post">
 			<h1><i class="fas fa-user"></i> Mis Datos</h1>
 			<div class="row">
 				<div class="col-md-6">
@@ -105,7 +105,7 @@
 					<button type="button" onclick="cambio_contraseña();"><i class="fas fa-lock"></i> Cambiar Contraseña</button>
 				</div>
 				<div class="col-md-6 menu-perfil">
-					<button type="button"><i class="fas fa-user-cog"></i> Modificar</button>
+					<button type="submit"><i class="fas fa-user-cog"></i> Modificar</button>
 				</div>
 			</div>
 		</form>
