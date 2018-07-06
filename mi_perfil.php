@@ -83,7 +83,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<h2><i class="fas fa-id-card"></i> D.N.I</h2>
-					<input type="number" name="Dni" value="<?php echo $rowcuenta['Dni'] ?>">
+					<input type="number" name="Dni" value="<?php echo $rowcuenta['Dni'] ?>" id=Dni>
 				</div>
 				<div class="col-md-6">
 					<h2><i class="fas fa-user"></i> Nombre y Apellido</h2>

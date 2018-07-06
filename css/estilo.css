@@ -174,6 +174,11 @@ body{
 	font-size: 20px;
 	border: 2px solid #EE964B;
 }
+.form-altausuario .contenedor-campos select{
+	width: 100%;
+	font-size: 20px;
+	border: 2px solid #EE964B;	
+}
 .form-altausuario .contenedor-campos .guardar{
 	display: block;
 	margin: auto;
@@ -477,4 +482,25 @@ body{
 	.menu-principal .dropdown-menu li a:hover{
 		color: white;
 	}
+}
+
+
+/* AVISO-TRANSACCIONES */
+.aviso-transacciones{
+	background: #683D2C;
+	padding-top:20px;
+	padding-bottom: 40px;
+	margin-top: 70px;
+	margin-bottom: 50px;
+	box-shadow: 0px 5px 40px black;
+	border: 2px solid #EE964B;
+	animation: zoomIn 1s forwards;
+}
+.aviso-transacciones h1{
+	text-align: center;
+	color: #EBEBD3;
+}
+.aviso-transacciones h2{
+	text-align: center;
+	color: #EE964B;	
 }

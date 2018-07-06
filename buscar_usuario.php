@@ -89,7 +89,7 @@
 		<form class="col-md-4  col-md-offset-1 form-busquedausuario" action="" method="post" >
 			<h1>Buscar Usuario</h1>
 			<h2><i class="fas fa-id-card"></i> D.N.I</h2>
-			<input list="browsers" name="Dni" placeholder="Escriba nombre" autocomplete="off">
+			<input list="browsers" name="Dni" required="" maxlength="60" placeholder="Escriba nombre" autocomplete="off">
 			<datalist id="browsers">
 			<?php
 				while ($row=$resnombres->fetch_assoc()) {

@@ -69,4 +69,36 @@ function Modificar_Cuenta(){
 	}
 }
 
+function Nuevo_Usuario(){
+	date_default_timezone_set("America/Buenos_Aires");
+	$Dni=$_POST['Dni'];
+	$Nom_Ape=$_POST['Nom_Ape'];
+	$Fecha_Nac=$_POST['Fecha_Nac'];
+	$Nacionalidad=$_POST['Nacionalidad'];
+	$Telefono=$_POST['Telefono'];
+	$Celular=$_POST['Celular'];
+	$Domicilio=$_POST['Domicilio'];
+	$Escuela_Trabajo=$_POST['Escuela_Trabajo'];
+	$Email=$_POST['Email'];
+	$Fecha_Alta=date("Y/m/d");
+
+	$link=Conexion();
+
+	$sql="SELECT * FROM usuario WHERE Dni='$Dni'";
+	$res=mysqli_query($link,$sql);
+	$row=$res->fetch_assoc();
+
+
+	if ($row['Dni']==$Dni) {
+		$Existe="Si";
+	}else{
+		$Existe="No";
+		$sql="INSERT INTO usuario (Dni,Nom_Ape,Fec_Nac,Nacionalidad,Telefono,Celular,Domicilio,Domicilio_Seg,Email,Fecha_Alta) VALUES ('$Dni','$Nom_Ape','$Fecha_Nac','$Nacionalidad','$Telefono','$Celular','$Domicilio','$Escuela_Trabajo','$Email','$Fecha_Alta')";
+		$res=mysqli_query($link,$sql);
+	}
+
+	return $Existe;
+
+}
+
 ?>
