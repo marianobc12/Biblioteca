@@ -118,7 +118,7 @@
                 <button id="guardar-mod-cliente" style="display: none;"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </div>
             <div class="col-md-6 contenedor-menu">
-                <button id="cancelar-mod-cliente" style="display: none;" onclick="cancelar_cliente();"><i class="fas fa-times fa-lg"></i> Cancelar</button>
+                <button type="button" id="cancelar-mod-cliente" style="display: none;" onclick="cancelar_cliente();"><i class="fas fa-times fa-lg"></i> Cancelar</button>
             </div>
         </div>
         <div class="col-md-6">

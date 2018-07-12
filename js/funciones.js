@@ -1,10 +1,9 @@
 function modificar_cliente() {
-    $("#guardar-mod-cliente").fadeIn().prop("disabled", false);
-    $("#cancelar-mod-cliente").fadeIn().prop("disabled", false);
+    $("#guardar-mod-cliente").fadeIn();
+    $("#cancelar-mod-cliente").fadeIn();
     $("#modificar-mod-cliente").hide();
     $("#eliminar-mod-cliente").hide();
-
-    $(".tarjeta-usuario :input").prop("disabled", false);
+    $(".tarjeta-usuario :input:not([type=button])").prop("disabled", false);
 }
 
 function cancelar_cliente() {
@@ -12,6 +11,7 @@ function cancelar_cliente() {
     $("#cancelar-mod-cliente").hide();
     $("#modificar-mod-cliente").fadeIn();
     $("#eliminar-mod-cliente").fadeIn();
+    $(".tarjeta-usuario :input:not([type=button])").prop("disabled", true);
 }
 
 function verificar_login() {
