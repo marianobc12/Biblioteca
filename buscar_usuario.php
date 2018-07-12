@@ -101,7 +101,7 @@
 			</datalist>
         <button class="buscar"><i class="fas fa-search"></i> Buscar</button>
     </form>
-    <form class="col-md-5 col-md-offset-1 tarjeta-usuario" method="post" action="" id="tarjeta-usuario">
+    <form class="col-md-5 col-md-offset-1 tarjeta-usuario" method="post" action="m_usuario.php" id="tarjeta-usuario">
         <div class="col-md-12">
             <h1><i class="fas fa-user"></i> <?php echo $resdatos['Nom_Ape']; ?></h1>
         </div>
@@ -115,7 +115,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 contenedor-menu">
-                <button id="guardar-mod-cliente" style="display: none;"><i class="fas fa-save fa-lg"></i> Guardar</button>
+                <button type="submit" id="guardar-mod-cliente" style="display: none;"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </div>
             <div class="col-md-6 contenedor-menu">
                 <button type="button" id="cancelar-mod-cliente" style="display: none;" onclick="cancelar_cliente();"><i class="fas fa-times fa-lg"></i> Cancelar</button>
@@ -131,7 +131,7 @@
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-calendar-alt"></i> Fecha de nacimiento</h2>
-            <input type="date" name="Fec_Nac" value="<?php echo $resdatos['Fec_Nac']; ?>">
+            <input type="date" name="Fecha_Nac" value="<?php echo $resdatos['Fec_Nac']; ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="far fa-flag"></i> Nacionalidad</h2>
@@ -139,7 +139,7 @@
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-phone-volume"></i> Teléfono</h2>
-            <input type="text" name="Teléfono" value="<?php echo $resdatos['Telefono']; ?>">
+            <input type="text" name="Telefono" value="<?php echo $resdatos['Telefono']; ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-mobile-alt"></i> Celular</h2>
@@ -159,5 +159,5 @@
         </div>
     </form>
 </body>
-
 </html>
+

@@ -101,4 +101,32 @@ function Nuevo_Usuario(){
 
 }
 
+
+
+function Modificar_Usuario(){
+	$Dni=$_POST['Dni'];
+	$Nom_Ape=$_POST['Nom_Ape'];
+	$Fecha_Nac=$_POST['Fecha_Nac'];
+	$Nacionalidad=$_POST['Nacionalidad'];
+	$Telefono=$_POST['Telefono'];
+	$Celular=$_POST['Celular'];
+	$Domicilio=$_POST['Domicilio'];
+	$Escuela_Trabajo=$_POST['Escuela_Trabajo'];
+	$Email=$_POST['Email'];
+
+	$link=Conexion();
+
+	$sql="SELECT * FROM usuario WHERE Dni='$Dni'";
+	$res=mysqli_query($link,$sql);
+	$row=$res->fetch_assoc();
+
+	if ($row['Dni']==$Dni) {
+		$Existe="Si";
+		$sql="UPDATE usuario SET Nom_Ape='$Nom_Ape',Fec_Nac='$Fecha_Nac',Nacionalidad='$Nacionalidad',Telefono='$Telefono',Celular='$Celular',Domicilio='$Domicilio',Domicilio_Seg='$Escuela_Trabajo',Email='$Email' WHERE Dni='$Dni'";
+		$res=mysqli_query($link,$sql);
+	}else{
+		$Existe="No";
+	}
+	return $Existe;
+}
 ?>
