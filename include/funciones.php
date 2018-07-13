@@ -129,4 +129,12 @@ function Modificar_Usuario(){
 	}
 	return $Existe;
 }
+
+function Traer_Nombres_Libros(){
+	$link=Conexion();
+	$sql="SELECT * FROM libro";
+	$res=mysqli_query($link,$sql);
+	return $res;
+}
+
 ?>

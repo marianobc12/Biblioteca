@@ -6,8 +6,8 @@
     }
 ?>
 <?php
-	include('include/funciones.php');
-	$resnombres=Traer_Nombres_Usuarios();
+    include ('include/funciones.php');
+    $nombreslibros=Traer_Nombres_Libros();
 ?>
 <!DOCTYPE html>
 <html>
@@ -83,21 +83,20 @@
             </div>
         </div>
     </nav>
-		<form class="col-md-4  col-md-offset-4 form-busquedausuario" action="c_usuario.php" method="post" >
+		<form class="col-md-4  col-md-offset-4 form-busquedausuario" action="" method="post" >
 			<h1>Buscar Usuario</h1>
-			<h2><i class="fas fa-id-card"></i> D.N.I</h2>
-			<input list="browsers" name="Dni" required="" maxlength="60" placeholder="Escriba nombre" autocomplete="off">
+			<h2><i class="fas fa-book"></i> Nº de inventario</h2>
+			<input list="browsers" name="Num_Inventario" required="" maxlength="60" placeholder="Escriba nombre" autocomplete="off">
 			<datalist id="browsers">
 			<?php
-				while ($row=$resnombres->fetch_assoc()) {
+				while ($row=$nombreslibros->fetch_assoc()) {
 			?>
-				<option value="<?php echo $row['Dni']; ?>"><?php echo $row['Nom_Ape']; ?></option>
+				<option value="<?php echo $row['Num_Inventario']; ?>"><?php echo $row['Titulo']; ?></option>
 			<?php
 				}
 			?>
 			</datalist>
-        <button class="buscar"><i class="fas fa-search"></i> Buscar</button>
+            <button class="buscar"><i class="fas fa-search"></i> Buscar</button>
     </form>
 </body>
 </html>
-

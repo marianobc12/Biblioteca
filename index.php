@@ -47,6 +47,9 @@
 		<div class="col-md-12 col-sm-12 campos-login">
 			<button class="entrar"><i class="fas fa-sign-in-alt"></i> Entrar</button>
 		</div>
+		<div class="col-md-12 col-sm-12 campos-login">
+			<a class="facebook" href="https://www.facebook.com/biadolfoalsina/" title="Ir a  facebook"><i class="fab fa-facebook"></i> Biblioteca Adolfo Alsina</a>
+		</div>
 	</form>
 
 	<div id="Modal-Alerta" class="modal fade" role="dialog">

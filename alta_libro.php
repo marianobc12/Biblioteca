@@ -61,7 +61,7 @@
                                     <i class="fas fa-user-plus"></i> Nuevo</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="buscar_libro.php">
                                     <i class="fas fa-search"></i> Buscar</a>
                             </li>
                         </ul>
@@ -132,7 +132,7 @@
         <div class="row">
             <form class="col-md-6 col-md-offset-3 col-sm-12 form-altausuario" action="" method="post">
                 <h1>
-                    <i class="fas fa-book"></i> Alta de libro</h1>
+                    <i class="fas fa-book"></i> Libro</h1>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 contenedor-campos">
                         <h2>

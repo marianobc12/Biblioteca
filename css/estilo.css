@@ -76,7 +76,7 @@ body{
 	display: block;
 	margin: auto;
 	margin-top: 10px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	font-size: 20px;
 	width: 50%;
 	height: 60px;
@@ -102,6 +102,21 @@ body{
 .formulario-login .campos-login p>a{
 	color:#EE964B;	
 }
+.formulario-login .campos-login .facebook{
+	color:#EE964B;
+	display: block;
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+.formulario-login .campos-login .facebook:hover{
+	color:#EBEBD3;
+	text-decoration: none;
+}
+
+
+
+
 /* MENU PRINCIPAL */
 .menu-principal{
 	background-color:#683D2C;
