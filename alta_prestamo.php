@@ -5,6 +5,11 @@
         header('Location:index.php');   
     }
 ?>
+<?php
+    include('include/funciones.php');
+    $nombreslibros=Traer_Nombres_Libros();
+    $resnombres=Traer_Nombres_Usuarios();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -130,71 +135,54 @@
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <form class="col-md-6 col-md-offset-3 col-sm-12 form-altausuario" action="" method="post">
-                <h1>
-                    <i class="fas fa-book"></i> Libro</h1>
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 contenedor-campos">
-                        <h2>
-                            <i class="fas fa-id-card"></i> Número de inventario </h2>
-                        <input type="number" name="Num_inventario" required="" max="99999" placeholder="Hasta 5 dígitos" min="1">
+            <div class="col-md-6 col-md-offset-3 contenedor-prestamo">
+                <form action="" method="" class="col-md-12 form-alta-prestamo">
+                    <div class="row">
+                        <h1><i class="fas fa-arrow-up"></i> Prestamo</h1>
                     </div>
-                    <div class="col-md-6 col-sm-6  contenedor-campos">
-                        <?php
-                            date_default_timezone_set("America/Buenos_Aires");
-                            $fecha_actual=date("Y-m-d");
-                        ?>
-                        <h2>
-                            <i class="fas fa-calendar-alt"></i> Fecha de entrada </h2>
-                        <input type="date" name="Fecha_entrada" required="" value="<?php echo $fecha_actual; ?>" disabled="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2><i class="fas fa-user"></i> Buscar usuario</h2>
+                            <input list="buscador-usuarios" name="Dni" required="" maxlength="60" placeholder="Escriba nombre" autocomplete="off">
+                            <datalist id="buscador-usuarios">
+                            <?php
+                                while ($row=$resnombres->fetch_assoc()) {
+                            ?>
+                                <option value="<?php echo $row['Dni']; ?>"><?php echo $row['Nom_Ape']; ?></option>
+                            <?php
+                                }
+                            ?>
+                            </datalist>
+                        </div>
+                        <div class="col-md-6">
+                            <h2><i class="fas fa-book"></i> Buscar libro</h2>
+                            <input list="buscador-libros" name="Num_Inventario" required="" maxlength="60" placeholder="Escriba nombre" autocomplete="off">
+                            <datalist id="buscador-libros">
+                            <?php
+                                while ($row=$nombreslibros->fetch_assoc()) {
+                            ?>
+                                <option value="<?php echo $row['Num_Inventario']; ?>"><?php echo $row['Titulo']; ?></option>
+                            <?php
+                                }
+                            ?>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 contenedor-campos">
-                        <h2>
-                            <i class="fas fa-user"></i> Autor </h2>
-                        <input type="text" name="Autor" maxlength="60" placeholder="Ej: Jorge Luis Borges" required="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2><i class="fas fa-calendar-alt"></i> Fecha del prestamo</h2>
+                            <input type="date" name="Fecha_Prestamo">
+                        </div>
+                        <div class="col-md-6">
+                            <h2><i class="fas fa-align-left"></i> Observaciones</h2>
+                            <textarea></textarea>
+                        </div>
                     </div>
-                    <div class="col-md-6 col-sm-6 contenedor-campos">
-                        <h2>
-                            <i class="fas fa-book"></i> Título</h2>
-                        <input type="text" name="Titulo" maxlength="100" required="" placeholder="Ej: El Aleph">
+                    <div class="row">
+                        <button type="submit" class="prestar"><i class="fas fa-handshake"></i> Prestar</button>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 contenedor-campos">
-                        <h2>
-                            <i class="fas fa-id-card"></i> Editorial</h2>
-                        <input type="text" name="Editorial" maxlength="60" required="" placeholder="Ej: Santillana">
-                    </div>
-                    <div class="col-md-6 col-sm-6 contenedor-campos">
-                        <h2>
-                            <i class="fas fa-user"></i> Género</h2>
-                        <input type="text" name="Genero" required="" placeholder="Ej: 82-32">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6  contenedor-campos">
-                        <h2>
-                            <i class="fas fa-donate"></i> Tipo de Operación</h2>
-                        <select name="Tipo_Operacion">
-                            <option value="0">Seleccionar Operación</option>
-                            <option value="Comprado">Comprado</option>
-                            <option value="Donado">Donado</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 contenedor-campos">
-                        <button type="submit" class="guardar">
-                        <i class="fas fa-save fa-lg"></i> Guardar</button>
-                    </div>
-                </div>
-                <div class="row">
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </body>
-
 </html>

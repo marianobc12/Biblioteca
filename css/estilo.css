@@ -240,6 +240,9 @@ body{
 	font-size: 20px;
 	border: 2px solid #EE964B;
 }
+.form-busquedausuario i{
+	color: #EBEBD3;
+}
 .form-busquedausuario .buscar{
 	display: block;
 	margin: auto;
@@ -518,4 +521,56 @@ body{
 .aviso-transacciones h2{
 	text-align: center;
 	color: #EE964B;	
+}
+
+
+
+/* FORMULARIO ALTA PRESTAMOS */
+.form-alta-prestamo{
+	background: #683D2C;
+	padding-top:20px;
+	padding-bottom: 40px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	box-shadow: 0px 5px 40px black;
+	border: 2px solid #EE964B;
+	animation: zoomIn 1s forwards;
+}
+.form-alta-prestamo h1{
+	text-align: center;
+	color: #EBEBD3;	
+}
+.form-alta-prestamo h2{
+	text-align: left;
+	font-size: 20px;
+	color: #EE964B;
+}
+.form-alta-prestamo input{
+	width:100%;
+	font-size: 20px;
+	border: 2px solid #EE964B;
+}
+.form-alta-prestamo i{
+	color: #EBEBD3;
+}
+.form-alta-prestamo textarea{
+	width: 100%;
+	height: 100px;
+	font-size: 20px;
+	border: 2px solid #EE964B;
+}
+.form-alta-prestamo .prestar {
+	display: block;
+	margin: auto;
+	margin-top:20px;
+	padding: 10px;
+	width: 50%;
+	font-size: 20px;
+	background: #EE964B;
+	border: none;
+}
+.form-alta-prestamo .prestar:hover{
+	box-shadow: 0px 5px 40px black;
+    outline: 0;
+    border: 0px;
 }
