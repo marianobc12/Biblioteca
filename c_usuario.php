@@ -5,13 +5,12 @@
         header('Location:index.php');   
     }
 ?>
-<?php
-	include('include/funciones.php');
-	$resnombres=Traer_Nombres_Usuarios();
+<?php 
+    include('include/funciones.php');
+    $resdatos=Traer_Datos_Usuarios();
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,21 +82,62 @@
             </div>
         </div>
     </nav>
-		<form class="col-md-4  col-md-offset-4 form-busquedausuario" action="c_usuario.php" method="post" >
-			<h1>Buscar Usuario</h1>
-			<h2><i class="fas fa-id-card"></i> D.N.I</h2>
-			<input list="browsers" name="Dni" required="" maxlength="60" placeholder="Escriba nombre" autocomplete="off">
-			<datalist id="browsers">
-			<?php
-				while ($row=$resnombres->fetch_assoc()) {
-			?>
-				<option value="<?php echo $row['Dni']; ?>"><?php echo $row['Nom_Ape']; ?></option>
-			<?php
-				}
-			?>
-			</datalist>
-        <button class="buscar"><i class="fas fa-search"></i> Buscar</button>
+    <form class="col-md-6 col-md-offset-3 tarjeta-usuario" method="post" action="m_usuario.php" id="tarjeta-usuario">
+        <div class="col-md-12">
+            <h1><i class="fas fa-user"></i> <?php echo $resdatos['Nom_Ape']; ?></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6 contenedor-menu">
+                <button type="button" onclick="modificar_cliente();" id="modificar-mod-cliente"><i class="fas fa-edit fa-lg"></i> Modificar</button>
+            </div>
+            <div class="col-md-6 contenedor-menu">
+                <button id="eliminar-mod-cliente"><i class="fas fa-trash fa-lg"></i> Eliminar</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 contenedor-menu">
+                <button type="submit" id="guardar-mod-cliente" style="display: none;"><i class="fas fa-save fa-lg"></i> Guardar</button>
+            </div>
+            <div class="col-md-6 contenedor-menu">
+                <button type="button" id="cancelar-mod-cliente" style="display: none;" onclick="cancelar_cliente();"><i class="fas fa-times fa-lg"></i> Cancelar</button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2><i class="fas fa-id-card"></i> D.N.I</h2>
+            <input type="number" name="Dni" value="<?php echo $resdatos['Dni']; ?>">
+        </div>
+        <div class="col-md-6">
+            <h2><i class="fas fa-user"></i> Nombre</h2>
+            <input type="text" name="Nom_Ape" value="<?php echo $resdatos['Nom_Ape']; ?>" >
+        </div>
+        <div class="col-md-6">
+            <h2><i class="fas fa-calendar-alt"></i> Fecha de nacimiento</h2>
+            <input type="date" name="Fecha_Nac" value="<?php echo $resdatos['Fec_Nac']; ?>">
+        </div>
+        <div class="col-md-6">
+            <h2><i class="far fa-flag"></i> Nacionalidad</h2>
+            <input type="text" name="Nacionalidad" value="<?php echo $resdatos['Nacionalidad']; ?>">
+        </div>
+        <div class="col-md-6">
+            <h2><i class="fas fa-phone-volume"></i> Teléfono</h2>
+            <input type="text" name="Telefono" value="<?php echo $resdatos['Telefono']; ?>">
+        </div>
+        <div class="col-md-6">
+            <h2><i class="fas fa-mobile-alt"></i> Celular</h2>
+            <input type="text" name="Celular" value="<?php echo $resdatos['Celular']; ?>">
+        </div>
+        <div class="col-md-6">
+            <h2><i class="fas fa-map-marker-alt"></i> Domicilio</h2>
+            <input type="text" name="Domicilio" value="<?php echo $resdatos['Domicilio']; ?>">
+        </div>
+        <div class="col-md-6">
+            <h2><i class="fas fa-map-marker-alt"></i> Escuela o Lugar de trabajo</h2>
+            <input type="text" name="Escuela_Trabajo" value="<?php echo $resdatos['Domicilio_Seg']; ?>">
+        </div>
+        <div class="col-md-12">
+            <h2><i class="fas fa-envelope"></i> Email</h2>
+            <input type="text" name="Email" value="<?php echo $resdatos['Email']; ?>">
+        </div>
     </form>
 </body>
 </html>
-
