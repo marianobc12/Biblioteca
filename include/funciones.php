@@ -137,4 +137,34 @@ function Traer_Nombres_Libros(){
 	return $res;
 }
 
+
+function Nuevo_Libro(){
+	$Num_Inventario=$_POST['Num_inventario'];
+	$Fecha_Entrada=$_POST['Fecha_entrada'];
+	$Autor=$_POST['Autor'];
+	$Titulo=$_POST['Titulo'];
+	$Editorial=$_POST['Editorial'];
+	$Genero=$_POST['Genero'];
+	$Tipo_Operacion=$_POST['Tipo_Operacion'];
+
+	$link=Conexion();
+
+	$sql="SELECT * FROM libro WHERE Num_Inventario='$Num_Inventario'";
+	$res=mysqli_query($link,$sql);
+	$row=$res->fetch_assoc();
+	
+	if ($row['Num_Inventario']==$Num_Inventario) {
+		$Existe="Si";
+	}else{
+		$Existe="No";
+		$sql="INSERT INTO libro (Num_Inventario,Fecha_Entrada,Autor,Titulo,Editorial,Tipo_Operacion,Genero) VALUES ('$Num_Inventario','$Fecha_Entrada','$Autor','$Titulo','$Editorial','$Genero','$Tipo_Operacion')";
+		$res=mysqli_query($link,$sql);
+	}
+
+	return $Existe;
+
+
+}
+
+
 ?>

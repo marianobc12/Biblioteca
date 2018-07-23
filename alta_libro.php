@@ -130,7 +130,7 @@
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <form class="col-md-6 col-md-offset-3 col-sm-12 form-altausuario" action="" method="post">
+            <form class="col-md-6 col-md-offset-3 col-sm-12 form-altausuario" action="g_libro.php" method="post">
                 <h1>
                     <i class="fas fa-book"></i> Libro</h1>
                 <div class="row">
@@ -146,7 +146,7 @@
                         ?>
                         <h2>
                             <i class="fas fa-calendar-alt"></i> Fecha de entrada </h2>
-                        <input type="date" name="Fecha_entrada" required="" value="<?php echo $fecha_actual; ?>" disabled="">
+                        <input type="date" name="Fecha_entrada" required="" value="<?php echo $fecha_actual; ?>">
                     </div>
                 </div>
                 <div class="row">
