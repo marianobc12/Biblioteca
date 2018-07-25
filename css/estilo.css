@@ -191,7 +191,7 @@ body{
 }
 .form-altausuario .contenedor-campos select{
 	width: 100%;
-	font-size: 20px;
+	font-size: 22px;
 	border: 2px solid #EE964B;	
 }
 .form-altausuario .contenedor-campos .guardar{
@@ -300,6 +300,11 @@ body{
 }
 .tarjeta-usuario h2 i{
 	color: #EBEBD3;		
+}
+.tarjeta-usuario  select{
+	width: 100%;
+	font-size: 22px;
+	border: 2px solid #EE964B;	
 }
 
 /* Modal alerta */
