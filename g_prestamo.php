@@ -133,5 +133,13 @@
             </div>
         </div>
     </nav>
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 aviso-transacciones">
+				<h1><i class="fas fa-bell"></i> Notificación</h1>
+				<h2>¡Prestamo Realizado!</h2>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
