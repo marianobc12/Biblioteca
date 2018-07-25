@@ -7,6 +7,9 @@
 ?>
 
 
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,6 +82,7 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2 contenedor-bienvenida">
 			<h1>Bienvenido/a al sistema.</h1>
+			<div id="cont_70c6f4029485d49faabe36401f3c032b"><script type="text/javascript" async src="https://www.tiempo.com/wid_loader/70c6f4029485d49faabe36401f3c032b"></script></div>
 			<h1>
 				<i class="fas fa-calendar-alt"></i>
 				<?php
