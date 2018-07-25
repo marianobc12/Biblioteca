@@ -173,5 +173,38 @@ function Nuevo_Libro(){
 
 }
 
+function Nuevo_Prestamo(){
+	$Dni=$_POST['Dni'];
+	$Num_Inventario=$_POST['Num_Inventario'];
+	$Fecha_Prestamo=$_POST['Fecha_Prestamo'];
+	$Observaciones=$_POST['Observaciones'];
+
+	$link=Conexion();
+
+
+	// CONSULTA PARA AVERIGUAR EL ID DEL USUARIO TENIENDO SU DNI//
+	$sql="SELECT Id_Usuario FROM usuario WHERE Dni='$Dni'";
+	$res=mysqli_query($link,$sql);
+	$rowusuario=$res->fetch_assoc();
+	$Id_Usuario=$rowusuario['Id_Usuario'];
+
+	// CONSULTA PARA AVERIGUAR EL ID DEL LIBRO TENIENDO SU NUM DE INVENTARIO//
+	$sql="SELECT Id_Libro FROM libro WHERE Num_Inventario='$Num_Inventario'";
+	$res=mysqli_query($link,$sql);
+	$rowlibro=$res->fetch_assoc();
+	$Id_Libro=$rowlibro['Id_Libro'];
+
+	// UPDATE QUE CAMBIA LA DISPONIBILIDAD DEL LIBRO A OCUPADO //
+	$sql="UPDATE libro SET Disponibilidad='Ocupado' WHERE Id_Libro='$Id_Libro'";
+
+	mysqli_query($link,$sql);
+
+	// NUEVO PRESTAMO AGREGADO A LA BASE DE DATOS//
+	$sql="INSERT INTO prestamo (Id_Usuario,Id_Libro,Fecha_Prestamo,Observaciones,Activo) VALUES ('$Id_Usuario','$Id_Libro','$Fecha_Prestamo','$Observaciones','Si')";
+	
+	mysqli_query($link,$sql);
+
+}
+
 
 ?>

@@ -7,9 +7,9 @@
 ?>
 <?php
     include('include/funciones.php');
-    $nombreslibros=Traer_Nombres_Libros_Prestamos();
-    $resnombres=Traer_Nombres_Usuarios();
+    Nuevo_Prestamo();
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -133,56 +133,5 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 contenedor-prestamo">
-                <form action="g_prestamo.php" method="post" class="col-md-12 form-alta-prestamo">
-                    <div class="row">
-                        <h1><i class="fas fa-arrow-up"></i> Prestamo</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h2><i class="fas fa-user"></i> Buscar usuario</h2>
-                            <input list="buscador-usuarios" name="Dni" required="" maxlength="60" placeholder="Escriba nombre" autocomplete="off">
-                            <datalist id="buscador-usuarios">
-                            <?php
-                                while ($row=$resnombres->fetch_assoc()) {
-                            ?>
-                                <option value="<?php echo $row['Dni']; ?>"><?php echo $row['Nom_Ape']; ?></option>
-                            <?php
-                                }
-                            ?>
-                            </datalist>
-                        </div>
-                        <div class="col-md-6">
-                            <h2><i class="fas fa-book"></i> Buscar libro</h2>
-                            <input list="buscador-libros" name="Num_Inventario" required="" maxlength="60" placeholder="Escriba nombre" autocomplete="off">
-                            <datalist id="buscador-libros">
-                            <?php
-                                while ($row=$nombreslibros->fetch_assoc()) {
-                            ?>
-                                <option value="<?php echo $row['Num_Inventario']; ?>"><?php echo $row['Titulo']; ?></option>
-                            <?php
-                                }
-                            ?>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h2><i class="fas fa-calendar-alt"></i> Fecha del prestamo</h2>
-                            <input type="date" name="Fecha_Prestamo">
-                        </div>
-                        <div class="col-md-6">
-                            <h2><i class="fas fa-align-left"></i> Observaciones</h2>
-                            <textarea name="Observaciones"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <button type="submit" class="prestar"><i class="fas fa-handshake"></i> Prestar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 </body>
 </html>
