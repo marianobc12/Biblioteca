@@ -35,3 +35,7 @@ function cambio_contraseña() {
     $('#Modal-Contraseña').modal();
 }
 
+function eliminar_usuario() {
+    $('#Modal-Eliminar_Usuario').modal();
+}
+

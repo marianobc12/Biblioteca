@@ -91,7 +91,7 @@
                 <button type="button" onclick="modificar_cliente();" id="modificar-mod-cliente"><i class="fas fa-edit fa-lg"></i> Modificar</button>
             </div>
             <div class="col-md-6 contenedor-menu">
-                <button id="eliminar-mod-cliente"><i class="fas fa-trash fa-lg"></i> Eliminar</button>
+                <button type="button" id="eliminar-mod-cliente" onclick="eliminar_usuario();"><i class="fas fa-trash fa-lg"></i> Eliminar</button>
             </div>
         </div>
         <div class="row">
@@ -139,5 +139,27 @@
             <input type="text" name="Email" value="<?php echo $resdatos['Email']; ?>">
         </div>
     </form>
+    <div class="modal fade modal-eliminar" id="Modal-Eliminar_Usuario">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">¿Desea eliminar el usuario?</h4>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="" method="">
+                <input type="number" value="<?php echo $resdatos['Dni']; ?>" style="display:none;">
+                <button type="submit" class="btn btn-success">Si , Eliminar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">No , Cancelar</button>
+                </form>
+            </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
