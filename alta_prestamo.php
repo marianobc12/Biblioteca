@@ -7,7 +7,7 @@
 ?>
 <?php
     include('include/funciones.php');
-    $nombreslibros=Traer_Nombres_Libros();
+    $nombreslibros=Traer_Nombres_Libros_Prestamos();
     $resnombres=Traer_Nombres_Usuarios();
 ?>
 <!DOCTYPE html>

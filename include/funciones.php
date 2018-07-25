@@ -137,6 +137,13 @@ function Traer_Nombres_Libros(){
 	return $res;
 }
 
+function Traer_Nombres_Libros_Prestamos(){
+	$link=Conexion();
+	$sql="SELECT * FROM libro WHERE Disponibilidad='Disponible'";
+	$res=mysqli_query($link,$sql);
+	return $res;
+}
+
 
 function Nuevo_Libro(){
 	$Num_Inventario=$_POST['Num_inventario'];
@@ -157,7 +164,7 @@ function Nuevo_Libro(){
 		$Existe="Si";
 	}else{
 		$Existe="No";
-		$sql="INSERT INTO libro (Num_Inventario,Fecha_Entrada,Autor,Titulo,Editorial,Tipo_Operacion,Genero) VALUES ('$Num_Inventario','$Fecha_Entrada','$Autor','$Titulo','$Editorial','$Genero','$Tipo_Operacion')";
+		$sql="INSERT INTO libro (Num_Inventario,Fecha_Entrada,Autor,Titulo,Editorial,Tipo_Operacion,Genero,Disponibilidad) VALUES ('$Num_Inventario','$Fecha_Entrada','$Autor','$Titulo','$Editorial','$Tipo_Operacion','$Genero','Disponible')";
 		$res=mysqli_query($link,$sql);
 	}
 
