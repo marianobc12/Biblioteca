@@ -219,4 +219,18 @@ function Eliminar_Usuario(){
 	
 }
 
+function Traer_Datos_Libros(){
+	$Num_Inventario=$_POST['Num_Inventario'];
+
+	$link=Conexion();
+
+	$sql="SELECT * FROM libro WHERE Num_Inventario='$Num_Inventario'";
+
+	$res=mysqli_query($link,$sql);
+
+	$row=$res->fetch_assoc();
+
+	return $row;
+}
+
 ?>

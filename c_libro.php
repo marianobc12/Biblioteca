@@ -7,6 +7,7 @@
 ?>
 <?php 
     include('include/funciones.php');
+    $rowlibro=Traer_Datos_Libros();
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,7 +50,7 @@
                     <li><a href="" class="dropdown" data-toggle="dropdown"><i class="fas fa-book"></i> Libros <i class="fas fa-caret-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="alta_libro.php"><i class="fas fa-user-plus"></i> Nuevo</a></li>
-                            <li><a href="#"><i class="fas fa-search"></i> Buscar</a></li>
+                            <li><a href="buscar_libro.php"><i class="fas fa-search"></i> Buscar</a></li>
                         </ul>
                     </li>
                     <li><a href="" class="dropdown" data-toggle="dropdown"><i class="fas fa-arrow-up"></i> Prestamos <i class="fas fa-caret-down"></i></a>
@@ -83,7 +84,7 @@
     </nav>
     <form class="col-md-6 col-md-offset-3 tarjeta-usuario" method="post" action="" id="tarjeta-usuario">
         <div class="col-md-12">
-            <h1><i class="fas fa-book"></i></h1>
+            <h1><i class="fas fa-book"></i> <?php echo $rowlibro['Titulo'] ?></h1>
         </div>
         <div class="row">
             <div class="col-md-6 contenedor-menu">
@@ -103,27 +104,27 @@
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Nº de Inventario</h2>
-            <input type="number" name="Num_Inventario" value="">
+            <input type="number" name="Num_Inventario" value="<?php echo $rowlibro['Num_Inventario'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Fecha Entrada</h2>
-            <input type="date" name="Fecha_Entrada" value="">
+            <input type="date" name="Fecha_Entrada" value="<?php echo $rowlibro['Fecha_Entrada'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Autor</h2>
-            <input type="text" name="Autor" value="">
+            <input type="text" name="Autor" value="<?php echo $rowlibro['Autor'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Título</h2>
-            <input type="text" name="Titulo" value="">
+            <input type="text" name="Titulo" value="<?php echo $rowlibro['Titulo'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Editorial</h2>
-            <input type="text" name="Editorial" value="">
+            <input type="text" name="Editorial" value="<?php echo $rowlibro['Editorial'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Género</h2>
-            <input type="text" name="Genero" value="">
+            <input type="text" name="Genero" value="<?php echo $rowlibro['Genero'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Operación</h2>
