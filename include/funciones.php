@@ -207,4 +207,16 @@ function Nuevo_Prestamo(){
 }
 
 
+
+function Eliminar_Usuario(){
+	$Dni=$_POST['Dni'];
+
+	$link=Conexion();
+
+	$sql="DELETE FROM usuario WHERE Dni='$Dni'";
+
+	mysqli_query($link,$sql);
+	
+}
+
 ?>

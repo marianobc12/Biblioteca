@@ -143,21 +143,25 @@
         <div class="modal-dialog">
             <div class="modal-content">
 
-            <!-- Modal Header -->
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">¿Desea eliminar el usuario?</h4>
+                <h4 class="modal-title">¿Deseas eliminar el usuario?</h4>
             </div>
 
-            <!-- Modal body -->
             <div class="modal-body">
-                <form action="" method="">
-                <input type="number" value="<?php echo $resdatos['Dni']; ?>" style="display:none;">
-                <button type="submit" class="btn btn-success">Si , Eliminar</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">No , Cancelar</button>
-                </form>
-            </div>
-
+                <div class="container-fluid">
+                    <div class="row">
+                        <form action="e_usuario.php" method="post" class="col-md-12 eliminar-usuario">
+                            <input type="number" name="Dni" value="<?php echo $resdatos['Dni']; ?>" style="display:none;">
+                            <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 ">
+                                <button type="submit" class="btn  eliminar">Si , Eliminar</button>
+                            </div>
+                            <div class="col-md-4 col-sm-4 ">
+                                <button type="button" class="btn cancelar" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

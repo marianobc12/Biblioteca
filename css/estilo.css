@@ -579,3 +579,26 @@ body{
     outline: 0;
     border: 0px;
 }
+
+
+/* ELIMINAR USUARIO MODAL */
+.eliminar-usuario{
+	padding: 20px;
+}
+.eliminar-usuario .eliminar{
+	width: 100%;
+	background: #EE964B;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.eliminar-usuario .cancelar{
+	width: 100%;
+	background: #EE964B;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.eliminar-usuario .eliminar:hover , .eliminar-usuario .cancelar:hover{
+	box-shadow: 0px 5px 40px black;
+    outline: 0;
+    border: 0px;
+}
