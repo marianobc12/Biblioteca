@@ -233,4 +233,19 @@ function Traer_Datos_Libros(){
 	return $row;
 }
 
+function Traer_Prestamos(){
+	$link=Conexion();
+
+	$rowusuario=Traer_Datos_Usuarios();
+
+	$Id_Usuario=$rowusuario['Id_Usuario'];
+
+	$sql="SELECT * FROM prestamo INNER JOIN libro ON prestamo.Id_Libro = libro.Id_Libro WHERE prestamo.Id_Usuario='$Id_Usuario' AND prestamo.Activo='Si'";
+
+	$res=mysqli_query($link,$sql);
+
+	return $res;
+	
+}
+
 ?>

@@ -153,14 +153,19 @@ body{
 /* mensaje bienvenida */
 .contenedor-bienvenida{
 	background:#683D2C;
-	margin-top: 150px;
+	margin-top: 120px;
 	border: 2px solid #EE964B;
 	animation: zoomIn 1s forwards;
-	box-shadow: 0px 5px 40px black;
 }
 .contenedor-bienvenida h1{
 	text-align: center;
 	color: #EBEBD3;
+}
+.contenedor-clima{
+	background:rgba(0,0,0,0.9);
+	border: 2px solid #EE964B;
+	margin-top: 20px;
+	animation: zoomIn 1s forwards;
 }
 
 
@@ -601,4 +606,30 @@ body{
 	box-shadow: 0px 5px 40px black;
     outline: 0;
     border: 0px;
+}
+
+
+/* TABLA DE PRESTAMO */
+.contenedor-tabla-prestamo{
+	background: #683D2C;
+	border: 2px solid #EE964B;
+}
+.contenedor-tabla-prestamo h1{
+	text-align: center;
+	font-size: 36px;
+	color: #EBEBD3;
+}
+.contenedor-tabla-prestamo h2{
+	font-size: 20px;
+	color: #EBEBD3;
+	text-align: center;
+}
+.contenedor-tabla-prestamo .table th{
+	color: #EE964B;
+}
+.contenedor-tabla-prestamo .table td{
+	color: #EBEBD3;
+}
+.contenedor-tabla-prestamo .table td>button{
+	width: 100%;
 }

@@ -5,6 +5,12 @@
 		header('Location:index.php');	
 	}
 ?>
+<?php
+    include('include/funciones.php');
+    $rowusuario=Traer_Datos_Usuarios();
+	$resprestamos=Traer_Prestamos();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,9 +22,9 @@
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/funciones.js"></script>
-	<title>Alta Usuario - Biblioteca Adolfo Alsina</title>
+	<title>Menú Principal - Biblioteca Adolfo Alsina</title>
 </head>
-<body style="background-image:url(img/fondo-sistema.jpg);">
+<body  style="background-image:url(img/fondo-sistema.jpg);">
 <nav class="navbar navbar-inverse menu-principal">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -64,7 +70,8 @@
 			    	echo "block";
 			    }else{
 			    	echo "none";
-			    } ?>"><a href="#"><i class="fas fa-plus"></i> Agregar Cuenta</a></li>
+			    } ?>"><a href="#"><i class="fas fa-plus"></i>Agregar Cuenta</a>
+			    </li>
 			    <li><a href="cerrar_sesion.php"><i class="fas fa-sign-out-alt"></i>  Cerrar Cuenta</a></li>
 		  	</ul>
         </li>
@@ -72,33 +79,40 @@
     </div>
   </div>
 </nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="table-responsive col-md-8 col-md-offset-2 contenedor-tabla-prestamo">
+            <h1>Prestamos</h1>
+            <h2><i class="fas fa-user"></i> <?php echo $rowusuario['Nom_Ape'] ?></h2>
+            <table class="table table-bordered">
+                <thead>
+                    <th>Nº de Ejemplar</th>
+                    <th>Libro</th>
+                    <th>Inicio</th>
+                    <th>Fin</th>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <?php
+                        while($rowprestamos=$resprestamos->fetch_assoc()){
+                    ?>
+                    <tr>
+                        <td><?php echo $rowprestamos['Num_Inventario'] ?></td>
+                        <td><?php echo $rowprestamos['Titulo'] ?></td>
+                        <td><?php echo $rowprestamos['Fecha_Prestamo'] ?></td>
+                        <td>22/02/2018</td>
+                        <td><button class="btn btn-success"><i class="fas fa-check"></i> Finalizar</button></td>
+                        <td><button class="btn btn-danger"><i class="fas fa-trash"></i> Borrar</button></td>
+                    </tr>
+                    <?php
+                        }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
-
-<?php
-	include('include/funciones.php');
-	$Existe=Nuevo_Libro();
-	if ($Existe=="Si") {
-?>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3 aviso-transacciones">
-				<h1><i class="fas fa-bell"></i> Notificación</h1>
-				<h2>¡El libro ya existe!</h2>
-			</div>
-		</div>
-	</div>
-<?php		
-	}else{
-?>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3 aviso-transacciones">
-				<h1><i class="fas fa-bell"></i> Notificación</h1>
-				<h2>¡El libro fue registrado correctamente!</h2>
-			</div>
-		</div>
-	</div>
-<?php
-	}
-?>

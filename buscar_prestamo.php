@@ -5,6 +5,11 @@
 		header('Location:index.php');	
 	}
 ?>
+<?php
+	include('include/funciones.php');
+	$resnombres=Traer_Nombres_Usuarios();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,9 +21,9 @@
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/funciones.js"></script>
-	<title>Alta Usuario - Biblioteca Adolfo Alsina</title>
+	<title>Menú Principal - Biblioteca Adolfo Alsina</title>
 </head>
-<body style="background-image:url(img/fondo-sistema.jpg);">
+<body  style="background-image:url(img/fondo-sistema.jpg);">
 <nav class="navbar navbar-inverse menu-principal">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -64,7 +69,8 @@
 			    	echo "block";
 			    }else{
 			    	echo "none";
-			    } ?>"><a href="#"><i class="fas fa-plus"></i> Agregar Cuenta</a></li>
+			    } ?>"><a href="#"><i class="fas fa-plus"></i>Agregar Cuenta</a>
+			    </li>
 			    <li><a href="cerrar_sesion.php"><i class="fas fa-sign-out-alt"></i>  Cerrar Cuenta</a></li>
 		  	</ul>
         </li>
@@ -72,33 +78,21 @@
     </div>
   </div>
 </nav>
+<form class="col-md-4  col-md-offset-4 form-busquedausuario" action="listado_prestamo.php" method="post" >
+			<h1>Buscar Usuario</h1>
+			<h2><i class="fas fa-id-card"></i> D.N.I</h2>
+			<input list="browsers" name="Dni" required="" maxlength="60" placeholder="Escribir Nombre" autocomplete="off">
+			<datalist id="browsers">
+			<?php
+				while ($row=$resnombres->fetch_assoc()) {
+			?>
+				<option value="<?php echo $row['Dni']; ?>"><?php echo $row['Nom_Ape']; ?></option>
+			<?php
+				}
+			?>
+			</datalist>
+        <button class="buscar"><i class="fas fa-search"></i> Buscar</button>
+</form>
+
 </body>
 </html>
-
-<?php
-	include('include/funciones.php');
-	$Existe=Nuevo_Libro();
-	if ($Existe=="Si") {
-?>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3 aviso-transacciones">
-				<h1><i class="fas fa-bell"></i> Notificación</h1>
-				<h2>¡El libro ya existe!</h2>
-			</div>
-		</div>
-	</div>
-<?php		
-	}else{
-?>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3 aviso-transacciones">
-				<h1><i class="fas fa-bell"></i> Notificación</h1>
-				<h2>¡El libro fue registrado correctamente!</h2>
-			</div>
-		</div>
-	</div>
-<?php
-	}
-?>

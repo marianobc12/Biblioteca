@@ -77,7 +77,7 @@
                                     <i class="fas fa-user-plus"></i> Nuevo</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="buscar_prestamo.php">
                                     <i class="fas fa-search"></i> Buscar</a>
                             </li>
                         </ul>

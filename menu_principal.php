@@ -7,9 +7,6 @@
 ?>
 
 
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,9 +77,8 @@
 </nav>
 <div class="container-fluid" id="contenedor-general">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2 contenedor-bienvenida">
+		<div class="col-md-6 col-md-offset-3 contenedor-bienvenida">
 			<h1>Bienvenido/a al sistema.</h1>
-			<div id="cont_70c6f4029485d49faabe36401f3c032b"><script type="text/javascript" async src="https://www.tiempo.com/wid_loader/70c6f4029485d49faabe36401f3c032b"></script></div>
 			<h1>
 				<i class="fas fa-calendar-alt"></i>
 				<?php
@@ -98,6 +94,11 @@
 				?>
 			</h1>
 		</div>
+	</div>
+	<div class="row">
+			<div class="col-md-2 col-md-offset-5 contenedor-clima">
+				<div id="cont_ee8ebbccb0357917ebf5246e2edfe570"><script type="text/javascript" async src="https://www.meteored.com.ar/wid_loader/ee8ebbccb0357917ebf5246e2edfe570"></script></div>
+			</div>
 	</div>
 </div>
 </body>
