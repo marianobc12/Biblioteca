@@ -26,11 +26,11 @@
 		<h2>Acceso al sistema</h2>
 		<div class="col-md-12 col-sm-12 campos-login">
 			<h1><i class="fas fa-id-card fa-lg"></i> D.N.I</h1>
-			<input type="number" name="Dni" id="Dni">
+			<input type="number" name="Dni" id="Dni" class="form-control">
 		</div>
 		<div class="col-md-12 col-sm-12 campos-login">
 			<h1><i class="fas fa-unlock-alt"></i> Contraseña</h1>
-			<input type="password" name="Contraseña" id="Contraseña">
+			<input type="password" name="Contraseña" id="Contraseña" class="form-control">
 		</div>
 		<div class="col-md-12 campos-login">
 			<p>¿Olvidaste tu contraseña?<a href="recuperar_cuenta.php"> ¡Presioná aquí!</a></p>
@@ -45,7 +45,7 @@
 			</h4>
 		</div>
 		<div class="col-md-12 col-sm-12 campos-login">
-			<button class="entrar"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+			<button class="btn entrar"><i class="fas fa-sign-in-alt"></i> Entrar</button>
 		</div>
 		<div class="col-md-12 col-sm-12 campos-login">
 			<a class="facebook" href="https://www.facebook.com/biadolfoalsina/" title="Ir a  facebook"><i class="fab fa-facebook"></i> Biblioteca Adolfo Alsina</a>

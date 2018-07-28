@@ -137,7 +137,7 @@
                     <div class="col-md-6 col-sm-6 contenedor-campos">
                         <h2>
                             <i class="fas fa-id-card"></i> Número de inventario </h2>
-                        <input type="number" name="Num_inventario" required="" max="99999" placeholder="Hasta 5 dígitos" min="1">
+                        <input class="form-control" type="number" name="Num_inventario" required="" max="99999" placeholder="Hasta 5 dígitos" min="1">
                     </div>
                     <div class="col-md-6 col-sm-6  contenedor-campos">
                         <?php
@@ -146,38 +146,38 @@
                         ?>
                         <h2>
                             <i class="fas fa-calendar-alt"></i> Fecha de entrada </h2>
-                        <input type="date" name="Fecha_entrada" required="" value="<?php echo $fecha_actual; ?>">
+                        <input class="form-control" type="date" name="Fecha_entrada" required="" value="<?php echo $fecha_actual; ?>">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 contenedor-campos">
                         <h2>
                             <i class="fas fa-user"></i> Autor </h2>
-                        <input type="text" name="Autor" maxlength="60" placeholder="Ej: Jorge Luis Borges" required="">
+                        <input class="form-control" type="text" name="Autor" maxlength="60" placeholder="Ej: Jorge Luis Borges" required="">
                     </div>
                     <div class="col-md-6 col-sm-6 contenedor-campos">
                         <h2>
                             <i class="fas fa-book"></i> Título</h2>
-                        <input type="text" name="Titulo" maxlength="100" required="" placeholder="Ej: El Aleph">
+                        <input class="form-control" type="text" name="Titulo" maxlength="100" required="" placeholder="Ej: El Aleph">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 contenedor-campos">
                         <h2>
                             <i class="fas fa-id-card"></i> Editorial</h2>
-                        <input type="text" name="Editorial" maxlength="60" required="" placeholder="Ej: Santillana">
+                        <input class="form-control" type="text" name="Editorial" maxlength="60" required="" placeholder="Ej: Santillana">
                     </div>
                     <div class="col-md-6 col-sm-6 contenedor-campos">
                         <h2>
                             <i class="fas fa-user"></i> Género</h2>
-                        <input type="text" name="Genero" required="" placeholder="Ej: 82-32">
+                        <input class="form-control" type="text" name="Genero" required="" placeholder="Ej: 82-32">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6  contenedor-campos">
                         <h2>
                             <i class="fas fa-donate"></i> Tipo de Operación</h2>
-                        <select name="Tipo_Operacion">
+                        <select name="Tipo_Operacion" class="form-control input-lg">
                             <option value="0">Seleccionar Operación</option>
                             <option value="Comprado">Comprado</option>
                             <option value="Donado">Donado</option>
@@ -186,7 +186,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12 contenedor-campos">
-                        <button type="submit" class="guardar">
+                        <button type="submit" class="btn guardar">
                         <i class="fas fa-save fa-lg"></i> Guardar</button>
                     </div>
                 </div>

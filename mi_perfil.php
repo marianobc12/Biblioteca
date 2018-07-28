@@ -83,11 +83,11 @@
 			<div class="row">
 				<div class="col-md-6">
 					<h2><i class="fas fa-id-card"></i> D.N.I</h2>
-					<input type="number" name="Dni" value="<?php echo $rowcuenta['Dni'] ?>" id=Dni>
+					<input class="form-control" type="number" name="Dni" value="<?php echo $rowcuenta['Dni'] ?>" id=Dni>
 				</div>
 				<div class="col-md-6">
 					<h2><i class="fas fa-user"></i> Nombre y Apellido</h2>
-					<input type="text" name="Nom_Ape" value="<?php echo $rowcuenta['Nom_Ape'] ?>">
+					<input class="form-control" type="text" name="Nom_Ape" value="<?php echo $rowcuenta['Nom_Ape'] ?>">
 				</div>
 			</div>
 			<div class="row">
@@ -97,15 +97,15 @@
 				</div>
 				<div class="col-md-6">
 					<h2><i class="fas fa-envelope"></i> Email</h2>
-					<input type="email" name="Email" value="<?php echo $rowcuenta['Email'] ?>">
+					<input class="form-control" type="email" name="Email" value="<?php echo $rowcuenta['Email'] ?>">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6 menu-perfil">
-					<button type="button" onclick="cambio_contraseña();"><i class="fas fa-lock"></i> Cambiar Contraseña</button>
+					<button class="btn" type="button" onclick="cambio_contraseña();"><i class="fas fa-lock"></i> Cambiar Contraseña</button>
 				</div>
 				<div class="col-md-6 menu-perfil">
-					<button type="submit"><i class="fas fa-user-cog"></i> Modificar</button>
+					<button class="btn" type="submit"><i class="fas fa-user-cog"></i> Modificar</button>
 				</div>
 			</div>
 		</form>

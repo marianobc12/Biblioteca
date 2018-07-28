@@ -25,10 +25,10 @@
 				</div>
 				<div class="col-md-12">
 					<h2><i class="fas fa-envelope"></i> Ingrese su correo electronico</h2>
-					<input type="email" name="Email" placeholder="Ej: ejemplo@dominio.com">
+					<input class="form-control" type="email" name="Email" placeholder="Ej: ejemplo@dominio.com">
 				</div>
 				<div class="col-md-12">
-					<button type="submit" class="recuperar"><i class="fas fa-unlock-alt"></i> Recuperar Cuenta</button>
+					<button type="submit" class="btn recuperar"><i class="fas fa-unlock-alt"></i> Recuperar Cuenta</button>
 				</div>
 			</form>
 		</div>

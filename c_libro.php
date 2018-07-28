@@ -88,47 +88,47 @@
         </div>
         <div class="row">
             <div class="col-md-6 contenedor-menu">
-                <button type="button" onclick="modificar_cliente();" id="modificar-mod-cliente"><i class="fas fa-edit fa-lg"></i> Modificar</button>
+                <button class="btn" type="button" onclick="modificar_cliente();" id="modificar-mod-cliente"><i class="fas fa-edit fa-lg"></i> Modificar</button>
             </div>
             <div class="col-md-6 contenedor-menu">
-                <button id="eliminar-mod-cliente"><i class="fas fa-trash fa-lg"></i> Eliminar</button>
+                <button class="btn" id="eliminar-mod-cliente"><i class="fas fa-trash fa-lg"></i> Eliminar</button>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 contenedor-menu">
-                <button type="submit" id="guardar-mod-cliente" style="display: none;"><i class="fas fa-save fa-lg"></i> Guardar</button>
+                <button class="btn" type="submit" id="guardar-mod-cliente" style="display: none;"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </div>
             <div class="col-md-6 contenedor-menu">
-                <button type="button" id="cancelar-mod-cliente" style="display: none;" onclick="cancelar_cliente();"><i class="fas fa-times fa-lg"></i> Cancelar</button>
+                <button class="btn" type="button" id="cancelar-mod-cliente" style="display: none;" onclick="cancelar_cliente();"><i class="fas fa-times fa-lg"></i> Cancelar</button>
             </div>
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Nº de Inventario</h2>
-            <input type="number" name="Num_Inventario" value="<?php echo $rowlibro['Num_Inventario'] ?>">
+            <input class="form-control" type="number" name="Num_Inventario" value="<?php echo $rowlibro['Num_Inventario'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Fecha Entrada</h2>
-            <input type="date" name="Fecha_Entrada" value="<?php echo $rowlibro['Fecha_Entrada'] ?>">
+            <input class="form-control" type="date" name="Fecha_Entrada" value="<?php echo $rowlibro['Fecha_Entrada'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Autor</h2>
-            <input type="text" name="Autor" value="<?php echo $rowlibro['Autor'] ?>">
+            <input class="form-control" type="text" name="Autor" value="<?php echo $rowlibro['Autor'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Título</h2>
-            <input type="text" name="Titulo" value="<?php echo $rowlibro['Titulo'] ?>">
+            <input class="form-control" type="text" name="Titulo" value="<?php echo $rowlibro['Titulo'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Editorial</h2>
-            <input type="text" name="Editorial" value="<?php echo $rowlibro['Editorial'] ?>">
+            <input class="form-control" type="text" name="Editorial" value="<?php echo $rowlibro['Editorial'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Género</h2>
-            <input type="text" name="Genero" value="<?php echo $rowlibro['Genero'] ?>">
+            <input class="form-control" type="text" name="Genero" value="<?php echo $rowlibro['Genero'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Operación</h2>
-            <select name="Operacion" id="">
+            <select class="form-control input-lg" name="Operacion" id="">
                 <option value="">Comprado</option>
                 <option value="">Donado</option>
             </select>
