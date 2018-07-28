@@ -162,7 +162,7 @@ body{
 	color: #EBEBD3;
 }
 .contenedor-clima{
-	background:rgba(0,0,0,0.9);
+	background:#EBEBD3;
 	border: 2px solid #EE964B;
 	margin-top: 20px;
 	animation: zoomIn 1s forwards;
