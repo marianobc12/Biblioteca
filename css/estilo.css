@@ -629,6 +629,6 @@ body{
 .contenedor-tabla-prestamo .table td{
 	color: #EBEBD3;
 }
-.contenedor-tabla-prestamo .table td>button{
+.contenedor-tabla-prestamo .table td>form>button{
 	width: 100%;
 }

@@ -102,8 +102,18 @@
                         <td><?php echo $rowprestamos['Titulo'] ?></td>
                         <td><?php echo $rowprestamos['Fecha_Prestamo'] ?></td>
                         <td>22/02/2018</td>
-                        <td><button class="btn btn-success"><i class="fas fa-check"></i> Finalizar</button></td>
-                        <td><button class="btn btn-danger"><i class="fas fa-trash"></i> Borrar</button></td>
+                        <td>
+                            <form action="" method="">
+                            <input name="Id_Prestamo" type="text" value="<?php echo $rowprestamos['Id_Prestamo']; ?>" style="display:none;">
+                                <button class="btn btn-success"><i class="fas fa-check"></i> Finalizar</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="">
+                                <input name="Id_Prestamo" type="text" value="<?php echo $rowprestamos['Id_Prestamo']; ?>" style="display:none;">
+                                <button class="btn btn-danger"><i class="fas fa-trash"></i> Borrar</button>
+                            </form>
+                        </td>
                     </tr>
                     <?php
                         }
