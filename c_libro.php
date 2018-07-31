@@ -82,7 +82,7 @@
             </div>
         </div>
     </nav>
-    <form class="col-md-6 col-md-offset-3 tarjeta-usuario" method="post" action="" id="tarjeta-usuario">
+    <form class="col-md-6 col-md-offset-3 tarjeta-usuario" method="post" action="m_libro.php" id="tarjeta-usuario">
         <div class="col-md-12">
             <h1><i class="fas fa-book"></i> <?php echo $rowlibro['Titulo'] ?></h1>
         </div>

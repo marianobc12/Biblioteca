@@ -247,4 +247,32 @@ function Traer_Prestamos(){
 	
 }
 
+
+function Modificar_Libro(){
+	$Num_Inventario=$_POST['Num_Inventario'];
+	$Fecha_Entrada=$_POST['Fecha_Entrada'];
+	$Autor=$_POST['Autor'];
+	$Titulo=$_POST['Titulo'];
+	$Editorial=$_POST['Editorial'];
+	$Genero=$_POST['Genero'];
+	$Tipo_Operacion=$_POST['Operacion'];
+
+	$link=Conexion();
+
+	$sql="SELECT * FROM libro WHERE Num_Inventario='$Num_Inventario'";
+	$res=mysqli_query($link,$sql);
+	$row=$res->fetch_assoc();
+
+	if ($row['Num_Inventario']==$Num_Inventario) {
+		$Existe="Si";
+		$sql="UPDATE libro SET Fecha_Entrada='$Fecha_Entrada',Autor='$Autor',Titulo='$Titulo',Editorial='$Editorial',Tipo_Operacion='$Tipo_Operacion',Genero='$Genero' WHERE Num_Inventario='$Num_Inventario'";
+		$res=mysqli_query($link,$sql);
+	}else{
+		$Existe="No";
+	}
+	return $Existe;
+}
+
+
+
 ?>
