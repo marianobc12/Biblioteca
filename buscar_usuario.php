@@ -91,7 +91,7 @@
 			<?php
 				while ($row=$resnombres->fetch_assoc()) {
 			?>
-				<option value="<?php echo $row['Dni']; ?>"><?php echo $row['Nom_Ape']; ?></option>
+				<option  value="<?php echo $row['Dni']; ?>"><?php echo $row['Nom_Ape']; ?></option>
 			<?php
 				}
 			?>

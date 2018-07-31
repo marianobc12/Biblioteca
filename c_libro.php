@@ -129,8 +129,8 @@
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Operación</h2>
             <select class="form-control input-lg" name="Operacion" id="">
-                <option value="">Comprado</option>
-                <option value="">Donado</option>
+                <option <?php if($rowlibro['Tipo_Operacion']=="Comprado"){echo "selected";} ?> value="Comprado">Comprado</option>
+                <option <?php if($rowlibro['Tipo_Operacion']=="Donado"){echo "selected";} ?> value="Donado">Donado</option>
             </select>
         </div>
     </form>

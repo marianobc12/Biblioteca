@@ -216,7 +216,6 @@ function Eliminar_Usuario(){
 	$sql="DELETE FROM usuario WHERE Dni='$Dni'";
 
 	mysqli_query($link,$sql);
-	
 }
 
 function Traer_Datos_Libros(){
