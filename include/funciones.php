@@ -274,5 +274,22 @@ function Modificar_Libro(){
 }
 
 
+function Terminar_Prestamo(){
+	$Id_Prestamo=$_POST['Id_Prestamo'];
+	$Id_Libro=$_POST['Id_Libro'];
+
+	$link=Conexion();
+
+	$sql="UPDATE prestamo SET Activo='No' WHERE Id_Prestamo='$Id_Prestamo'";
+
+	mysqli_query($link,$sql);
+
+	$sql="UPDATE libro SET Disponibilidad='Disponible' WHERE Id_Libro='$Id_Libro'";
+
+	mysqli_query($link,$sql);
+}
+
+
+
 
 ?>
