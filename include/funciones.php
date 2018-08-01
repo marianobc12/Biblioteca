@@ -4,7 +4,7 @@ function Conexion(){
 	$link	= mysqli_connect('localhost', 'root','root','biblioteca')or die('No se pudo conectar a la DB'. mysqli_error($link));
 	return $link;
 }
-/*('localhost', 'id6360398_root','biblioteca1234','id6360398_biblioteca')*/
+/*('localhost', 'id6360398_biblioteca','biblioteca','id6360398_biblioteca')*/
 
 function Traer_Nombres_Usuarios(){
 	$link=Conexion();
