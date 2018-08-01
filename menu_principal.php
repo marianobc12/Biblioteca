@@ -96,9 +96,8 @@
 		</div>
 	</div>
 	<div class="row">
-			<div class="col-md-2 col-md-offset-5 contenedor-clima">
-				<div id="cont_ee8ebbccb0357917ebf5246e2edfe570"><script type="text/javascript" async src="https://www.meteored.com.ar/wid_loader/ee8ebbccb0357917ebf5246e2edfe570"></script></div>
-			</div>
+		<div class="contenedor-clima" id="TT_FWtwrBthtaDa8jKUVfr111E11CaULYU2Laoa5IvlwEz">El tiempo - Tutiempo.net</div>
+		<script type="text/javascript" src="https://www.tutiempo.net/s-widget/l_FWtwrBthtaDa8jKUVfr111E11CaULYU2Laoa5IvlwEz"></script>
 	</div>
 </div>
 </body>

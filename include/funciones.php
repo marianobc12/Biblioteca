@@ -38,17 +38,18 @@ function Recuperar_Cuenta(){
 	$res=mysqli_query($link,$sql);
 	$row=$res->fetch_assoc();
 	$numerorow=count($row);
-	echo $numerorow;
-	if ($numerorow>0) {
-		$cuenta="true";
-		$Dni=$row['Dni'];
-		$Clave=$row['Clave'];
-		$Mensaje="Recuperacion de cuenta - Sistema Bibliotecario Adolfo Alsina\n Cuenta Recuperada\n D.N.I: ".$Dni."\n Contraseña: ".$Clave."\n Saludos!";
-		mail($Email, "Recuperar Cuenta - Sistema Bibliotecario Adolfo Alsina", $Mensaje);
-		echo "Mensaje enviado a su email";
+	if ($Email==NULL){
+		$cuenta="null";
 	}else{
-		$cuenta="false";
-		echo "NO EXISTE ESA CUENTA";
+		if ($numerorow>0) {
+			$cuenta="true";
+			$Dni=$row['Dni'];
+			$Clave=$row['Clave'];
+			$Mensaje="Recuperacion de cuenta - Sistema Bibliotecario Adolfo Alsina\n Cuenta Recuperada\n D.N.I: ".$Dni."\n Contraseña: ".$Clave."\n Saludos!";
+			mail($Email, "Recuperar Cuenta - Sistema Bibliotecario Adolfo Alsina", $Mensaje);
+		}else{
+			$cuenta="false";
+		}
 	}
 	return $cuenta;
 }
