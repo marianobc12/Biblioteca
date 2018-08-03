@@ -112,8 +112,8 @@ body{
 .formulario-login{
 	background-color:#683D2C;
 	margin-top: 150px;
-	border: 2px solid #EE964B;
 	animation: zoomIn 0.5s forwards;
+	border:2px solid #EE964B;
 	box-shadow: 0px 5px 40px black;
 }
 .formulario-login h1{
@@ -136,7 +136,6 @@ body{
 	width: 60%;
 	text-align: center;
 	font-size: 25px;
-	border: 2px solid #EE964B;
 }
 .formulario-login .campos-login input:focus{
     box-shadow: 0px 5px 40px black;
@@ -265,12 +264,9 @@ body{
 }
 .form-altausuario .contenedor-campos input{
 	width: 100%;
-	font-size: 20px;
-	border: 2px solid #EE964B;
 }
 .form-altausuario .contenedor-campos select{
-	width: 100%;
-	border: 2px solid #EE964B;	
+	width: 100%;	
 }
 .form-altausuario .contenedor-campos .guardar{
 	display: block;
@@ -315,8 +311,6 @@ body{
 .form-busquedausuario input{
 	display: block;
 	margin: auto;
-	font-size: 20px;
-	border: 2px solid #EE964B;
 	width: 50%;
 }
 .form-busquedausuario i{
@@ -363,8 +357,6 @@ body{
 	color: #EBEBD3;	
 }
 .tarjeta-usuario input{
-	font-size: 20px;
-	border: 2px solid #EE964B;	
 	width: 100%;
 }
 .tarjeta-usuario h1{
@@ -382,7 +374,6 @@ body{
 }
 .tarjeta-usuario  select{
 	width: 100%;
-	border: 2px solid #EE964B;	
 }
 
 /* Modal alerta */
@@ -411,16 +402,11 @@ body{
 	font-size: 20px;
 	color: #EE964B;	
 }
-.form-perfil input{
-	font-size: 20px;
-	border: 2px solid #EE964B;	
+.form-perfil input{	
 	width: 100%;
 }
 .form-perfil select{
-	font-size: 20px;
-	border: 2px solid #EE964B;	
 	width: 100%;
-	padding: 2px;
 }
 .menu-perfil button{
 	width: 100%;
@@ -457,7 +443,6 @@ body{
 	margin: auto;
 	text-align: center;
 	font-size: 20px;
-	border: 2px solid #EE964B;	
 }
 .modal-contraseña .form-cambiocontra .guardar{
 	display: block;
@@ -629,8 +614,6 @@ body{
 }
 .form-alta-prestamo input{
 	width:100%;
-	font-size: 20px;
-	border: 2px solid #EE964B;
 }
 .form-alta-prestamo i{
 	color: #EBEBD3;
@@ -638,8 +621,6 @@ body{
 .form-alta-prestamo textarea{
 	width: 100%;
 	height: 100px;
-	font-size: 20px;
-	border: 2px solid #EE964B;
 }
 .form-alta-prestamo .prestar {
 	display: block;
@@ -696,15 +677,17 @@ body{
 	color: #EBEBD3;
 	text-align: center;
 }
-.contenedor-tabla-prestamo .table{
+.contenedor-tabla-prestamo .tabla-prestamo{
 	animation: fadeInLeft 1s forwards;
 }
-.contenedor-tabla-prestamo .table th{
+.contenedor-tabla-prestamo .tabla-prestamo th{
 	color: #EE964B;
+	text-align: center;
 }
-.contenedor-tabla-prestamo .table td{
+.contenedor-tabla-prestamo .tabla-prestamo td{
 	color: #EBEBD3;
+	text-align: center;
 }
-.contenedor-tabla-prestamo .table td>form>button{
+.contenedor-tabla-prestamo .tabla-prestamo td>form>button{
 	width: 100%;
 }

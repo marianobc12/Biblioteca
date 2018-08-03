@@ -79,47 +79,47 @@
 		<div class="row">
 			<div class="col-md-6 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-id-card"></i> D.N.I </h2>
-				<input class="form-control" type="text" name="Dni" required="" maxlength="8" placeholder="Ingresar D.N.I" minlength="8" >
+				<input class="form-control input-lg" type="text" name="Dni" required="" maxlength="8" placeholder="Ingresar D.N.I" minlength="8" >
 			</div>
 			<div class="col-md-6 col-sm-6  contenedor-campos">
 				<h2><i class="fas fa-user"></i> Nombre y Apellido </h2>
-				<input class="form-control" type="text" name="Nom_Ape" required="" maxlength="60" placeholder="Ingresar Nombre y Apellido">
+				<input class="form-control input-lg" type="text" name="Nom_Ape" required="" maxlength="60" placeholder="Ingresar Nombre y Apellido">
 			</div>	
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-calendar-alt"></i> Fecha de Nacimiento </h2>
-				<input class="form-control" type="date" name="Fecha_Nac" required="">
+				<input class="form-control input-lg" type="date" name="Fecha_Nac" required="">
 			</div>
 			<div class="col-md-6 col-sm-6 contenedor-campos">
 				<h2><i class="far fa-flag"></i> Nacionalidad</h2>
-				<input class="form-control" type="text" name="Nacionalidad" required="" maxlength="50" placeholder="Ej: Argentina">
+				<input class="form-control input-lg" type="text" name="Nacionalidad" required="" maxlength="50" placeholder="Ej: Argentina">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-phone-volume"></i> Teléfono</h2>
-				<input class="form-control" type="text" name="Telefono" required="" maxlength="20" placeholder="Ej: 4253254">
+				<input class="form-control input-lg" type="text" name="Telefono" required="" maxlength="20" placeholder="Ej: 4253254">
 			</div>
 			<div class="col-md-6 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-mobile-alt"></i> Celular</h2>
-				<input class="form-control" type="text" name="Celular" maxlength="20" placeholder="Ej: 2215678532">
+				<input class="form-control input-lg" type="text" name="Celular" maxlength="20" placeholder="Ej: 2215678532">
 			</div>	
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-map-marker-alt"></i> Domicilio </h2>
-				<input class="form-control" type="text" name="Domicilio" required="" maxlength="100" placeholder="Ej: 4 e/ 37 y 38">
+				<input class="form-control input-lg" type="text" name="Domicilio" required="" maxlength="100" placeholder="Ej: 4 e/ 37 y 38">
 			</div>
 			<div class="col-md-6 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-map-marker-alt"></i> Escuela o lugar de trabajo</h2>
-				<input class="form-control" type="text" name="Escuela_Trabajo" maxlength="100" placeholder="Ingresar Dirección">
+				<input class="form-control input-lg" type="text" name="Escuela_Trabajo" maxlength="100" placeholder="Ingresar Dirección">
 			</div>	
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-envelope"></i> Email</h2>
-				<input class="form-control" type="email" name="Email" maxlength="100" placeholder="Ej: Ejemplo@dominio.com">
+				<input class="form-control input-lg" type="email" name="Email" maxlength="100" placeholder="Ej: Ejemplo@dominio.com">
 			</div>
 			<div class="col-md-6 col-sm-6 contenedor-campos">
 				<button type="submit" class="btn guardar"><i class="fas fa-save fa-lg"></i>  Guardar</button>

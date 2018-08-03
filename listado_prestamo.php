@@ -9,6 +9,7 @@
     include('include/funciones.php');
     $rowusuario=Traer_Datos_Usuarios();
     $resprestamos=Traer_Prestamos();
+    $cantprestamos=mysqli_num_rows($resprestamos);
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +85,10 @@
         <div class="table-responsive col-md-8 col-md-offset-2 contenedor-tabla-prestamo">
             <h1>Prestamos</h1>
             <h2><i class="fas fa-user"></i> <?php echo $rowusuario['Nom_Ape'] ?></h2>
-            <table class="table table-bordered">
+            <?php
+                if($cantprestamos>0){
+            ?>
+            <table class="table table-bordered tabla-prestamo">
                 <thead>
                     <th>Nº de Ejemplar</th>
                     <th>Libro</th>
@@ -118,9 +122,13 @@
                     </tr>
                     <?php
                         }
+                    }else{
                     ?>
+                    <div class="alert alert-info col-md-6 col-md-offset-3 text-center" role="alert" style="animation:zoomIn 0.5s forwards">
+                        <strong>Notificación:</strong> El usuario no presenta actualmente ningún prestamo.
+                    </div>
                     <?php
-                        $rowprestamos['Id_Libro'];
+                    }
                     ?>
                 </tbody>
             </table>

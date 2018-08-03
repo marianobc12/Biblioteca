@@ -104,39 +104,39 @@
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> D.N.I</h2>
-            <input class="form-control" type="number" name="Dni" value="<?php echo $resdatos['Dni']; ?>">
+            <input class="form-control input-lg" type="number" name="Dni" value="<?php echo $resdatos['Dni']; ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-user"></i> Nombre</h2>
-            <input class="form-control" type="text" name="Nom_Ape" value="<?php echo $resdatos['Nom_Ape']; ?>" >
+            <input class="form-control input-lg" type="text" name="Nom_Ape" value="<?php echo $resdatos['Nom_Ape']; ?>" >
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-calendar-alt"></i> Fecha de nacimiento</h2>
-            <input class="form-control" type="date" name="Fecha_Nac" value="<?php echo $resdatos['Fec_Nac']; ?>">
+            <input class="form-control input-lg" type="date" name="Fecha_Nac" value="<?php echo $resdatos['Fec_Nac']; ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="far fa-flag"></i> Nacionalidad</h2>
-            <input class="form-control" type="text" name="Nacionalidad" value="<?php echo $resdatos['Nacionalidad']; ?>">
+            <input class="form-control input-lg" type="text" name="Nacionalidad" value="<?php echo $resdatos['Nacionalidad']; ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-phone-volume"></i> Teléfono</h2>
-            <input class="form-control" type="text" name="Telefono" value="<?php echo $resdatos['Telefono']; ?>">
+            <input class="form-control input-lg" type="text" name="Telefono" value="<?php echo $resdatos['Telefono']; ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-mobile-alt"></i> Celular</h2>
-            <input class="form-control" type="text" name="Celular" value="<?php echo $resdatos['Celular']; ?>">
+            <input class="form-control input-lg" type="text" name="Celular" value="<?php echo $resdatos['Celular']; ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-map-marker-alt"></i> Domicilio</h2>
-            <input class="form-control" type="text" name="Domicilio" value="<?php echo $resdatos['Domicilio']; ?>">
+            <input class="form-control input-lg" type="text" name="Domicilio" value="<?php echo $resdatos['Domicilio']; ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-map-marker-alt"></i> Escuela o Lugar de trabajo</h2>
-            <input class="form-control" type="text" name="Escuela_Trabajo" value="<?php echo $resdatos['Domicilio_Seg']; ?>">
+            <input class="form-control input-lg" type="text" name="Escuela_Trabajo" value="<?php echo $resdatos['Domicilio_Seg']; ?>">
         </div>
         <div class="col-md-12">
             <h2><i class="fas fa-envelope"></i> Email</h2>
-            <input class="form-control" type="text" name="Email" value="<?php echo $resdatos['Email']; ?>">
+            <input class="form-control input-lg" type="text" name="Email" value="<?php echo $resdatos['Email']; ?>">
         </div>
     </form>
     <div class="modal fade modal-eliminar" id="Modal-Eliminar_Usuario">

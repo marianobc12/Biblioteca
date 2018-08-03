@@ -143,7 +143,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <h2><i class="fas fa-user"></i> Buscar usuario</h2>
-                            <input class="form-control" list="buscador-usuarios" name="Dni" required="" maxlength="60" placeholder="Escriba nombre" autocomplete="off">
+                            <input class="form-control input-lg" list="buscador-usuarios" name="Dni" required="" maxlength="60" placeholder="Escriba nombre" autocomplete="off">
                             <datalist id="buscador-usuarios">
                             <?php
                                 while ($row=$resnombres->fetch_assoc()) {
@@ -156,7 +156,7 @@
                         </div>
                         <div class="col-md-6">
                             <h2><i class="fas fa-book"></i> Buscar libro</h2>
-                            <input class="form-control" list="buscador-libros" name="Num_Inventario" required="" maxlength="60" placeholder="Escriba nombre" autocomplete="off">
+                            <input class="form-control input-lg" list="buscador-libros" name="Num_Inventario" required="" maxlength="60" placeholder="Escriba nombre" autocomplete="off">
                             <datalist id="buscador-libros">
                             <?php
                                 while ($row=$nombreslibros->fetch_assoc()) {
@@ -170,11 +170,11 @@
                     <div class="row">
                         <div class="col-md-6">
                             <h2><i class="fas fa-calendar-alt"></i> Fecha del prestamo</h2>
-                            <input class="form-control" type="date" name="Fecha_Prestamo">
+                            <input class="form-control input-lg" type="date" name="Fecha_Prestamo">
                         </div>
                         <div class="col-md-6">
                             <h2><i class="fas fa-align-left"></i> Observaciones</h2>
-                            <textarea class="form-control" name="Observaciones"></textarea>
+                            <textarea class="form-control input-lg" name="Observaciones"></textarea>
                         </div>
                     </div>
                     <div class="row">

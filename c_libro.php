@@ -104,27 +104,27 @@
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Nº de Inventario</h2>
-            <input class="form-control" type="number" name="Num_Inventario" value="<?php echo $rowlibro['Num_Inventario'] ?>">
+            <input class="form-control input-lg" type="number" name="Num_Inventario" value="<?php echo $rowlibro['Num_Inventario'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Fecha Entrada</h2>
-            <input class="form-control" type="date" name="Fecha_Entrada" value="<?php echo $rowlibro['Fecha_Entrada'] ?>">
+            <input class="form-control input-lg" type="date" name="Fecha_Entrada" value="<?php echo $rowlibro['Fecha_Entrada'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Autor</h2>
-            <input class="form-control" type="text" name="Autor" value="<?php echo $rowlibro['Autor'] ?>">
+            <input class="form-control input-lg" type="text" name="Autor" value="<?php echo $rowlibro['Autor'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Título</h2>
-            <input class="form-control" type="text" name="Titulo" value="<?php echo $rowlibro['Titulo'] ?>">
+            <input class="form-control input-lg" type="text" name="Titulo" value="<?php echo $rowlibro['Titulo'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Editorial</h2>
-            <input class="form-control" type="text" name="Editorial" value="<?php echo $rowlibro['Editorial'] ?>">
+            <input class="form-control input-lg" type="text" name="Editorial" value="<?php echo $rowlibro['Editorial'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Género</h2>
-            <input class="form-control" type="text" name="Genero" value="<?php echo $rowlibro['Genero'] ?>">
+            <input class="form-control input-lg" type="text" name="Genero" value="<?php echo $rowlibro['Genero'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Operación</h2>

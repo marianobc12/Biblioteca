@@ -86,7 +86,7 @@
 		<form class="col-md-4  col-md-offset-4 form-busquedausuario" action="c_libro.php" method="post" >
 			<h1>Buscar Libro</h1>
 			<h2><i class="fas fa-book"></i> Nº de inventario</h2>
-			<input class="form-control" list="browsers" name="Num_Inventario" required="" maxlength="60" placeholder="Escribir Nombre" autocomplete="off">
+			<input class="form-control input-lg" list="browsers" name="Num_Inventario" required="" maxlength="60" placeholder="Escribir Nombre" autocomplete="off">
 			<datalist id="browsers">
 			<?php
 				while ($row=$nombreslibros->fetch_assoc()) {
