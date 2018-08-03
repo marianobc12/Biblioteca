@@ -119,6 +119,9 @@
                     <?php
                         }
                     ?>
+                    <?php
+                        $rowprestamos['Id_Libro'];
+                    ?>
                 </tbody>
             </table>
         </div>

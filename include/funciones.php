@@ -60,14 +60,10 @@ function Modificar_Cuenta(){
 	$Nom_Ape=$_POST['Nom_Ape'];
 	$Email=$_POST['Email'];
 
-	if ($Dni==null || $Nom_Ape==null || $Email==null) {
-		header('Location:mi_perfil.php');	
-	}else{
-		$link=Conexion();
-		$sql="UPDATE cuenta SET Dni='$Dni',Nom_Ape='$Nom_Ape',Email='$Email' WHERE Id_Cuenta='$Id_Cuenta'";
-		$res=mysqli_query($link,$sql);
-		header('Location:mi_perfil.php'); 
-	}
+	$link=Conexion();
+	$sql="UPDATE cuenta SET Dni='$Dni',Nom_Ape='$Nom_Ape',Email='$Email' WHERE Id_Cuenta='$Id_Cuenta'";
+	$res=mysqli_query($link,$sql);
+
 }
 
 function Nuevo_Usuario(){
