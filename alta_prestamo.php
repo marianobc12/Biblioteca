@@ -169,12 +169,12 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <h2><i class="fas fa-calendar-alt"></i> Fecha del prestamo</h2>
+                            <h2><i class="fas fa-calendar-alt"></i> Inicio del prestamo</h2>
                             <input class="form-control input-lg" type="date" name="Fecha_Prestamo">
                         </div>
                         <div class="col-md-6">
-                            <h2><i class="fas fa-align-left"></i> Observaciones</h2>
-                            <textarea class="form-control input-lg" name="Observaciones"></textarea>
+                            <h2><i class="fas fa-calendar-alt"></i> Fin del prestamo</h2>
+                            <input class="form-control input-lg" type="date" name="Fecha_Fin_Prestamo">
                         </div>
                     </div>
                     <div class="row">

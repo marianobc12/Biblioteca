@@ -174,7 +174,7 @@ function Nuevo_Prestamo(){
 	$Dni=$_POST['Dni'];
 	$Num_Inventario=$_POST['Num_Inventario'];
 	$Fecha_Prestamo=$_POST['Fecha_Prestamo'];
-	$Observaciones=$_POST['Observaciones'];
+	$Fecha_Fin_Prestamo=$_POST['Fecha_Fin_Prestamo'];
 
 	$link=Conexion();
 
@@ -197,7 +197,7 @@ function Nuevo_Prestamo(){
 	mysqli_query($link,$sql);
 
 	// NUEVO PRESTAMO AGREGADO A LA BASE DE DATOS//
-	$sql="INSERT INTO prestamo (Id_Usuario,Id_Libro,Fecha_Prestamo,Observaciones,Activo) VALUES ('$Id_Usuario','$Id_Libro','$Fecha_Prestamo','$Observaciones','Si')";
+	$sql="INSERT INTO prestamo (Id_Usuario,Id_Libro,Fecha_Prestamo,Fecha_Fin_Prestamo,Activo) VALUES ('$Id_Usuario','$Id_Libro','$Fecha_Prestamo','$Fecha_Fin_Prestamo','Si')";
 	
 	mysqli_query($link,$sql);
 
