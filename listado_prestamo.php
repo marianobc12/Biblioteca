@@ -105,7 +105,7 @@
                         <td><?php echo $rowprestamos['Num_Inventario'] ?></td>
                         <td><?php echo $rowprestamos['Titulo'] ?></td>
                         <td><?php echo $rowprestamos['Fecha_Prestamo'] ?></td>
-                        <td>22/02/2018</td>
+                        <td><?php echo $rowprestamos['Fecha_Fin_Prestamo'] ?></td>
                         <td>
                             <form action="t_prestamo.php" method="post">
                             <input name="Id_Prestamo" type="text" value="<?php echo $rowprestamos['Id_Prestamo']; ?>" style="display:none;">

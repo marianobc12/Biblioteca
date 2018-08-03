@@ -284,6 +284,13 @@ function Terminar_Prestamo(){
 	$sql="UPDATE libro SET Disponibilidad='Disponible' WHERE Id_Libro='$Id_Libro'";
 
 	mysqli_query($link,$sql);
+
+	$Fecha_Actual=date('Y-m-d');
+
+	$sql="INSERT INTO devolucion (Id_Prestamo,Fecha_Devolucion) VALUES ('$Id_Prestamo','$Fecha_Actual')";
+
+	mysqli_query($link,$sql);
+
 }
 
 

@@ -42,8 +42,8 @@ CREATE TABLE IF NOT EXISTS `devolucion` (
   `Fecha_Devolucion` date NOT NULL,
   PRIMARY KEY (`Id_Devolucion`),
   KEY `Id_Prestamo` (`Id_Prestamo`),
-  CONSTRAINT `Id_Prestamo` FOREIGN KEY (`Id_Prestamo`) REFERENCES `prestamo` (`Id_Prestamo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de devolucion de libros';
+  CONSTRAINT `Id_Prestamo` FOREIGN KEY (`Id_Prestamo`) REFERENCES `prestamo` (`Id_Prestamo`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de devolucion de libros';
 
 -- Volcando datos para la tabla biblioteca.devolucion: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `devolucion` DISABLE KEYS */;
@@ -69,12 +69,12 @@ CREATE TABLE IF NOT EXISTS `libro` (
 /*!40000 ALTER TABLE `libro` DISABLE KEYS */;
 INSERT INTO `libro` (`Id_Libro`, `Num_Inventario`, `Fecha_Entrada`, `Autor`, `Titulo`, `Editorial`, `Tipo_Operacion`, `Genero`, `Disponibilidad`) VALUES
 	(1, 3121, '2018-06-14', 'Carlo  Andez', 'Pinocho', 'Santillana', 'Donado', '82-36', 'Disponible'),
-	(2, 4000, '0000-00-00', 'Jorge Luis Borges', 'Cenicienta', 'Santillana', 'Comprado', '82-36', 'Ocupado'),
+	(2, 4000, '0000-00-00', 'Jorge Luis Borges', 'Cenicienta', 'Santillana', 'Comprado', '82-36', 'Disponible'),
 	(3, 4332, '2018-07-31', 'Jorge Luis Borges', 'Duende', 'Santillana', 'Donado', '82-36', 'Disponible'),
-	(4, 4323, '2018-07-23', 'Jorge Luis Borges', 'Duende', 'Santillana', 'Comprado', '82-32', 'Ocupado'),
-	(5, 2312, '2018-07-24', 'Jorge Luis Borges', 'El Aleph', 'Mundo Azul', 'Comprado', '82-32', 'Ocupado'),
-	(6, 3212, '2018-07-24', 'Luis Ven', 'Seguridad Informatica', 'Microsoft', 'Donado', '82-36', 'Ocupado'),
-	(7, 3214, '2018-07-27', 'Marquez', 'El almohadon de plumas', 'Santillana', 'Donado', '82-36', 'Ocupado'),
+	(4, 4323, '2018-07-23', 'Jorge Luis Borges', 'Duende', 'Santillana', 'Comprado', '82-32', 'Disponible'),
+	(5, 2312, '2018-07-24', 'Jorge Luis Borges', 'El Aleph', 'Mundo Azul', 'Comprado', '82-32', 'Disponible'),
+	(6, 3212, '2018-07-24', 'Luis Ven', 'Seguridad Informatica', 'Microsoft', 'Donado', '82-36', 'Disponible'),
+	(7, 3214, '2018-07-27', 'Marquez', 'El almohadon de plumas', 'Santillana', 'Donado', '82-36', 'Disponible'),
 	(8, 2323, '2018-07-28', 'Jorge Luis Borges', 'Cenicienta', 'Santillana', 'Comprado', '82-36', 'Disponible');
 /*!40000 ALTER TABLE `libro` ENABLE KEYS */;
 
@@ -85,28 +85,17 @@ CREATE TABLE IF NOT EXISTS `prestamo` (
   `Id_Usuario` int(11) NOT NULL,
   `Id_Libro` int(11) NOT NULL,
   `Fecha_Prestamo` date NOT NULL,
-  `Observaciones` longtext COLLATE utf8_bin NOT NULL,
+  `Fecha_Fin_Prestamo` date NOT NULL,
   `Activo` varchar(2) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`Id_Prestamo`),
   KEY `Id_Usuario` (`Id_Usuario`),
   KEY `Id_Libro` (`Id_Libro`),
-  CONSTRAINT `Id_Libro` FOREIGN KEY (`Id_Libro`) REFERENCES `libro` (`Id_Libro`),
-  CONSTRAINT `Id_Usuario` FOREIGN KEY (`Id_Usuario`) REFERENCES `usuario` (`Id_Usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de prestamo';
+  CONSTRAINT `Id_Libro` FOREIGN KEY (`Id_Libro`) REFERENCES `libro` (`Id_Libro`) ON DELETE CASCADE,
+  CONSTRAINT `Id_Usuario` FOREIGN KEY (`Id_Usuario`) REFERENCES `usuario` (`Id_Usuario`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de prestamo';
 
--- Volcando datos para la tabla biblioteca.prestamo: ~7 rows (aproximadamente)
+-- Volcando datos para la tabla biblioteca.prestamo: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `prestamo` DISABLE KEYS */;
-INSERT INTO `prestamo` (`Id_Prestamo`, `Id_Usuario`, `Id_Libro`, `Fecha_Prestamo`, `Observaciones`, `Activo`) VALUES
-	(1, 213, 4, '2018-07-24', '', 'Si'),
-	(2, 211, 1, '2018-07-19', '', 'No'),
-	(4, 211, 5, '2018-07-17', '', 'No'),
-	(5, 202, 2, '2018-07-05', '', 'Si'),
-	(6, 206, 6, '2018-07-10', '', 'Si'),
-	(7, 218, 7, '2018-07-27', '', 'Si'),
-	(8, 211, 8, '2018-07-31', '', 'No'),
-	(9, 211, 8, '2018-07-31', '', 'No'),
-	(10, 218, 5, '2018-07-31', '', 'No'),
-	(11, 211, 5, '2018-07-31', '', 'Si');
 /*!40000 ALTER TABLE `prestamo` ENABLE KEYS */;
 
 -- Volcando estructura para tabla biblioteca.usuario
@@ -125,16 +114,15 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `Fecha_Alta` date NOT NULL,
   PRIMARY KEY (`Id_Usuario`),
   UNIQUE KEY `Dni` (`Dni`)
-) ENGINE=InnoDB AUTO_INCREMENT=219 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de los usuarios';
+) ENGINE=InnoDB AUTO_INCREMENT=220 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de los usuarios';
 
--- Volcando datos para la tabla biblioteca.usuario: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla biblioteca.usuario: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`Id_Usuario`, `Dni`, `Nom_Ape`, `Fec_Nac`, `Nacionalidad`, `Telefono`, `Celular`, `Domicilio`, `Domicilio_Seg`, `Email`, `Fecha_Alta`) VALUES
 	(202, '31027895', 'Pepe', '2018-07-06', 'Argentina', '4233443', '3', '10 E/ 65 y 66', '3', 'marianoleandro1997@gmail.com', '2018-07-06'),
 	(206, '31027891', 'Laura Gonzales', '2018-07-06', 'Argentina', '4233443', '', '10 E/ 65 y 66', '', '', '2018-07-06'),
 	(211, '40714390', 'Jorge Latin', '2018-07-18', 'Chile', '4233443', '2215465577', '11 y 25', '4 y 66', 'jorg@hotmail.com', '2018-07-06'),
-	(213, '14758963', 'Lautaro Pinola', '1996-11-19', 'Argentina', '4235436', '', '11 y 22', '', '', '2018-07-06'),
-	(218, '40714396', 'Mariano Flores', '1997-10-24', 'Argentina', '4253165', '2215465577', '120 Y 65', '', '', '2018-07-27');
+	(219, '40714396', 'Mariano Flores', '1997-10-24', 'Argentina', '4253165', '2216779983', '12 y 65', '', 'mariano@hotmail.com', '2018-08-03');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

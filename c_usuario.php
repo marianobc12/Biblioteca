@@ -151,6 +151,9 @@
             <div class="modal-body">
                 <div class="container-fluid">
                     <div class="row">
+                        <div class="alert alert-warning">
+                            <strong>Atención:</strong> Si elimina el usuario , también se borrarán sus prestamos y devoluciones</a>.
+                        </div>
                         <form action="e_usuario.php" method="post" class="col-md-12 eliminar-usuario">
                             <input type="number" name="Dni" value="<?php echo $resdatos['Dni']; ?>" style="display:none;">
                             <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 ">
