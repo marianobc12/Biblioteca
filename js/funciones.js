@@ -39,3 +39,6 @@ function eliminar_usuario() {
     $('#Modal-Eliminar_Usuario').modal();
 }
 
+function eliminar_prestamo(){
+    $('#Modal-Eliminar-Prestamo').modal();
+}

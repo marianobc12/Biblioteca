@@ -23,7 +23,17 @@
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/funciones.js"></script>
-	<title>Menú Principal - Biblioteca Adolfo Alsina</title>
+    <title>Menú Principal - Biblioteca Adolfo Alsina</title>
+    
+    <script type="text/javascript">
+		$(function(){
+	    $(".btn-eliminar-prestamo").click(function(e) {
+	        e.preventDefault();
+            var data = $(this).attr("data-valor");
+	        document.getElementById("Id_Prestamo").value=data;
+	    	});
+		});
+	</script>
 </head>
 <body  style="background-image:url(img/fondo-sistema.jpg);">
 <nav class="navbar navbar-inverse menu-principal">
@@ -76,7 +86,7 @@
 </nav>
 <div class="container-fluid">
     <div class="row">
-        <div class="table-responsive col-md-8 col-md-offset-2 contenedor-tabla-prestamo">
+        <div class="table-responsive col-md-8 col-md-offset-2 col-sm-12   contenedor-tabla-prestamo">
             <h1>Prestamos</h1>
             <h2><i class="fas fa-user"></i> <?php echo $rowusuario['Nom_Ape'] ?></h2>
             <?php
@@ -84,10 +94,10 @@
             ?>
             <table class="table table-bordered tabla-prestamo">
                 <thead>
-                    <th>Nº de Ejemplar</th>
-                    <th>Libro</th>
-                    <th>Inicio</th>
-                    <th>Fin</th>
+                    <th>Nº de Inventario</th>
+                    <th><i class="fas fa-book"></i> Libro</th>
+                    <th><i class="fas fa-calendar-alt"></i> Inicio</th>
+                    <th><i class="fas fa-calendar-alt"></i> Fin</th>
                     <th></th>
                     <th></th>
                 </thead>
@@ -102,16 +112,13 @@
                         <td><?php echo $rowprestamos['Fecha_Fin_Prestamo'] ?></td>
                         <td>
                             <form action="t_prestamo.php" method="post">
-                            <input name="Id_Prestamo" type="text" value="<?php echo $rowprestamos['Id_Prestamo']; ?>" style="display:none;">
-                            <input name="Id_Libro" type="text" value="<?php echo $rowprestamos['Id_Libro']; ?>" style="display:none;">
-                                <button class="btn btn-success"><i class="fas fa-check"></i> Finalizar</button>
+                                <input name="Id_Prestamo" type="text" value="<?php echo $rowprestamos['Id_Prestamo']; ?>" style="display:none;">
+                                <input name="Id_Libro" type="text" value="<?php echo $rowprestamos['Id_Libro']; ?>" style="display:none;">
+                                    <button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Finalizar</button>
                             </form>
                         </td>
                         <td>
-                            <form action="">
-                                <input name="Id_Prestamo" type="text" value="<?php echo $rowprestamos['Id_Prestamo']; ?>" style="display:none;">
-                                <button class="btn btn-danger"><i class="fas fa-trash"></i> Borrar</button>
-                            </form>
+                            <button type="button" class="btn btn-danger btn-eliminar-prestamo" data-valor="<?php echo $rowprestamos['Id_Prestamo']?>" onclick="eliminar_prestamo();"><i class="fas fa-trash"></i> Borrar</button>
                         </td>
                     </tr>
                     <?php
@@ -129,6 +136,40 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+<div class="modal fade modal-eliminar" id="Modal-Eliminar-Prestamo">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">¿Deseas eliminar el prestamo?</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="alert alert-warning">
+                            <strong>Atención:</strong> Si elimina el prestamo , el libro vuelve a estar disponible para ser prestado.
+                        </div>
+                        <form action="e_usuario.php" method="post" class="col-md-12 eliminar-prestamo">
+                            <input type="number"  id="Id_Prestamo" name="Id_Prestamo" style="display:none;">
+                            <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 ">
+                                <button type="submit" class="btn  eliminar">Si , Eliminar</button>
+                            </div>
+                            <div class="col-md-4 col-sm-4 ">
+                                <button type="button" class="btn cancelar" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
