@@ -152,9 +152,13 @@
                         </div>
                     </div>
                     <div class="row">
+                        <?php
+                            date_default_timezone_set("America/Buenos_Aires");
+                            $fecha_actual=date("Y-m-d");
+                        ?>
                         <div class="col-md-6">
                             <h2><i class="fas fa-calendar-alt"></i> Inicio del prestamo</h2>
-                            <input class="form-control input-lg" type="date" name="Fecha_Prestamo">
+                            <input class="form-control input-lg" type="date" name="Fecha_Prestamo" value="<?php echo $fecha_actual; ?>">
                         </div>
                         <div class="col-md-6">
                             <h2><i class="fas fa-calendar-alt"></i> Fin del prestamo</h2>

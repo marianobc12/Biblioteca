@@ -40,6 +40,7 @@
 				?>
 				<div class="col-md-12">
 					<button type="submit" class="btn recuperar"><i class="fas fa-unlock-alt"></i> Recuperar Cuenta</button>
+					<button class="btn recuperar" onclick="location.href='index.php'"><i class="fas fa-undo"></i> Volver al acceso</button>
 				</div>
 			</form>
 		</div>
