@@ -59,12 +59,6 @@
                             <li><a href="buscar_prestamo.php"><i class="fas fa-search"></i> Buscar</a></li>
                         </ul>
                     </li>
-                    <li><a href="" class="dropdown" data-toggle="dropdown"><i class="fas fa-arrow-down"></i> Devoluciones <i class="fas fa-caret-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><i class="fas fa-user-plus"></i> Nuevo</a></li>
-                            <li><a href="#"><i class="fas fa-search"></i> Buscar</a></li>
-                        </ul>
-                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="" class="dropdown" data-toggle="dropdown"><i class="fas fa-user-circle"></i> Mi Cuenta <i class="fas fa-caret-down"></i></a>

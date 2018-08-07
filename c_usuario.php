@@ -59,12 +59,6 @@
                             <li><a href="buscar_prestamo.php"><i class="fas fa-search"></i> Buscar</a></li>
                         </ul>
                     </li>
-                    <li><a href="" class="dropdown" data-toggle="dropdown"><i class="fas fa-arrow-down"></i> Devoluciones <i class="fas fa-caret-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><i class="fas fa-user-plus"></i> Nuevo</a></li>
-                            <li><a href="#"><i class="fas fa-search"></i> Buscar</a></li>
-                        </ul>
-                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="" class="dropdown" data-toggle="dropdown"><i class="fas fa-user-circle"></i> Mi Cuenta <i class="fas fa-caret-down"></i></a>
@@ -85,6 +79,7 @@
     <form class="col-md-6 col-md-offset-3 tarjeta-usuario" method="post" action="m_usuario.php" id="tarjeta-usuario">
         <div class="col-md-12">
             <h1><i class="fas fa-user"></i> <?php echo $resdatos['Nom_Ape']; ?></h1>
+            <button type="button" class="btn btn-primary" style="display:block;margin:auto;font-size:20px;"><i class="fas fa-arrow-down"></i> Ver Devoluciones</button>
         </div>
         <div class="row">
             <div class="col-md-6 contenedor-menu">
