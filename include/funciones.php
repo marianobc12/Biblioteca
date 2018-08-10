@@ -210,9 +210,25 @@ function Eliminar_Usuario(){
 
 	$link=Conexion();
 
+	$sql="SELECT * FROM usuario WHERE Dni='$Dni'";
+
+	$res=mysqli_query($link,$sql);
+
+	$row=$res->fetch_assoc();
+
+	$Id_Usuario=$row['Id_Usuario'];
+
+
+	/* Consulta sql para poner disponibles los libros antes de eliminar el usuario , sus prestamos y sus devoluciones. */
+
+	$sql="UPDATE libro INNER JOIN prestamo ON libro.Id_Libro = prestamo.Id_Libro SET libro.Disponibilidad = 'Disponible' WHERE prestamo.Activo='Si' AND prestamo.Id_Usuario='$Id_Usuario'"; 
+
+	mysqli_query($link,$sql);
+
 	$sql="DELETE FROM usuario WHERE Dni='$Dni'";
 
 	mysqli_query($link,$sql);
+
 }
 
 function Traer_Datos_Libros(){
