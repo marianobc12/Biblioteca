@@ -293,6 +293,30 @@ function Terminar_Prestamo(){
 
 }
 
+function Borrar_Prestamo(){
+	$Id_Prestamo=$_POST['Id_Prestamo'];
+
+	$link=Conexion();
+
+	$sql="SELECT * FROM prestamo WHERE Id_Prestamo='$Id_Prestamo'";
+
+	$res=mysqli_query($link,$sql);
+
+	$row=$res->fetch_assoc();
+
+	$Id_Libro=$row['Id_Libro'];
+
+	$sql="UPDATE libro SET Disponibilidad='Disponible' WHERE Id_Libro='$Id_Libro'";
+
+	mysqli_query($link,$sql);
+
+	$sql="DELETE FROM prestamo WHERE Id_Prestamo='$Id_Prestamo'";
+
+	mysqli_query($link,$sql);
+
+
+}
+
 
 
 

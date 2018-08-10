@@ -156,7 +156,7 @@
                         <div class="alert alert-warning">
                             <strong>Atención:</strong> Si elimina el prestamo , el libro vuelve a estar disponible para ser prestado.
                         </div>
-                        <form action="e_usuario.php" method="post" class="col-md-12 eliminar-prestamo">
+                        <form action="e_prestamo.php" method="post" class="col-md-12 eliminar-prestamo">
                             <input type="number"  id="Id_Prestamo" name="Id_Prestamo" style="display:none;">
                             <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 ">
                                 <button type="submit" class="btn  eliminar">Si , Eliminar</button>
