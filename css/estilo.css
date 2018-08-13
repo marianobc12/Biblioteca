@@ -1,7 +1,7 @@
 /* importacion de fuente */
 @font-face {
 font-family: LibreBaskerville-Regular;
-src: url(../font/LibreBaskerville-Regular.ttf);
+src: url(../fonts/LibreBaskerville-Regular.ttf);
 }
 
 
@@ -717,4 +717,15 @@ body{
 	box-shadow: 0px 5px 40px black;
     outline: 0;
     border: 0px;
+}
+
+
+
+/* HISTORIAL DE PRESTAMOS REALIZADOS! */
+.contenedor-tabla-prestamo{
+	padding: 40px;
+	padding-top: 20px;
+}
+.contenedor-tabla-prestamo .tabla-historial-prestamo thead{
+	background:#EBEBD3;
 }
