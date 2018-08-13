@@ -18,6 +18,7 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/funciones.js"></script>
     <title>Menú Principal - Biblioteca Adolfo Alsina</title>
+    <link rel="stylesheet" href="DataTable/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="DataTable/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="DataTable/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="DataTable/css/dataTables.bootstrap.min.css">
@@ -25,11 +26,28 @@
     <script src="DataTable/js/jquery.dataTables.min.js"></script>
     <script src="DataTable/js/dataTables.bootstrap.min.js"></script>
     <script src="DataTable/js/dataTables.responsive.min.js"></script>
+    
+    <script src="DataTable/js/dataTables.buttons.min.js"></script>
+    <script src="DataTable/js/buttons.print.min.js"></script>
+
+    <script src="DataTable/js/pdfmake.min.js"></script>
+    <script src="DataTable/js/vfs_fonts.js"></script>
+    <script src="DataTable/js/buttons.html5.min.js"></script>
+
     <script>
         $(document).ready(function() {
-            $('#Tabla-Historial-Prestamo').DataTable();
+            $('#Tabla-Historial-Prestamo').DataTable( {
+                dom: 'Blfrtip',
+                buttons: [
+                    'print','pdfHtml5'
+                ],
+                "language": {
+                    "url": "DataTable/json/Spanish.json"
+                }
+            } );
         } );
     </script>
+    
 </head>
 <body  style="background-image:url(img/fondo-sistema.jpg);">
 <nav class="navbar navbar-inverse menu-principal">
