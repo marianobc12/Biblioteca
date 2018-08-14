@@ -26,6 +26,25 @@ src: url(../fonts/LibreBaskerville-Regular.ttf);
     opacity: 1;
   }
 }
+@keyframes lightSpeedIn {
+	from {
+	  transform: translate3d(100%, 0, 0) skewX(-30deg);
+	  opacity: 0;
+	}
+  
+	60% {
+	  transform: skewX(20deg);
+	  opacity: 1;
+	}
+  
+	80% {
+	  transform: skewX(-5deg);
+	}
+  
+	to {
+	  transform: translate3d(0, 0, 0);
+	}
+  }
 
 @keyframes fadeInUp {
 	from {
@@ -178,7 +197,6 @@ body{
 	color:#EE964B;
 	display: block;
 	text-align: center;
-	margin-bottom: 20px;
 	font-size: 20px;
 }
 .formulario-login .campos-login .facebook:hover{
@@ -698,6 +716,58 @@ body{
 }
 
 
+/* BOTON DESARROLLO (PROGRAMADORES) */
+.formulario-login .boton-desarrollador{
+	display: block;
+	margin: auto;
+	background: transparent;
+	margin-top: 10px;
+	color: #EBEBD3;
+}
+.formulario-login .boton-desarrollador:focus{
+	outline: none;	
+}
+.Modal-Desarrolladores{
+	animation:lightSpeedIn 1s forwards;
+}
+.Modal-Desarrolladores .logo-md{
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+}
+.Modal-Desarrolladores .modal-title{
+	color: rgb(32, 22, 92);
+	font-size: 25px;
+}
+.Modal-Desarrolladores .titulo-desarrolladores{
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+.Modal-Desarrolladores .programador img{
+	height: 150px;
+	width: 150px;
+	display: block;
+	margin: auto;
+}
+.Modal-Desarrolladores .programador .nombre{
+	font-size: 20px;
+}
+.Modal-Desarrolladores  .contacto{
+	font-size: 20px;	
+}
+.Modal-Desarrolladores .logo-visita{
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+}
+.Modal-Desarrolladores a{
+	text-decoration: none;
+}
+.boton-desarrollador img{
+	height: 30px;
+	width: 30px;
+	border-radius: 100%;
+}
 
 
 

@@ -50,6 +50,9 @@
 		<div class="col-md-12 col-sm-12 campos-login">
 			<a class="facebook" href="https://www.facebook.com/biadolfoalsina/" title="Ir a  facebook" target="_blank"><i class="fab fa-facebook fa-lg" style="color:#EBEBD3;"></i> Biblioteca Adolfo Alsina</a>
 		</div>
+		<div class="col-md-12">
+				<button type="button" class="btn boton-desarrollador" data-toggle="modal" data-target="#Modal-Desarrolladores"><img src="img/logo-md.png" alt="MutantDevs"> Desarrollado por MutantDevs</button>
+		</div>
 	</form>
 
 	<div id="Modal-Alerta" class="modal fade" role="dialog">
@@ -68,5 +71,43 @@
 	    </div>
   		</div>
 	</div>
+
+
+	<div id="Modal-Desarrolladores" class="modal fade Modal-Desarrolladores" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><img src="img/logo-md.png" alt="MutantDevs" class="logo-md"> MutantDevs</h4>
+      </div>
+      <div class="modal-body">
+					<h1 class="text-center titulo-desarrolladores"> Desarrolladores</h1>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-6 programador">
+								<img class="img-circle" src="img/mariano.jpg" alt="Flores Mariano">
+								<h1 class="text-center nombre">Flores Mariano</h1>
+							</div>
+							<div class="col-md-6 programador">
+								<img class="img-circle" src="img/martin.png" alt="Flores Mariano">
+								<h1 class="text-center nombre">Martín Comito</h1>
+							</div>
+						</div>
+						<div class="row">
+							<h1 class="text-center titulo-desarrolladores"> Contacto</h1>
+							<a href="https://www.facebook.com/MutantDevs/" target="_blank"><h1 class="text-center contacto"><img src="img/logo-md.png" alt="MutantDevs" class="logo-visita"> ¡Visita nuestra página!</h1></a>
+							<h1 class="text-center contacto">Email: mutantdevs@gmail.com</h1>
+						</div>
+					</div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 </body>
 </html>
