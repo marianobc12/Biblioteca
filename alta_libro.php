@@ -94,6 +94,8 @@
                                 <a href="mi_perfil.php">
                                     <i class="fas fa-address-card"></i> Ver Datos</a>
                             </li>
+                            <li><a href="inventario.php"><i class="fas fa-book"></i> Inventario</a></li>
+					        <li><a href="historial_prestamo.php"><i class="fas fa-history"></i> Historial Prestamos</a></li>
                             <li style="display:<?php if ($_SESSION['TipoAcceso']=="Admin") {
                 			    	echo "block ";
                 			    }else{
