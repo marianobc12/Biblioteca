@@ -18,7 +18,7 @@
 	<script type="text/javascript" src="js/funciones.js"></script>
 	<title>Acceso - Biblioteca Adolfo Alsina</title>
 </head>
-<body style="background-image:url(img/fondo-sistema.jpg);">
+<body>
 	<form action="verificar_login.php" method="post" class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 formulario-login" onsubmit="return verificar_login();">
 		<h1><i class="fas fa-book"></i> Biblioteca</h1>
 		<h1>Adolfo Alsina</h1>

@@ -22,7 +22,7 @@
 	<script type="text/javascript" src="js/funciones.js"></script>
 	<title>Alta Usuario - Biblioteca Adolfo Alsina</title>
 </head>
-<body style="background-image:url(img/fondo-sistema.jpg);">
+<body>
 <nav class="navbar navbar-inverse menu-principal">
   <div class="container-fluid">
     <div class="navbar-header">

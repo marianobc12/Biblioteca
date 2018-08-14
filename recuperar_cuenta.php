@@ -16,7 +16,7 @@
 	<script type="text/javascript" src="js/funciones.js"></script>
 	<title>Recuperar Cuenta - Biblioteca Adolfo Alsina</title>
 </head>
-<body style="background-image:url(img/fondo-sistema.jpg);">
+<body>
 	<div class="container-fluid">
 		<div class="row">
 			<form class="col-md-6 col-md-offset-3 form-recuperar-cuenta" action="recuperar_cuenta.php" method="post">

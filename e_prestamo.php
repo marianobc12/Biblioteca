@@ -33,7 +33,7 @@
 		});
 	</script>
 </head>
-<body  style="background-image:url(img/fondo-sistema.jpg);">
+<body>
 <nav class="navbar navbar-inverse menu-principal">
   <div class="container-fluid">
     <div class="navbar-header">
