@@ -334,6 +334,19 @@ function Borrar_Prestamo(){
 }
 
 
+function Cantidad_Usuarios(){
+	$link=Conexion();
+
+	$sql="SELECT count(*) FROM usuario";
+	
+	$res=mysqli_query($link,$sql);
+
+	$cant_usuario=mysqli_fetch_row($res);
+
+	return $cant_usuario;
+}
+
+
 
 
 ?>

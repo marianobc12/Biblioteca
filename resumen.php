@@ -5,7 +5,10 @@
 		header('Location:index.php');	
 	}
 ?>
-
+<?php
+    include('include/funciones.php');
+    $cant_usuario=Cantidad_Usuarios();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -83,7 +86,7 @@
                 <h2 class="text-center">Registros Totales</h2>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                     <h3 class="text-center">Usuarios</h3>
-                    <h3 class="text-center"><i class="fas fa-user"></i> 500</h3>
+                    <h3 class="text-center"><i class="fas fa-user"></i> <?php echo $cant_usuario[0] ?></h3>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                     <h3 class="text-center">Libros</h1>
