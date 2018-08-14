@@ -358,5 +358,22 @@ function Cantidad_Libros(){
 	return $cant_libro;
 }
 
+function Cantidad_Prestamos_Hoy(){
+	$Fecha_Actual=date("Y-m-d");
+
+	$link=Conexion();
+
+	$sql="SELECT count(*) FROM prestamo WHERE Fecha_Prestamo='$Fecha_Actual'";
+
+	$res=mysqli_query($link,$sql);
+
+	$cant_prestamo_hoy=mysqli_fetch_row($res);
+
+	return $cant_prestamo_hoy;
+
+}
+
+
+
 
 ?>

@@ -9,6 +9,7 @@
     include('include/funciones.php');
     $cant_usuario=Cantidad_Usuarios();
     $cant_libro=Cantidad_Libros();
+    $cant_prestamo_hoy=Cantidad_Prestamos_Hoy();
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +100,7 @@
                 <h2 class="text-center">Actividad de hoy</h2>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                     <h3 class="text-center">Prestamos</h3>
-                    <h3 class="text-center"><i class="fas fa-arrow-up"></i> 10</h3>
+                    <h3 class="text-center"><i class="fas fa-arrow-up"></i> <?php echo $cant_prestamo_hoy[0] ?></h3>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                     <h3 class="text-center">Devoluciones</h1>
