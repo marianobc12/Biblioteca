@@ -466,6 +466,7 @@ body{
 	margin-top: 250px;
 	border: 2px solid #EE964B;
 	box-shadow: 0px 5px 40px black;
+	animation:zoomIn 0.5s forwards;
 }
 .form-recuperar-cuenta h1{
 	text-align: center;
@@ -727,4 +728,33 @@ body{
 }
 .contenedor-tabla-prestamo .tabla-historial-prestamo thead{
 	background:#EBEBD3;
+}
+
+
+
+
+
+/* RESUMEN */
+.contenedor-resumen{
+	background: #683D2C;
+	border: 2px solid #EE964B;
+	padding: 20px;
+	animation:zoomIn 0.5s forwards;
+}
+.contenedor-resumen h1{
+	color: #EBEBD3;
+}
+.contenedor-resumen h2{
+	color: #EBEBD3;
+}
+.contenedor-resumen h3{
+	color: #EE964B;
+}
+.contenedor-resumen h3>i{
+	color: #EBEBD3;
+}
+.contenedor-resumen hr{
+	height: 1px;
+	background: #EE964B;
+	border: none;
 }
