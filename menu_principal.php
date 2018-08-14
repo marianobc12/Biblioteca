@@ -56,11 +56,13 @@
         <li><a href="" class="dropdown" data-toggle="dropdown"><i class="fas fa-user-circle"></i> Mi Cuenta <i class="fas fa-caret-down"></i></a>
 	        <ul class="dropdown-menu">
 			    <li><a href="mi_perfil.php"><i class="fas fa-address-card"></i> Ver Datos</a></li>
+					<li><a href="inventario.php"><i class="fas fa-book"></i> Inventario</a></li>
+					<li><a href="historial_prestamo.php"><i class="fas fa-history"></i> Historial Prestamos</a></li>
 			    <li style="display:<?php if ($_SESSION['TipoAcceso']=="Admin") {
 			    	echo "block";
 			    }else{
 			    	echo "none";
-			    } ?>"><a href="#"><i class="fas fa-plus"></i>Agregar Cuenta</a>
+			    } ?>"><a href="#"><i class="fas fa-plus"></i> Agregar Cuenta</a>
 			    </li>
 			    <li><a href="cerrar_sesion.php"><i class="fas fa-sign-out-alt"></i>  Cerrar Cuenta</a></li>
 		  	</ul>
