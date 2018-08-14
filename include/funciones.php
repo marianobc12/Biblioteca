@@ -373,7 +373,20 @@ function Cantidad_Prestamos_Hoy(){
 
 }
 
+function Cantidad_Devoluciones_Hoy(){
+	$Fecha_Actual=date("Y-m-d");
 
+	$link=Conexion();
+
+	$sql="SELECT count(*) FROM devolucion WHERE Fecha_Devolucion='$Fecha_Actual'";
+
+	$res=mysqli_query($link,$sql);
+
+	$cant_devolucion_hoy=mysqli_fetch_row($res);
+
+	return $cant_devolucion_hoy;
+
+}
 
 
 ?>
