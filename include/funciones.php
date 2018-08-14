@@ -346,7 +346,17 @@ function Cantidad_Usuarios(){
 	return $cant_usuario;
 }
 
+function Cantidad_Libros(){
+	$link=Conexion();
 
+	$sql="SELECT count(*) FROM libro";
+	
+	$res=mysqli_query($link,$sql);
+
+	$cant_libro=mysqli_fetch_row($res);
+
+	return $cant_libro;
+}
 
 
 ?>

@@ -8,6 +8,7 @@
 <?php
     include('include/funciones.php');
     $cant_usuario=Cantidad_Usuarios();
+    $cant_libro=Cantidad_Libros();
 ?>
 
 <!DOCTYPE html>
@@ -90,7 +91,7 @@
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                     <h3 class="text-center">Libros</h1>
-                    <h3 class="text-center"><i class="fas fa-book"></i> 4500</h3>
+                    <h3 class="text-center"><i class="fas fa-book"></i> <?php echo $cant_libro[0] ?></h3>
                 </div>
             </div>
             <hr>
