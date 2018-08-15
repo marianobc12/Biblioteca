@@ -32,10 +32,10 @@
 			<h1><i class="fas fa-unlock-alt"></i> Contraseña</h1>
 			<input type="password" name="Contraseña" id="Contraseña" class="form-control">
 		</div>
-		<div class="col-md-12 campos-login">
+		<div class="col-md-12 col-sm-12 campos-login">
 			<p>¿Olvidaste tu contraseña?<a href="recuperar_cuenta.php"> ¡Presioná aquí!</a></p>
 		</div>
-		<div class="col-md-12">
+		<div class="col-md-12 col-sm-12">
 			<h4 class="msj-incorrecto">
 				<?php
 					if ($Acceso=="false"){
@@ -50,7 +50,7 @@
 		<div class="col-md-12 col-sm-12 campos-login">
 			<a class="facebook" href="https://www.facebook.com/biadolfoalsina/" title="Ir a  facebook" target="_blank"><i class="fab fa-facebook fa-lg" style="color:#EBEBD3;"></i> Biblioteca Adolfo Alsina</a>
 		</div>
-		<div class="col-md-12">
+		<div class="col-md-12 col-sm-12">
 				<button type="button" class="btn boton-desarrollador" data-toggle="modal" data-target="#Modal-Desarrolladores"><img src="img/logo-md.png" alt="MutantDevs"> Desarrollado por MutantDevs</button>
 		</div>
 	</form>
