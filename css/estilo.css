@@ -905,5 +905,47 @@ body{
 		border: none;
 		box-shadow: none;
 	}
+
+	.form-perfil{
+		margin-top: 0px;
+		margin-bottom: 0px;
+		border: none;
+		box-shadow: none;
+	}
+
+	.contenedor-resumen{
+		margin-top: 0px;
+		margin-bottom: 0px;
+		border: none;
+		box-shadow: none;
+	}
+	.contenedor-resumen h3{
+		font-size: 20px;
+	}
+
+	.contenedor-tabla-prestamo{
+		margin-top: 0px;
+		margin-bottom: 0px;
+		border: none;
+		box-shadow: none;
+	}
+	.contenedor-tabla-prestamo h1{
+		margin: 0px;
+		margin-bottom: 20px;
+		font-size: 20px;
+	}
+
+	.tarjeta-usuario{
+		margin-top: 0px;
+		margin-bottom: 0px;
+		border: none;
+		box-shadow: none;
+	}
+
+	.aviso-transacciones{
+		margin-bottom: 0px;
+		border: none;
+		box-shadow: none;
+	}
 	
 }
