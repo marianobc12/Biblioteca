@@ -254,7 +254,6 @@ body{
 	color: #EBEBD3;
 }
 .contenedor-clima{
-	display: block;
 	margin: auto;
 	margin-top: 20px;
 	background: #683D2C;
@@ -802,7 +801,12 @@ body{
 	color: #EBEBD3;
 }
 
-
+/*CARGA SPING */
+.spin-carga{
+	margin-top: 20px;
+	background: #683D2C;
+	border:2px solid #EE964B;
+}
 
 
 

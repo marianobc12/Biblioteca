@@ -19,6 +19,13 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/funciones.js"></script>
 	<title>Menú Principal - Biblioteca Adolfo Alsina</title>
+
+	<script>
+		$(document).ready(function() {
+			document.getElementById("clima").style.display="block";
+			document.getElementById("carga").style.display="none";
+		});
+	</script>
 </head>
 <body>
 <nav class="navbar navbar-inverse menu-principal">
@@ -93,8 +100,13 @@
 			</h1>
 		</div>
 	</div>
-	<div class="row">
-		<div class="contenedor-clima" id="TT_FWtwrBthtaDa8jKUVfr111E11CaULYU2Laoa5IvlwEz">El tiempo - Tutiempo.net</div>
+	<div class="row" id="carga">
+		<div class="col-md-2 col-md-offset-5  col-sm-2 col-sm-offset-5 spin-carga col-xs-12">
+			<h4 class="text-center"><i class="fa fa-spinner fa-spin fa-2x"></i> Cargando clima...</h4>
+		</div>
+	</div>
+	<div class="row" style="display:none;" id="clima">
+		<div class="contenedor-clima" id="TT_FWtwrBthtaDa8jKUVfr111E11CaULYU2Laoa5IvlwEz"></div>
 		<script type="text/javascript" src="https://www.tutiempo.net/s-widget/l_FWtwrBthtaDa8jKUVfr111E11CaULYU2Laoa5IvlwEz"></script>
 	</div>
 </div>
