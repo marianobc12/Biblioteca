@@ -108,7 +108,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="contenedor-tabla-prestamo col-md-10 col-md-offset-1 col-sm-12">
-            <h1>Historial de Prestamos</h1>
+            <h1>Historial de Prestamos <i class="fas fa-arrow-up"></i></h1>
             <table id="Tabla-Historial-Prestamo" class="table  table-striped table-bordered display responsive nowrap tabla-historial-prestamo" style="width:100%">
                 <thead>
                     <tr>
