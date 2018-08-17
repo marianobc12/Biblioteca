@@ -394,4 +394,15 @@ function Cantidad_Devoluciones_Hoy(){
 }
 
 
+function Listar_Prestamos(){
+	$link=Conexion();
+
+	$sql="SELECT u.Dni,u.Nom_Ape,l.Num_Inventario,l.Titulo,p.Fecha_Prestamo,p.Fecha_Fin_Prestamo,p.Activo FROM  prestamo p INNER JOIN  libro l ON p.Id_Libro=l.Id_Libro INNER JOIN usuario u ON p.Id_Usuario=u.Id_Usuario";
+
+	$res=mysqli_query($link,$sql);
+
+	return $res;
+}
+
+
 ?>
