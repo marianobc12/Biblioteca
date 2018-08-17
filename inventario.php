@@ -109,7 +109,7 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1 contenedor-inventario">
             <h1>Inventario <i class="fas fa-clipboard-list"></i></h1>
-            <table id="Tabla-Inventario" class="table  table-striped table-bordered display responsive nowrap tabla-inventario" style="width:100%">
+            <table id="Tabla-Inventario" class="table  table-striped table-bordered display responsive tabla-inventario" style="width:100%">
                 <thead>
                     <th>Nº de Inventario</th>
                     <th>Título</th>
