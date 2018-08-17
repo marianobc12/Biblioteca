@@ -301,6 +301,7 @@ function Terminar_Prestamo(){
 
 	mysqli_query($link,$sql);
 
+	date_default_timezone_set("America/Buenos_Aires");
 	$Fecha_Actual=date('Y-m-d');
 
 	$sql="INSERT INTO devolucion (Id_Prestamo,Fecha_Devolucion) VALUES ('$Id_Prestamo','$Fecha_Actual')";
@@ -359,6 +360,7 @@ function Cantidad_Libros(){
 }
 
 function Cantidad_Prestamos_Hoy(){
+	date_default_timezone_set("America/Buenos_Aires");
 	$Fecha_Actual=date("Y-m-d");
 
 	$link=Conexion();
@@ -371,9 +373,12 @@ function Cantidad_Prestamos_Hoy(){
 
 	return $cant_prestamo_hoy;
 
+
+
 }
 
 function Cantidad_Devoluciones_Hoy(){
+	date_default_timezone_set("America/Buenos_Aires");
 	$Fecha_Actual=date("Y-m-d");
 
 	$link=Conexion();
