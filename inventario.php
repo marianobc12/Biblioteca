@@ -5,6 +5,10 @@
 		header('Location:index.php');	
 	}
 ?>
+<?php
+    include('include/funciones.php');
+    $res=Listar_Libros();
+?>
 
 
 <!DOCTYPE html>
@@ -117,7 +121,22 @@
                     <th>Disponibilidad</th>
                 </thead>
                 <tbody>
-
+                    <?php
+                        while($row=$res->fetch_assoc()){
+                    ?>
+                    <tr class="<?php if($row['Disponibilidad']=="Ocupado"){ echo 'danger';}else{ echo 'success';} ?>">
+                        <td><?php echo $row['Num_Inventario']; ?></td>
+                        <td><?php echo $row['Titulo']; ?></td>
+                        <td><?php echo $row['Autor']; ?></td>
+                        <td><?php echo $row['Editorial']; ?></td>
+                        <td><?php echo $row['Fecha_Entrada']; ?></td>
+                        <td><?php echo $row['Tipo_Operacion']; ?></td>
+                        <td><?php echo $row['Genero']; ?></td>
+                        <td><?php echo $row['Disponibilidad']; ?></td>
+                    </tr>
+                    <?php
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>
