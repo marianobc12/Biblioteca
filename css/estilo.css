@@ -783,6 +783,32 @@ body{
 
 
 
+
+
+/* TABLA INVENTARIO DE LIBROS */
+.contenedor-inventario{
+	padding: 40px;
+	padding-top: 20px;
+	animation: zoomIn 0.5s forwards;
+	background: #683D2C;
+	border: 2px solid #EE964B;
+}
+.contenedor-inventario .tabla-inventario thead{
+	background:#EE964B;
+}
+.contenedor-inventario h1{
+	text-align: center;
+	font-size: 36px;
+	color: #EBEBD3;
+}
+
+
+
+
+
+
+
+
 /* MEDIA CELULAR */
 @media screen and (max-width: 600px) {
 	body{
