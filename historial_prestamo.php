@@ -5,7 +5,10 @@
 		header('Location:index.php');	
 	}
 ?>
-
+<?php
+    include('include/funciones.php');
+    $res=Listar_Prestamos();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -104,7 +107,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="contenedor-tabla-prestamo col-md-8 col-md-offset-2">
+        <div class="contenedor-tabla-prestamo col-md-10 col-md-offset-1 col-sm-12">
             <h1>Historial de Prestamos</h1>
             <table id="Tabla-Historial-Prestamo" class="table  table-striped table-bordered display responsive nowrap tabla-historial-prestamo" style="width:100%">
                 <thead>
@@ -119,42 +122,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>40714396</td>
-                        <td>Flores Mariano</td>
-                        <td>4002</td>
-                        <td>Pinocho</td>
-                        <td>10-02-2018</td>
-                        <td>10-03-2018</td>
-                        <td>SI</td>
+                    <?php
+                        while($row=$res->fetch_assoc()){
+                    ?>
+                    <tr class="<?php if($row['Activo']=='Si'){ echo 'success';}else{ echo 'info';} ?>">
+                        <td><?php echo $row['Dni']; ?></td>
+                        <td><?php echo $row['Nom_Ape']; ?></td>
+                        <td><?php echo $row['Num_Inventario']; ?></td>
+                        <td><?php echo $row['Titulo']; ?></td>
+                        <td><?php echo $row['Fecha_Prestamo']; ?></td>
+                        <td><?php echo $row['Fecha_Fin_Prestamo']; ?></td>
+                        <td><?php echo $row['Activo']; ?></td>
                     </tr>
-                    <tr>
-                        <td>40714396</td>
-                        <td>Flores Mariano</td>
-                        <td>4002</td>
-                        <td>Pinocho</td>
-                        <td>10-02-2018</td>
-                        <td>10-03-2018</td>
-                        <td>NO</td>
-                    </tr>
-                    <tr>
-                        <td>40714396</td>
-                        <td>Flores Mariano</td>
-                        <td>4002</td>
-                        <td>Pinocho</td>
-                        <td>10-02-2018</td>
-                        <td>10-03-2018</td>
-                        <td>SI</td>
-                    </tr>
-                    <tr>
-                        <td>40714396</td>
-                        <td>Flores Mariano</td>
-                        <td>4002</td>
-                        <td>Pinocho</td>
-                        <td>10-02-2018</td>
-                        <td>10-03-2018</td>
-                        <td>NO</td>
-                    </tr>
+                    <?php
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>
