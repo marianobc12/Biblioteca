@@ -404,5 +404,15 @@ function Listar_Prestamos(){
 	return $res;
 }
 
+function Listar_Libros(){
+	$link=Conexion();
+
+	$sql="SELECT * FROM libro";
+
+	$res=mysqli_query($link,$sql);
+
+	return $res;
+}
+
 
 ?>
