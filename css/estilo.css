@@ -258,6 +258,7 @@ body{
 	margin-top: 20px;
 	background: #683D2C;
 	border:2px solid #EE964B;
+	animation: fadeIn 1s forwards;
 }
 
 
@@ -807,8 +808,12 @@ body{
 	background: #683D2C;
 	border:2px solid #EE964B;
 }
-
-
+.spin-carga i{
+	color: #EE964B;
+}
+.spin-carga h4{
+	color: #EBEBD3;
+}
 
 
 /* MEDIA CELULAR */
@@ -986,6 +991,12 @@ body{
 		margin-bottom: 0px;
 		border: none;
 		box-shadow: none;
+	}
+
+
+	.spin-carga{
+		margin-top: 20px;
+		border:none;
 	}
 	
 }
