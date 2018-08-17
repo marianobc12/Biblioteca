@@ -686,7 +686,18 @@ body{
 	background:#EBEBD3;
 }
 
-
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate{
+	color:#EE964B;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+	background: #EE964B;
+	outline: none;
+	border: 1px solid #EBEBD3;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+	background: #EBEBD3;
+	border:1px solid #EE964B;
+}
 
 
 
