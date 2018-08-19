@@ -6,8 +6,8 @@
 	}
 ?>
 <?php
-	include('include/funciones.php');
-	$rowcuenta=Traer_Datos_Cuenta();
+    include('include/funciones.php');
+    Cambiar_Contraseña();
 ?>
 <!DOCTYPE html>
 <html>
@@ -74,74 +74,12 @@
   </div>
 </nav>
 <div class="container-fluid">
-	<div class="row">
-		<form class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 form-perfil" action="modificar_perfil.php" method="post">
-			<h1><i class="fas fa-user"></i> Mis Datos</h1>
-			<div class="row">
-				<div class="col-md-6">
-					<h2><i class="fas fa-id-card"></i> D.N.I</h2>
-					<input class="form-control input-lg" type="number" name="Dni" value="<?php echo $rowcuenta['Dni'] ?>" id=Dni>
-				</div>
-				<div class="col-md-6">
-					<h2><i class="fas fa-user"></i> Nombre y Apellido</h2>
-					<input class="form-control input-lg" type="text" name="Nom_Ape" value="<?php echo $rowcuenta['Nom_Ape'] ?>">
-				</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 aviso-transacciones">
+				<h1><i class="fas fa-bell"></i> Notificación</h1>
+				<h2>¡Contraseña Modificada!</h2>
 			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<h2><i class="fas fa-user-shield"></i> Tipo de cuenta</h2>
-					<h2><?php echo $rowcuenta['Tipo'] ?></h2>
-				</div>
-				<div class="col-md-6">
-					<h2><i class="fas fa-envelope"></i> Email</h2>
-					<input class="form-control input-lg" type="email" name="Email" value="<?php echo $rowcuenta['Email'] ?>">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 menu-perfil">
-					<button class="btn" type="button" onclick="cambio_contraseña();"><i class="fas fa-lock"></i> Cambiar Contraseña</button>
-				</div>
-				<div class="col-md-6 menu-perfil">
-					<button class="btn" type="submit"><i class="fas fa-user-cog"></i> Modificar</button>
-				</div>
-			</div>
-		</form>
-	</div>
-</div>
-<div id="Modal-Contraseña" class="modal fade modal-contraseña" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"><i class="fas fa-lock"></i> Cambio de contraseña</h4>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-        	<div class="row">
-        		<form action="cambio_contra.php" method="post" class="col-md-12 modal-body form-cambiocontra" onsubmit="return verificar_contraseña()">
-		        	<div class="col-md-12">
-		        		<h2>Nueva Contraseña</h2>
-		        		<input class="form-control" type="password" name="Contraseña_Nueva1" id="Contraseña_Nueva1" required>
-		        	</div>
-		        	<div class="col-md-12">
-		        		<h2>Repita Contraseña Nueva</h2>
-		        		<input class="form-control" type="password" name="Contraseña_Nueva2" id="Contraseña_Nueva2" required>
-		        	</div>
-							<div class="alert alert-danger col-md-12" role="alert" id="aviso-error-contra">
-								<i class="fas fa-exclamation-circle fa-lg"></i> ¡Las contraseñas no coinciden!
-							</div>
-		        	<div class="col-md-12">
-		        		<button type="submit" class="guardar"><i class="fas fa-check"></i> Confirmar</button>
-		        	</div>
-	        	</form>
-        	</div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
+		</div>
 </div>
 </body>
 </html>
