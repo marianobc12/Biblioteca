@@ -468,16 +468,26 @@ body{
 	display: block;
 	margin: auto;
 	width: 60%;
-	margin-top: 45px;
+	margin-top: 20px;
 	font-size: 20px;
 	height: 50px;
 	background: #EE964B;
 	border: none;	
 }
+.modal-contraseña .form-cambiocontra .guardar>i{
+	color: #EBEBD3;
+}
 .modal-contraseña .form-cambiocontra .guardar:hover{
 	box-shadow: 0px 5px 40px black;
     outline: 0;
     border: 0px;	
+}
+.modal-contraseña .alert-danger{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	text-align: center;
+	display: none;
+	animation: fadeIn 0.5s forwards;
 }
 
 

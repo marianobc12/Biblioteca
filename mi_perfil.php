@@ -118,21 +118,20 @@
       <div class="modal-body">
         <div class="container-fluid">
         	<div class="row">
-        		<form action="" method="" class="col-md-12 modal-body form-cambiocontra">
-		        	<div class="col-md-12">
-		        		<h2>Contraseña Actual</h2>
-		        		<input type="password" name="Contraseña_Actual" placeholder="Ingresar Contraseña Actual">
-		        	</div>
+        		<form action="" method="post" class="col-md-12 modal-body form-cambiocontra" onsubmit="return verificar_contraseña()">
 		        	<div class="col-md-12">
 		        		<h2>Nueva Contraseña</h2>
-		        		<input type="password" name="Contraseña_Nueva1" placeholder="Ingresar Contraseña Nueva">
+		        		<input class="form-control" type="password" name="Contraseña_Nueva1" id="Contraseña_Nueva1" required>
 		        	</div>
 		        	<div class="col-md-12">
 		        		<h2>Repita Contraseña Nueva</h2>
-		        		<input type="password" name="Contraseña_Nueva2" placeholder="Ingresar Contraseña Nueva">
+		        		<input class="form-control" type="password" name="Contraseña_Nueva2" id="Contraseña_Nueva2" required>
 		        	</div>
+							<div class="alert alert-danger col-md-12" role="alert" id="aviso-error-contra">
+								<i class="fas fa-exclamation-circle fa-lg"></i> ¡Las contraseñas no coinciden!
+							</div>
 		        	<div class="col-md-12">
-		        		<button class="guardar">Guardar</button>
+		        		<button type="submit" class="guardar"><i class="fas fa-check"></i> Confirmar</button>
 		        	</div>
 	        	</form>
         	</div>

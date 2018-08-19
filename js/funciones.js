@@ -42,3 +42,15 @@ function eliminar_usuario() {
 function eliminar_prestamo(){
     $('#Modal-Eliminar-Prestamo').modal();
 }
+
+function verificar_contraseña(){
+    var contraseña1=document.getElementById("Contraseña_Nueva1").value;
+    var contraseña2=document.getElementById("Contraseña_Nueva2").value;
+    if (contraseña1!=contraseña2) {
+        document.getElementById("aviso-error-contra").style.display="block";
+        return false;
+    }else{
+        return true;
+    }
+    
+}
