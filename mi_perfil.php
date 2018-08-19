@@ -8,6 +8,7 @@
 <?php
 	include('include/funciones.php');
 	$rowcuenta=Traer_Datos_Cuenta();
+	Cambiar_Contraseña();
 ?>
 <!DOCTYPE html>
 <html>

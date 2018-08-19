@@ -414,5 +414,16 @@ function Listar_Libros(){
 	return $res;
 }
 
+function Cambiar_Contraseña(){
+	$link=Conexion();
+
+	$Id_Cuenta=$_SESSION['Id_Cuenta'];
+
+	$Contraseña_Nueva=$_POST['Contraseña_Nueva1'];
+
+	$sql="UPDATE  cuenta SET Clave='$Contraseña_Nueva'  WHERE Id_Cuenta='$Id_Cuenta'";
+
+	mysqli_query($link,$sql);
+}
 
 ?>
