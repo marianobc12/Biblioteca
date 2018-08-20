@@ -426,4 +426,34 @@ function Cambiar_Contraseña(){
 	mysqli_query($link,$sql);
 }
 
+function Crear_Cuenta(){
+	$Dni=$_POST['Dni'];
+	$Nom_Ape=$_POST['Nom_Ape'];
+	$Tipo_Cuenta=$_POST['Tipo_Cuenta'];
+	$Email=$_POST['Email'];
+	$Contraseña=$_POST['Contraseña'];
+	
+	$link=Conexion();
+
+	$sql="SELECT * FROM cuenta WHERE Dni='$Dni'";
+
+	$res=mysqli_query($link,$sql);
+
+	$row=mysqli_num_rows($res);
+
+	if($row>0){
+		$Existe="Si";
+	}else{
+		$Existe="No";
+	}
+	
+	echo $Existe;
+
+	$sql="INSERT INTO cuenta (Dni,Nom_Ape,Tipo,Email,Clave) VALUES ('$Dni','$Nom_Ape','$Tipo_Cuenta','$Email','$Contraseña')";
+
+	mysqli_query($link,$sql);
+
+	return $Existe;
+}
+
 ?>
