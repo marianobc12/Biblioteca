@@ -5,11 +5,6 @@
         header('Location:index.php');   
     }
 ?>
-<?php
-    include('include/funciones.php');
-    Nuevo_Prestamo();
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -121,12 +116,11 @@
         </div>
     </nav>
     <div class="container-fluid">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3 aviso-transacciones">
-				<h1><i class="fas fa-bell"></i> Notificación</h1>
-				<h2>¡Prestamo Realizado!</h2>
-			</div>
-		</div>
-	</div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-8">
+                <form action="" method=""></form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

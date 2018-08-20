@@ -61,7 +61,7 @@
 			    	echo "block";
 			    }else{
 			    	echo "none";
-			    } ?>"><a href="#"><i class="fas fa-plus"></i> Agregar Cuenta</a></li>
+			    } ?>"><a href="agregar_cuenta.php"><i class="fas fa-plus"></i> Agregar Cuenta</a></li>
 			    <li><a href="cerrar_sesion.php"><i class="fas fa-sign-out-alt"></i>  Cerrar Cuenta</a></li>
 		  	</ul>
         </li>

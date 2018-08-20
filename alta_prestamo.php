@@ -107,7 +107,7 @@
                 			    }else{
                 			    	echo "none ";
                 			    } ?>">
-                                <a href="#">
+                                <a href="agregar_cuenta.php">
                                     <i class="fas fa-plus"></i>Agregar Cuenta</a>
                             </li>
                             <li>
