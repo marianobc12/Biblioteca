@@ -826,6 +826,44 @@ body{
 }
 
 
+
+
+/* NUEVA CUENTA FORMULARIO */
+.contenedor-cuentanueva{
+	background: #683D2C;
+	padding: 20px;
+	margin-top: 70px;
+	box-shadow: 0px 5px 40px black;
+	border: 2px solid #EE964B;
+	animation: zoomIn 0.5s forwards;
+
+}
+.nueva-cuenta h1{
+	color: #EBEBD3;	
+}
+.nueva-cuenta h2{
+	font-size: 20px;
+	color: #EE964B;
+}
+.nueva-cuenta h2>i{
+	color: #EBEBD3;
+}
+.nueva-cuenta .crear-cuenta{
+	display: block;
+	margin: auto;
+	margin-top:50px;
+	padding: 10px;
+	width: 50%;
+	font-size: 20px;
+	background: #EE964B;
+	border: none;
+}
+.nueva-cuenta .crear-cuenta:hover{
+	box-shadow: 0px 5px 40px black;
+    outline: 0;
+    border: 0px;
+}
+
 /* MEDIA CELULAR */
 @media screen and (max-width: 600px) {
 	body{
@@ -1007,6 +1045,12 @@ body{
 	.spin-carga{
 		margin-top: 20px;
 		border:none;
+	}
+
+	.contenedor-cuentanueva{
+		border: none;
+		box-shadow: none;
+		margin:0px;
 	}
 	
 }

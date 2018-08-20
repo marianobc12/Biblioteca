@@ -117,8 +117,43 @@
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 col-md-offset-8">
-                <form action="" method=""></form>
+            <div class="col-md-6 col-md-offset-3 contenedor-cuentanueva">
+                <form action="" method="" class="nueva-cuenta">
+                    <h1 class="text-center"><i class="fas fa-plus"></i> Crear Cuenta</h1>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h2><i class="fas fa-id-card"></i> D.N.I</h2>
+                            <input type="number" class="form-control input-lg" required>
+                        </div>
+                        <div class="col-md-7">
+                            <h2><i class="fas fa-user"></i> Nombre y Apellido</h2>
+                            <input type="text" class="form-control input-lg" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h2><i class="fas fa-user-shield"></i> Tipo de cuenta</h2>
+                            <select name="" id="" class="form-control input-lg" required>
+                                <option value="0">Seleccionar</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Usuario">Usuario</option>
+                            </select>
+                        </div>
+                        <div class="col-md-7">
+                            <h2><i class="fas fa-envelope"></i> Email</h2>
+                            <input type="email" class="form-control input-lg" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h2><i class="fas fa-unlock-alt"></i> Contraseña</h2>
+                            <input type="password" class="form-control input-lg" required>
+                        </div>
+                        <div class="col-md-7">
+                            <button type="submit" class="btn crear-cuenta">Crear <i class="fas fa-user-plus"></i></button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
