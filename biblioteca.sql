@@ -23,9 +23,9 @@ CREATE TABLE IF NOT EXISTS `cuenta` (
   PRIMARY KEY (`Id_Cuenta`),
   UNIQUE KEY `Dni` (`Dni`),
   UNIQUE KEY `Email` (`Email`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de las cuentas de acceso';
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de las cuentas de acceso';
 
--- Volcando datos para la tabla biblioteca.cuenta: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla biblioteca.cuenta: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `cuenta` DISABLE KEYS */;
 INSERT INTO `cuenta` (`Id_Cuenta`, `Dni`, `Nom_Ape`, `Tipo`, `Email`, `Clave`) VALUES
 	(1, '40714396', 'Mariano Flores', 'Admin', 'marianobc12@hotmail.com', 'admin'),
@@ -44,10 +44,15 @@ CREATE TABLE IF NOT EXISTS `devolucion` (
   PRIMARY KEY (`Id_Devolucion`),
   KEY `Id_Prestamo` (`Id_Prestamo`),
   CONSTRAINT `Id_Prestamo` FOREIGN KEY (`Id_Prestamo`) REFERENCES `prestamo` (`Id_Prestamo`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de devolucion de libros';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de devolucion de libros';
 
--- Volcando datos para la tabla biblioteca.devolucion: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla biblioteca.devolucion: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `devolucion` DISABLE KEYS */;
+INSERT INTO `devolucion` (`Id_Devolucion`, `Id_Prestamo`, `Fecha_Devolucion`) VALUES
+	(2, 2, '2018-08-16'),
+	(3, 3, '2018-08-17'),
+	(4, 11, '2018-08-17'),
+	(5, 7, '2018-08-17');
 /*!40000 ALTER TABLE `devolucion` ENABLE KEYS */;
 
 -- Volcando estructura para tabla biblioteca.libro
@@ -64,37 +69,37 @@ CREATE TABLE IF NOT EXISTS `libro` (
   `Disponibilidad` varchar(20) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`Id_Libro`),
   UNIQUE KEY `Num_Inventario` (`Num_Inventario`)
-) ENGINE=InnoDB AUTO_INCREMENT=6554 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de los libros';
+) ENGINE=InnoDB AUTO_INCREMENT=1488 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de los libros';
 
--- Volcando datos para la tabla biblioteca.libro: ~1.220 rows (aproximadamente)
+-- Volcando datos para la tabla biblioteca.libro: ~1.486 rows (aproximadamente)
 /*!40000 ALTER TABLE `libro` DISABLE KEYS */;
 INSERT INTO `libro` (`Id_Libro`, `Num_Inventario`, `Fecha_Entrada`, `Autor`, `Titulo`, `Editorial`, `Tipo_Operacion`, `Genero`, `Disponibilidad`) VALUES
-	(1, 6553, '2008-01-22', 'Cort zar, Julio', 'Bestiario.  ', 'Punto de Lectura', '', '82-34', 'Disponible'),
+	(1, 6553, '2008-01-22', 'Cort zar, Julio', 'Bestiario.  ', 'Punto de Lectura', '', '82-34', 'Ocupado'),
 	(2, 6554, '2008-01-22', 'Poe, Edgar Allan', 'El escarabajo de oro y otros cuentos.  ', 'Losada', '', '82-34', 'Disponible'),
 	(3, 6555, '2008-01-22', 'De Santis, Pablo', 'El inventor de juegos.    ', 'Alfaguara', '', '82-32', 'Disponible'),
-	(4, 6556, '2008-01-22', 'Sk rmata, Antonio', 'No pasa nada.              ', 'Sudamericana', '', '82-32', 'Disponible'),
-	(5, 6557, '2008-01-22', 'De Santis, Pablo', 'Desde el ojo del pez.  ', 'Sudamericana', '', '82-33', 'Disponible'),
+	(4, 6556, '2008-01-22', 'Sk rmata, Antonio', 'No pasa nada.              ', 'Sudamericana', '', '82-32', 'Ocupado'),
+	(5, 6557, '2008-01-22', 'De Santis, Pablo', 'Desde el ojo del pez.  ', 'Sudamericana', '', '82-33', 'Ocupado'),
 	(6, 6558, '2008-01-22', 'Cort zar, Julio', 'Rayuela.    ', 'Punto de Lectura', '', '82-34', 'Disponible'),
 	(7, 6559, '2008-01-22', 'Vasconcelos, Jos‚ Mauro de', 'Mi planta de naranja lima.  ', 'El Ateneo', '', '82-35', 'Disponible'),
 	(8, 6560, '2008-01-22', 'Colecci¢n del mirador', 'Mitos Clasificados I.        ', 'C ntaro', '', '82', 'Disponible'),
 	(9, 6561, '2008-01-22', 'Colecci¢n del mirador', 'Mitos Clasificados II.     ', 'C ntaro', '', '82', 'Disponible'),
 	(10, 6562, '2008-01-22', 'S bato, Ernesto', 'Cuentos que me apasionaron.', 'Booket', '', '82-34', 'Disponible'),
-	(11, 6563, '2008-01-22', 'Garc¡a Lorca, Federico', 'Bodas de sangre. /Jinetes hacia el mar. ', 'C ntaro', '', '82-3', 'Disponible'),
+	(11, 6563, '2008-01-22', 'Garc¡a Lorca, Federico', 'Bodas de sangre. /Jinetes hacia el mar. ', 'C ntaro', '', '82-3', 'Ocupado'),
 	(12, 6564, '2008-01-22', 'Orwell, George', '1984. ', 'Booket', '', '82-3', 'Disponible'),
 	(13, 6565, '2008-01-22', 'Kordon Klaus', 'El muro. ', 'C ntaro', '', '82-32', 'Disponible'),
 	(14, 6566, '2008-01-22', 'Zunz, Ema', 'El misterio del cuarto amarillo. ', 'C ntaro', '', '82-32', 'Disponible'),
 	(15, 6567, '2008-01-22', 'Mujica Lainez, Manuel', 'Misteriosa Buenos Aires.', 'Debolsillo', '', '82-34', 'Disponible'),
 	(16, 6568, '2008-01-22', 'S bato, Ernesto', 'Antes del fin. ', 'Booket', '', '82-32', 'Disponible'),
 	(17, 6569, '2008-01-22', 'Irving, Washington', 'El jinete sin cabeza. ', 'Andr‚s Bello', '', '82-34', 'Disponible'),
-	(18, 6570, '2008-01-22', 'Salinger, Jerome David', 'El guardian entre el centeno.  ', 'Edhasa', '', '82-32', 'Disponible'),
-	(19, 6571, '2008-01-22', 'Garc¡a M rquez, Gabrie', 'Doce cuentos peregrinos. ', 'Debolsillo', '', '82-34', 'Disponible'),
+	(18, 6570, '2008-01-22', 'Salinger, Jerome David', 'El guardian entre el centeno.  ', 'Edhasa', '', '82-32', 'Ocupado'),
+	(19, 6571, '2008-01-22', 'Garc¡a M rquez, Gabrie', 'Doce cuentos peregrinos. ', 'Debolsillo', '', '82-34', 'Ocupado'),
 	(20, 6572, '2008-01-22', 'Conan Doyle Arthu', 'Elemental Watson.   ', 'C ntaro', '', '82-32', 'Disponible'),
 	(21, 6573, '2008-01-22', 'S bato, Ernesto', 'Sobre h‚roes y tumbas.  ', 'Seix Barral', '', '82-32', 'Disponible'),
 	(22, 6574, '2008-01-22', 'Kafka, Franz', 'La metamorfosis.  ', 'G rgola', '', '82-32', 'Disponible'),
 	(23, 6575, '2008-01-22', 'Schujer, Silvia', 'Las visitas.  ', 'Alfaguara', '', '82-32', 'Disponible'),
 	(24, 6576, '2008-01-22', 'Bodoc, Liliana', 'Diciembre, s£per  lbum.  ', 'Alfaguara', '', '82-32', 'Disponible'),
 	(25, 6577, '2008-01-22', 'Puig, Manuel', 'Boquitas pintadas.', 'Booket', '', '82-3', 'Disponible'),
-	(26, 6578, '2008-01-22', 'Hemingway, Ernest', 'Cuentos (HEMINGWAY). ', 'Lumen', '', '82-34', 'Disponible'),
+	(26, 6578, '2008-01-22', 'Hemingway, Ernest', 'Cuentos (HEMINGWAY). ', 'Lumen', '', '82-34', 'Ocupado'),
 	(27, 6579, '2008-01-22', 'Mastreta, µgeles', 'Mal de amores.   ', 'Booket', '', '82-3', 'Disponible'),
 	(28, 6580, '2008-02-28', 'Santa Ana, Antonio', 'Ojos del perro Siberiano.  ', 'Grupo Norma', '', '82-3', 'Disponible'),
 	(29, 6581, '2008-02-28', 'Birmajer, Marcelo', 'El alma del diablo. ', 'Grupo Norma', '', '82-3', 'Disponible'),
@@ -107,7 +112,7 @@ INSERT INTO `libro` (`Id_Libro`, `Num_Inventario`, `Fecha_Entrada`, `Autor`, `Ti
 	(36, 6588, '2008-02-28', 'Pescetti, Luis Mar¡a', 'Frin.', 'Alfaguara', '', '82-32', 'Disponible'),
 	(37, 6589, '2008-02-28', 'Colecci¢n', 'Juegos, canciones, chistes.  ', 'Libsa', '', '82-1', 'Disponible'),
 	(38, 6590, '2008-02-28', 'Muleiro, Pepe', 'Chistes para chicos II.  ', 'Debolsillo', '', '82-1', 'Disponible'),
-	(39, 6591, '2008-02-28', 'Sorrentino, Fernando', 'Cuentos del mentiroso.', 'Grupo Norma', '', '82-34', 'Disponible'),
+	(39, 6591, '2008-02-28', 'Sorrentino, Fernando', 'Cuentos del mentiroso.', 'Grupo Norma', '', '82-34', 'Ocupado'),
 	(40, 6592, '2008-02-28', 'Bodoc, Liliana', 'La saga de los confines', 'Grupo Norma', '', '82-32', 'Disponible'),
 	(41, 6593, '2008-02-28', 'Bodoc, Liliana', 'Los d¡as de la sombra.', 'Grupo Norma', '', '82-32', 'Disponible'),
 	(42, 6594, '2008-02-28', 'Bodoc, Liliana', 'D¡as del fuego.', 'Grupo Norma', '', '82-32', 'Disponible'),
@@ -518,7 +523,7 @@ INSERT INTO `libro` (`Id_Libro`, `Num_Inventario`, `Fecha_Entrada`, `Autor`, `Ti
 	(448, 6999, '2009-10-14', 'Schuff, Nicolas', 'Mostruos argentinos.       ', 'Estrada', '', '82-3', 'Disponible'),
 	(449, 7000, '2009-10-14', 'Abbate, Florencia', 'Las siete maravillas del mundo.', 'Estrada', '', '82-34', 'Disponible'),
 	(450, 7001, '2009-10-14', 'Erbiti, Alejandra', 'Los m s bellos cuentos.', 'Latinbooks', '', '82-34', 'Disponible'),
-	(451, 7002, '2009-10-20', 'Colecci¢n infantil', 'Enciclopedia Billiquen Escolar.      ', 'Atlantida', '', '82-03', 'Disponible'),
+	(451, 7002, '2009-10-20', 'ColecciÃ³n infantil', 'Enciclopedia Billiquen Escolar.      ', 'Atlantida', 'Comprado', '82-03', 'Disponible'),
 	(452, 7003, '2009-10-20', 'Colecci¢n infantil', 'Maxi cuentos.', 'Grupo Cultural', '', '82-34', 'Disponible'),
 	(453, 7004, '2009-10-20', 'Colecci¢n infantil', 'Maxi cuentos.', 'Grupo Cultural', '', '82-34', 'Disponible'),
 	(454, 7005, '2009-10-20', 'Colecci¢n infantil', 'Entre Adas y duendes.', 'Grupo Cultural', '', '82-34', 'Disponible'),
@@ -1571,10 +1576,23 @@ CREATE TABLE IF NOT EXISTS `prestamo` (
   KEY `Id_Libro` (`Id_Libro`),
   CONSTRAINT `Id_Libro` FOREIGN KEY (`Id_Libro`) REFERENCES `libro` (`Id_Libro`) ON DELETE CASCADE,
   CONSTRAINT `Id_Usuario` FOREIGN KEY (`Id_Usuario`) REFERENCES `usuario` (`Id_Usuario`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de prestamo';
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de prestamo';
 
--- Volcando datos para la tabla biblioteca.prestamo: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla biblioteca.prestamo: ~12 rows (aproximadamente)
 /*!40000 ALTER TABLE `prestamo` DISABLE KEYS */;
+INSERT INTO `prestamo` (`Id_Prestamo`, `Id_Usuario`, `Id_Libro`, `Fecha_Prestamo`, `Fecha_Fin_Prestamo`, `Activo`) VALUES
+	(2, 211, 85, '2018-08-16', '2018-08-31', 'No'),
+	(3, 219, 357, '2018-08-17', '2018-08-31', 'No'),
+	(4, 221, 11, '2018-08-17', '2018-08-22', 'Si'),
+	(5, 224, 18, '2018-08-17', '2018-08-18', 'Si'),
+	(6, 234, 39, '2018-08-17', '2018-08-23', 'Si'),
+	(7, 276, 3, '2018-08-17', '2018-08-25', 'No'),
+	(8, 211, 1, '2018-08-17', '2018-08-26', 'Si'),
+	(9, 253, 4, '2018-08-17', '2018-10-26', 'Si'),
+	(10, 231, 26, '2018-08-17', '2018-08-30', 'Si'),
+	(11, 240, 6, '2018-08-17', '2018-08-17', 'No'),
+	(12, 239, 5, '2018-08-17', '2019-01-05', 'Si'),
+	(13, 234, 19, '2018-08-17', '2018-08-24', 'Si');
 /*!40000 ALTER TABLE `prestamo` ENABLE KEYS */;
 
 -- Volcando estructura para tabla biblioteca.usuario
@@ -1595,12 +1613,12 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   UNIQUE KEY `Dni` (`Dni`)
 ) ENGINE=InnoDB AUTO_INCREMENT=320 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de los usuarios';
 
--- Volcando datos para la tabla biblioteca.usuario: ~117 rows (aproximadamente)
+-- Volcando datos para la tabla biblioteca.usuario: ~102 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`Id_Usuario`, `Dni`, `Nom_Ape`, `Fec_Nac`, `Nacionalidad`, `Telefono`, `Celular`, `Domicilio`, `Domicilio_Seg`, `Email`, `Fecha_Alta`) VALUES
 	(206, '31027891', 'Laura Gonzales', '2018-07-06', 'Argentina', '4233443', '', '10 E/ 65 y 66', '', '', '2018-07-06'),
 	(211, '40714390', 'Jorge Latin', '2018-07-18', 'Chile', '4233443', '2215465577', '11 y 25', '4 y 66', 'jorg@hotmail.com', '2018-07-06'),
-	(219, '40714396', 'Mariano Flores', '1997-10-24', 'Argentina', '4253165', '2216779983', '12 y 65', '', 'mariano@hotmail.com', '2018-08-03'),
+	(219, '40714396', 'Mariano Flores', '1997-10-24', 'Argentina', '4253169', '2216779983', '12 y 65', '', 'mariano@hotmail.com', '2018-08-03'),
 	(220, '25957510', 'Merritt Rivers', '2031-05-19', 'Falkland Islands', '(869) 161-8928', '(299) 765-6330', '370-1181 Erat, Ctra.', '263-6921 Cras Avenida', 'cursus.Integer.mollis@FuscemollisDuis.ca', '2023-01-18'),
 	(221, '38915525', 'Bruno Rutledge', '2016-03-19', 'Solomon Islands', '(756) 481-9221', '(784) 306-2246', 'Apdo.:212-874 Mi C/', '810-9410 Ligula ', 'molestie.in@nectellus.net', '2001-06-19'),
 	(222, '25169964', 'Dalton Anthony', '2029-01-19', 'Aruba', '(825) 791-3039', '(882) 831-2194', '9242 Sociis Carretera', 'Apartado núm.: 853, 8833 Pretium Av.', 'lorem@Suspendisse.com', '2009-04-18'),
