@@ -102,6 +102,7 @@
                             <li><a href="resumen.php"><i class="fas fa-edit"></i> Resumen</a></li>
                             <li><a href="inventario.php"><i class="fas fa-book"></i> Inventario</a></li>
 					        <li><a href="historial_prestamo.php"><i class="fas fa-history"></i> Historial Prestamos</a></li>
+                            <li><a href="deudores.php"><i class="fas fa-user-times"></i> Deudores</a></li>
                             <li style="display:<?php if ($_SESSION['TipoAcceso']=="Admin") {
                 			    	echo "block ";
                 			    }else{
