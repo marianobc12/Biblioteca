@@ -5,6 +5,11 @@
 		header('Location:index.php');	
 	}
 ?>
+
+<?php
+    include('include/funciones.php');
+    $res=Deudores();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -112,12 +117,27 @@
                         <th>Usuario</th>
                         <th>Nº Inventario</th>
                         <th>Libro</th>
-                        <th>Fecha del prestamo</th>
-                        <th>Termina</th>
-                        <th>Activo</th>
+                        <th>Terminó</th>
+                        <th>Teléfono</th>
+                        <th>Domicilio</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                        while($row=$res->fetch_assoc()){
+                    ?>
+                    <tr>
+                        <td><?php echo $row['Dni']; ?></td>
+                        <td><?php echo $row['Nom_Ape']; ?></td>
+                        <td><?php echo $row['Num_Inventario']; ?></td>
+                        <td><?php echo $row['Titulo']; ?></td>
+                        <td><?php echo $row['Fecha_Fin_Prestamo']; ?></td>
+                        <td><?php echo $row['Telefono']; ?></td>
+                        <td><?php echo $row['Domicilio']; ?></td>
+                    </tr>
+                    <?php
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>

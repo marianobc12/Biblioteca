@@ -456,4 +456,18 @@ function Crear_Cuenta(){
 	return $Existe;
 }
 
+
+function Deudores(){
+	date_default_timezone_set("America/Buenos_Aires");
+	$Fecha_Actual=date('Y-m-d');
+
+	$link=Conexion();
+
+	$sql="SELECT u.Dni,u.Nom_Ape,u.Telefono,u.Domicilio,l.Num_Inventario,l.Titulo,p.Fecha_Fin_Prestamo  FROM prestamo p INNER JOIN libro l ON p.Id_Libro=l.Id_Libro INNER JOIN usuario u ON p.Id_Usuario=u.Id_Usuario WHERE p.Activo='Si' AND p.Fecha_Fin_Prestamo<'$Fecha_Actual'";
+
+	$res=mysqli_query($link,$sql);
+
+	return $res;
+}
+
 ?>
