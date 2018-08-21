@@ -693,7 +693,7 @@ body{
 	padding-top: 20px;
 	animation: zoomIn 0.5s forwards;
 }
-.contenedor-tabla-prestamo .tabla-historial-prestamo thead{
+.contenedor-tabla-prestamo .dataTable thead{
 	background:#EE964B;
 }
 
