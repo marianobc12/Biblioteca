@@ -83,7 +83,6 @@
     <form class="col-md-6 col-md-offset-3 tarjeta-usuario" method="post" action="m_usuario.php" id="tarjeta-usuario">
         <div class="col-md-12">
             <h1><i class="fas fa-user"></i> <?php echo $resdatos['Nom_Ape']; ?></h1>
-            <button type="button" class="btn btn-primary" style="display:block;margin:auto;font-size:20px;"><i class="fas fa-arrow-down"></i> Ver Devoluciones</button>
         </div>
         <div class="row">
             <div class="col-md-6 contenedor-menu">
@@ -137,6 +136,9 @@
             <h2><i class="fas fa-envelope"></i> Email</h2>
             <input class="form-control input-lg" type="text" name="Email" value="<?php echo $resdatos['Email']; ?>">
         </div>
+    </form>
+    <form action="devoluciones.php" method="post" class="col-md-6 col-md-offset-3 form-devoluciones">
+        <button type="button" class="btn ver-devoluciones"><i class="fas fa-arrow-down"></i> Ver Devoluciones</button>
     </form>
     <div class="modal fade modal-eliminar" id="Modal-Eliminar_Usuario">
         <div class="modal-dialog">
