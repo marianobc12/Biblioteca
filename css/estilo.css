@@ -1053,4 +1053,9 @@ body{
 		margin:0px;
 	}
 	
+
+	.contenedor-inventario{
+		border: none;
+		box-shadow: none;
+	}
 }
