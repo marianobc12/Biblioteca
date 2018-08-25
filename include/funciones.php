@@ -470,4 +470,16 @@ function Deudores(){
 	return $res;
 }
 
+function Devoluciones(){
+	$Id_Usuario=$_POST['Id_Usuario'];
+
+	$link=Conexion();
+
+	$sql="SELECT u.Nom_Ape,l.Num_Inventario,l.Titulo,p.Fecha_Prestamo,p.Fecha_Fin_Prestamo,d.Fecha_Devolucion FROM devolucion d INNER JOIN prestamo p ON  d.Id_Prestamo=p.Id_Prestamo INNER JOIN usuario u ON p.Id_Usuario=u.Id_Usuario INNER JOIN libro l ON p.Id_Libro=l.Id_Libro WHERE u.Id_Usuario='$Id_Usuario'";
+
+	$res=mysqli_query($link,$sql);
+
+	return $res;
+}
+
 ?>

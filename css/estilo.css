@@ -884,6 +884,31 @@ body{
     border: 0px;
 }
 
+
+
+/* TABLA DEVOLUCIONES */
+.contenedor-tabla-devoluciones{
+	background: #683D2C;
+	border: 2px solid #EE964B;
+}
+.contenedor-tabla-devoluciones h1{
+	text-align: center;
+	font-size: 36px;
+	color: #EBEBD3;
+}
+.contenedor-tabla-devoluciones h2{
+	font-size: 20px;
+	color: #EBEBD3;
+	text-align: center;
+}
+.contenedor-tabla-devoluciones .tabla-devoluciones thead{
+	background: #EE964B;
+}
+.contenedor-tabla-devoluciones .tabla-devoluciones th{
+	text-align: center;
+}
+
+
 /* MEDIA CELULAR */
 @media screen and (max-width: 600px) {
 	body{
@@ -1077,5 +1102,9 @@ body{
 	.contenedor-inventario{
 		border: none;
 		box-shadow: none;
+	}
+
+	.contenedor-tabla-devoluciones{
+		border:none;
 	}
 }

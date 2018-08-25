@@ -138,7 +138,7 @@
         </div>
     </form>
     <form action="devoluciones.php" method="post" class="col-md-6 col-md-offset-3 form-devoluciones">
-        <input type="text" value="<?php echo $resdatos['Id_Usuario']; ?>" style="display:none;">
+        <input type="text" value="<?php echo $resdatos['Id_Usuario']; ?>" style="display:none;" name="Id_Usuario">
         <button type="submit" class="btn ver-devoluciones"><i class="fas fa-arrow-down"></i> Ver Devoluciones</button>
     </form>
     <div class="modal fade modal-eliminar" id="Modal-Eliminar_Usuario">
