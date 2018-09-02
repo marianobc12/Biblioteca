@@ -16,7 +16,6 @@
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/funciones.js"></script>
-	<script type="text/javascript" src="js/validacion-nuevo-usuario.js"></script>
 	<title>Menú Principal - Biblioteca Adolfo Alsina</title>
 </head>
 <body>
@@ -74,44 +73,44 @@
 </nav>
 <div class="container-fluid">
 <div class="row">
-	<form onsubmit="return Validar_Usuario();" class="col-md-10 col-md-offset-1 col-sm-12 form-altausuario" action="g_usuario.php" method="post">
+	<form  class="col-md-10 col-md-offset-1 col-sm-12 form-altausuario" action="g_usuario.php" method="post">
 		<h1><i class="fas fa-user"></i> Usuario</h1>
 		<div class="row">
 			<div class="col-md-4 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-id-card"></i> D.N.I </h2>
-				<input class="form-control input-lg" type="text" name="Dni" id="Dni" required=""  maxlength="8" placeholder="Ingresar D.N.I" minlength="8" >
+				<input class="form-control input-lg" type="text" name="Dni" id="Dni" pattern="[0-9]+" required=""   maxlength="8" placeholder="Ingresar D.N.I" minlength="8" >
 			</div>
 			<div class="col-md-4 col-sm-6  contenedor-campos">
 				<h2><i class="fas fa-user"></i> Nombre y Apellido </h2>
-				<input class="form-control input-lg" type="text" name="Nom_Ape" required=""  maxlength="60" placeholder="Ingresar Nombre y Apellido">
+				<input class="form-control input-lg" type="text" name="Nom_Ape" required="" minlength="4"  maxlength="100" placeholder="Ingresar Nombre y Apellido">
 			</div>
 			<div class="col-md-4 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-calendar-alt"></i> Fecha de Nacimiento </h2>
-				<input class="form-control input-lg" type="date" required=""  name="Fecha_Nac">
+				<input class="form-control input-lg" type="date" required=""  min="1900-01-01" name="Fecha_Nac">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-sm-6 contenedor-campos">
 				<h2><i class="far fa-flag"></i> Nacionalidad</h2>
-				<input class="form-control input-lg" type="text" name="Nacionalidad" required=""   maxlength="50" placeholder="Ej: Argentina">
+				<input class="form-control input-lg" type="text" name="Nacionalidad" required="" minlength="2"   maxlength="50" placeholder="Ej: Argentina">
 			</div>
 			<div class="col-md-4 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-phone-volume"></i> Teléfono</h2>
-				<input class="form-control input-lg" type="text" name="Telefono" required=""  maxlength="20" placeholder="Ej: 4253254">
+				<input class="form-control input-lg" type="text" name="Telefono" required="" minlength="5"  maxlength="20" placeholder="Ej: 4253254">
 			</div>
 			<div class="col-md-4 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-mobile-alt"></i> Celular</h2>
-				<input class="form-control input-lg" type="text" name="Celular" maxlength="20" placeholder="Ej: 2215678532">
+				<input class="form-control input-lg" type="text" name="Celular" minlength="5" maxlength="20" placeholder="Ej: 2215678532">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-map-marker-alt"></i> Domicilio </h2>
-				<input class="form-control input-lg" type="text" name="Domicilio" required=""  maxlength="100" placeholder="Ej: 4 e/ 37 y 38">
+				<input class="form-control input-lg" type="text" name="Domicilio" minlength="4" required=""  maxlength="100" placeholder="Ej: 4 e/ 37 y 38">
 			</div>
 			<div class="col-md-6 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-map-marker-alt"></i> Escuela o lugar de trabajo</h2>
-				<input class="form-control input-lg" type="text" name="Escuela_Trabajo" maxlength="100" placeholder="Ingresar Dirección">
+				<input class="form-control input-lg" type="text" name="Escuela_Trabajo" minlength="4" maxlength="100" placeholder="Ingresar Dirección">
 			</div>	
 		</div>
 		<div class="row">

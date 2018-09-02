@@ -75,3 +75,10 @@ function verificar_contraseña(){
     }
     
 }
+
+
+
+function Validar_Usuario(){
+    var FechaActual=new Date();
+    alert (FechaActual);
+}
