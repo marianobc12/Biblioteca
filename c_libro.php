@@ -86,18 +86,18 @@
         </div>
         <div class="row">
             <div class="col-md-6 contenedor-menu">
-                <button class="btn" type="button" onclick="modificar_cliente();" id="modificar-mod-cliente"><i class="fas fa-edit fa-lg"></i> Modificar</button>
+                <button class="btn" type="button" onclick="modificar_libro();" id="modificar-mod-libro"><i class="fas fa-edit fa-lg"></i> Modificar</button>
             </div>
             <div class="col-md-6 contenedor-menu">
-                <button class="btn" id="eliminar-mod-cliente"><i class="fas fa-trash fa-lg"></i> Eliminar</button>
+                <button type="button" class="btn" id="eliminar-mod-libro" onclick="eliminar_libro();"><i class="fas fa-trash fa-lg"></i> Eliminar</button>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 contenedor-menu">
-                <button class="btn" type="submit" id="guardar-mod-cliente" style="display: none;"><i class="fas fa-save fa-lg"></i> Guardar</button>
+                <button class="btn" type="submit" id="guardar-mod-libro" style="display: none;"><i class="fas fa-save fa-lg"></i> Guardar</button>
             </div>
             <div class="col-md-6 contenedor-menu">
-                <button class="btn" type="button" id="cancelar-mod-cliente" style="display: none;" onclick="cancelar_cliente();"><i class="fas fa-times fa-lg"></i> Cancelar</button>
+                <button class="btn" type="button" id="cancelar-mod-libro" style="display: none;" onclick="cancelar_libro();"><i class="fas fa-times fa-lg"></i> Cancelar</button>
             </div>
         </div>
         <div class="col-md-6">
@@ -132,5 +132,34 @@
             </select>
         </div>
     </form>
+    <div class="modal fade modal-eliminar" id="Modal-Eliminar_Libro">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">¿Deseas eliminar el libro?</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="alert alert-warning">
+                            <strong>Atención:</strong> Si elimina el libro , también se borrarán sus prestamos y devoluciones.
+                        </div>
+                        <form action="e_libro.php" method="post" class="col-md-12 eliminar-libro">
+                            <input type="number" name="Num_Inventario" value="<?php echo $rowlibro['Num_Inventario'] ?>" style="display:none;">
+                            <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 ">
+                                <button type="submit" class="btn  eliminar">Si , Eliminar</button>
+                            </div>
+                            <div class="col-md-4 col-sm-4 ">
+                                <button type="button" class="btn cancelar" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

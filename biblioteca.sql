@@ -15,15 +15,15 @@
 DROP TABLE IF EXISTS `cuenta`;
 CREATE TABLE IF NOT EXISTS `cuenta` (
   `Id_Cuenta` int(2) NOT NULL AUTO_INCREMENT,
-  `Dni` char(8) COLLATE utf8_bin NOT NULL,
-  `Nom_Ape` varchar(60) COLLATE utf8_bin NOT NULL,
-  `Tipo` varchar(20) COLLATE utf8_bin NOT NULL,
-  `Email` varchar(45) COLLATE utf8_bin NOT NULL,
-  `Clave` varchar(45) COLLATE utf8_bin NOT NULL,
+  `Dni` char(8) NOT NULL,
+  `Nom_Ape` varchar(60) NOT NULL,
+  `Tipo` varchar(20) NOT NULL,
+  `Email` varchar(45) NOT NULL,
+  `Clave` varchar(45) NOT NULL,
   PRIMARY KEY (`Id_Cuenta`),
   UNIQUE KEY `Dni` (`Dni`),
   UNIQUE KEY `Email` (`Email`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de las cuentas de acceso';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='Datos de las cuentas de acceso';
 
 -- Volcando datos para la tabla biblioteca.cuenta: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `cuenta` DISABLE KEYS */;
@@ -44,15 +44,10 @@ CREATE TABLE IF NOT EXISTS `devolucion` (
   PRIMARY KEY (`Id_Devolucion`),
   KEY `Id_Prestamo` (`Id_Prestamo`),
   CONSTRAINT `Id_Prestamo` FOREIGN KEY (`Id_Prestamo`) REFERENCES `prestamo` (`Id_Prestamo`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de devolucion de libros';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Datos de devolucion de libros';
 
--- Volcando datos para la tabla biblioteca.devolucion: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla biblioteca.devolucion: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `devolucion` DISABLE KEYS */;
-INSERT INTO `devolucion` (`Id_Devolucion`, `Id_Prestamo`, `Fecha_Devolucion`) VALUES
-	(2, 2, '2018-08-16'),
-	(3, 3, '2018-08-17'),
-	(4, 11, '2018-08-17'),
-	(5, 7, '2018-08-17');
 /*!40000 ALTER TABLE `devolucion` ENABLE KEYS */;
 
 -- Volcando estructura para tabla biblioteca.libro
@@ -61,20 +56,20 @@ CREATE TABLE IF NOT EXISTS `libro` (
   `Id_Libro` int(11) NOT NULL AUTO_INCREMENT,
   `Num_Inventario` int(5) NOT NULL,
   `Fecha_Entrada` date NOT NULL,
-  `Autor` varchar(100) COLLATE utf8_bin NOT NULL,
-  `Titulo` varchar(255) COLLATE utf8_bin NOT NULL,
-  `Editorial` varchar(100) COLLATE utf8_bin NOT NULL,
-  `Tipo_Operacion` varchar(8) COLLATE utf8_bin NOT NULL,
-  `Genero` varchar(5) COLLATE utf8_bin NOT NULL,
-  `Disponibilidad` varchar(20) COLLATE utf8_bin NOT NULL,
+  `Autor` varchar(100) NOT NULL,
+  `Titulo` varchar(255) NOT NULL,
+  `Editorial` varchar(100) NOT NULL,
+  `Tipo_Operacion` varchar(8) NOT NULL,
+  `Genero` varchar(5) NOT NULL,
+  `Disponibilidad` varchar(20) NOT NULL,
   PRIMARY KEY (`Id_Libro`),
   UNIQUE KEY `Num_Inventario` (`Num_Inventario`)
-) ENGINE=InnoDB AUTO_INCREMENT=1488 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de los libros';
+) ENGINE=InnoDB AUTO_INCREMENT=1488 DEFAULT CHARSET=utf8 COMMENT='Datos de los libros';
 
 -- Volcando datos para la tabla biblioteca.libro: ~1.486 rows (aproximadamente)
 /*!40000 ALTER TABLE `libro` DISABLE KEYS */;
 INSERT INTO `libro` (`Id_Libro`, `Num_Inventario`, `Fecha_Entrada`, `Autor`, `Titulo`, `Editorial`, `Tipo_Operacion`, `Genero`, `Disponibilidad`) VALUES
-	(1, 6553, '2008-01-22', 'Cort zar, Julio', 'Bestiario.  ', 'Punto de Lectura', '', '82-34', 'Ocupado'),
+	(1, 6553, '2008-01-22', 'CortÃ¡zar, Julio', 'Bestiario.  ', 'Punto de Lectura', 'Comprado', '82-34', 'Ocupado'),
 	(2, 6554, '2008-01-22', 'Poe, Edgar Allan', 'El escarabajo de oro y otros cuentos.  ', 'Losada', '', '82-34', 'Disponible'),
 	(3, 6555, '2008-01-22', 'De Santis, Pablo', 'El inventor de juegos.    ', 'Alfaguara', '', '82-32', 'Disponible'),
 	(4, 6556, '2008-01-22', 'Sk rmata, Antonio', 'No pasa nada.              ', 'Sudamericana', '', '82-32', 'Ocupado'),
@@ -1570,52 +1565,46 @@ CREATE TABLE IF NOT EXISTS `prestamo` (
   `Id_Libro` int(11) NOT NULL,
   `Fecha_Prestamo` date NOT NULL,
   `Fecha_Fin_Prestamo` date NOT NULL,
-  `Activo` varchar(2) COLLATE utf8_bin NOT NULL,
+  `Activo` varchar(2) NOT NULL,
   PRIMARY KEY (`Id_Prestamo`),
   KEY `Id_Usuario` (`Id_Usuario`),
   KEY `Id_Libro` (`Id_Libro`),
   CONSTRAINT `Id_Libro` FOREIGN KEY (`Id_Libro`) REFERENCES `libro` (`Id_Libro`) ON DELETE CASCADE,
   CONSTRAINT `Id_Usuario` FOREIGN KEY (`Id_Usuario`) REFERENCES `usuario` (`Id_Usuario`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de prestamo';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Datos de prestamo';
 
--- Volcando datos para la tabla biblioteca.prestamo: ~12 rows (aproximadamente)
+-- Volcando datos para la tabla biblioteca.prestamo: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `prestamo` DISABLE KEYS */;
-INSERT INTO `prestamo` (`Id_Prestamo`, `Id_Usuario`, `Id_Libro`, `Fecha_Prestamo`, `Fecha_Fin_Prestamo`, `Activo`) VALUES
-	(2, 211, 85, '2018-08-16', '2018-08-31', 'No'),
-	(3, 219, 357, '2018-08-17', '2018-08-31', 'No'),
-	(4, 221, 11, '2018-08-17', '2018-08-22', 'Si'),
-	(5, 224, 18, '2018-08-17', '2018-08-18', 'Si'),
-	(6, 234, 39, '2018-08-17', '2018-08-23', 'Si'),
-	(7, 276, 3, '2018-08-17', '2018-08-25', 'No'),
-	(8, 211, 1, '2018-08-17', '2018-08-26', 'Si'),
-	(9, 253, 4, '2018-08-17', '2018-10-26', 'Si'),
-	(10, 231, 26, '2018-08-17', '2018-08-30', 'Si'),
-	(11, 240, 6, '2018-08-17', '2018-08-17', 'No'),
-	(12, 239, 5, '2018-08-17', '2019-01-05', 'Si'),
-	(13, 234, 19, '2018-08-17', '2018-08-24', 'Si');
 /*!40000 ALTER TABLE `prestamo` ENABLE KEYS */;
 
 -- Volcando estructura para tabla biblioteca.usuario
 DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `Id_Usuario` int(11) NOT NULL AUTO_INCREMENT,
-  `Dni` char(8) COLLATE utf8_bin NOT NULL,
-  `Nom_Ape` varchar(100) COLLATE utf8_bin NOT NULL,
+  `Dni` char(8) NOT NULL,
+  `Nom_Ape` varchar(100) NOT NULL,
   `Fec_Nac` date NOT NULL,
-  `Nacionalidad` varchar(50) COLLATE utf8_bin NOT NULL,
-  `Telefono` varchar(20) COLLATE utf8_bin NOT NULL,
-  `Celular` varchar(20) COLLATE utf8_bin DEFAULT NULL,
-  `Domicilio` varchar(100) COLLATE utf8_bin NOT NULL,
-  `Domicilio_Seg` varchar(100) COLLATE utf8_bin DEFAULT NULL,
-  `Email` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `Nacionalidad` varchar(50) NOT NULL,
+  `Telefono` varchar(20) NOT NULL,
+  `Celular` varchar(20) DEFAULT NULL,
+  `Domicilio` varchar(100) NOT NULL,
+  `Domicilio_Seg` varchar(100) DEFAULT NULL,
+  `Email` varchar(100) DEFAULT NULL,
   `Fecha_Alta` date NOT NULL,
   PRIMARY KEY (`Id_Usuario`),
   UNIQUE KEY `Dni` (`Dni`)
-) ENGINE=InnoDB AUTO_INCREMENT=320 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Datos de los usuarios';
+) ENGINE=InnoDB AUTO_INCREMENT=320 DEFAULT CHARSET=utf8 COMMENT='Datos de los usuarios';
 
 -- Volcando datos para la tabla biblioteca.usuario: ~102 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`Id_Usuario`, `Dni`, `Nom_Ape`, `Fec_Nac`, `Nacionalidad`, `Telefono`, `Celular`, `Domicilio`, `Domicilio_Seg`, `Email`, `Fecha_Alta`) VALUES
+	(1, '27010469', 'Abraham Campos', '2007-07-18', 'Bhutan', '(746) 847-8916', '(655) 545-1529', 'Apdo.:836-9418 Magna. Calle', 'Apartado núm.: 186, 7577 Ultrices C.', 'adipiscing.elit@Nullatemporaugue.com', '2008-06-18'),
+	(2, '24709752', 'Ahmed Alston', '2002-09-17', 'Solomon Islands', '(509) 360-7354', '(292) 936-8349', 'Apartado núm.: 616, 7371 Malesuada C/', 'Apdo.:474-2158 Nec, Avda.', 'Duis@Integereu.net', '2012-03-19'),
+	(3, '15492012', 'Alan Mayer', '2015-01-18', 'Afghanistan', '(220) 242-1208', '(626) 521-1412', '583-9273 Faucibus C.', '5716 Ultrices C/', 'Aenean.sed.pede@scelerisquelorem.co.uk', '2010-08-17'),
+	(4, '39865125', 'Amir Hardin', '2016-08-17', 'Saudi Arabia', '(200) 149-4452', '(780) 649-2035', '343-5742 Augue Calle', '8508 Sapien, ', 'eu.ultrices.sit@dictum.edu', '2001-10-18'),
+	(5, '17738079', 'Armand Buckley', '2024-12-17', 'Poland', '(156) 370-9013', '(321) 665-2273', '646 Adipiscing Av.', 'Apdo.:939-3737 Sed, Avda.', 'dolor.Quisque@turpisegestasAliquam.co.uk', '2009-07-18'),
+	(6, '5030703', 'Armand Crawford', '2011-06-18', 'New Caledonia', '(944) 448-4369', '(887) 906-0964', 'Apartado núm.: 864, 5505 Maecenas Carretera', 'Apdo.:428-1700 Odio. Avda.', 'a.aliquet@facilisiSedneque.net', '2027-01-18'),
+	(7, '10747267', 'Austin Dennis', '2021-10-18', 'Burundi', '(660) 437-1717', '(599) 249-1458', 'Apartado núm.: 496, 4631 Dictum Avenida', '372-448 Congue. Av.', 'placerat.velit@faucibusorci.edu', '2021-04-19'),
 	(206, '31027891', 'Laura Gonzales', '2018-07-06', 'Argentina', '4233443', '', '10 E/ 65 y 66', '', '', '2018-07-06'),
 	(211, '40714390', 'Jorge Latin', '2018-07-18', 'Chile', '4233443', '2215465577', '11 y 25', '4 y 66', 'jorg@hotmail.com', '2018-07-06'),
 	(219, '40714396', 'Mariano Flores', '1997-10-24', 'Argentina', '4253169', '2216779983', '12 y 65', '', 'mariano@hotmail.com', '2018-08-03'),
@@ -1641,7 +1630,6 @@ INSERT INTO `usuario` (`Id_Usuario`, `Dni`, `Nom_Ape`, `Fec_Nac`, `Nacionalidad`
 	(239, '50328408', 'Oliver Randall', '2029-10-17', 'French Polynesia', '(822) 794-1919', '(668) 558-4559', '705-8806 Curabitur Carretera', '5661 Nam Calle', 'id@sedliberoProin.edu', '2017-08-18'),
 	(240, '14244957', 'Kevin Blevins', '2010-11-17', 'Ghana', '(114) 308-7171', '(544) 491-5465', 'Apdo.:177-6028 Metus Avenida', '796-2286 Dictum Calle', 'Pellentesque.habitant.morbi@dictummagnaUt.edu', '2021-05-19'),
 	(241, '20654688', 'Brent Armstrong', '2005-04-19', 'Sudan', '(553) 680-3969', '(618) 122-2800', 'Apdo.:485-9042 Suspendisse C.', 'Apartado núm.: 799, 3512 Velit. Calle', 'auctor.velit.Aliquam@sit.ca', '2011-05-18'),
-	(242, '39865125', 'Amir Hardin', '2016-08-17', 'Saudi Arabia', '(200) 149-4452', '(780) 649-2035', '343-5742 Augue Calle', '8508 Sapien, ', 'eu.ultrices.sit@dictum.edu', '2001-10-18'),
 	(243, '42066101', 'Elvis Guy', '2012-02-18', 'Brazil', '(644) 996-4515', '(488) 630-9872', '676-7356 Morbi C.', 'Apartado núm.: 176, 1373 Vel Calle', 'Nam.porttitor.scelerisque@mitempor.ca', '2009-08-17'),
 	(244, '32369717', 'Stuart Richardson', '2021-07-18', 'Israel', '(890) 509-2902', '(106) 978-3309', '2402 Orci Ctra.', '4064 Nisi Ctra.', 'eleifend.nunc.risus@facilisisfacilisismagna.co.uk', '2014-06-18'),
 	(245, '11690675', 'Dieter Nolan', '2007-10-18', 'Korea, North', '(198) 209-6703', '(396) 781-5806', 'Apartado núm.: 935, 2924 At Ctra.', '360-8840 Vel Avda.', 'velit.Sed@molestie.org', '2019-01-18'),
@@ -1657,7 +1645,6 @@ INSERT INTO `usuario` (`Id_Usuario`, `Dni`, `Nom_Ape`, `Fec_Nac`, `Nacionalidad`
 	(255, '43491084', 'Herrod Robertson', '2020-09-18', 'Åland Islands', '(754) 344-9328', '(953) 633-9007', '305-4781 Penatibus Avda.', 'Apartado núm.: 733, 5697 Vel, C.', 'sociosqu.ad@lectusconvallisest.net', '2002-05-18'),
 	(257, '44509003', 'Richard Lane', '2025-06-18', 'South Africa', '(575) 542-4184', '(127) 389-6311', 'Apdo.:451-2285 Ac Carretera', '8015 Et, Calle', 'Donec.nibh.enim@acfacilisis.edu', '2022-07-18'),
 	(258, '29740114', 'Sawyer Santos', '2018-09-17', 'Guyana', '(315) 207-6090', '(226) 218-2860', 'Apdo.:831-499 Placerat. Avda.', '6346 Eget Ctra.', 'luctus@aliquet.org', '2015-04-18'),
-	(259, '5030703', 'Armand Crawford', '2011-06-18', 'New Caledonia', '(944) 448-4369', '(887) 906-0964', 'Apartado núm.: 864, 5505 Maecenas Carretera', 'Apdo.:428-1700 Odio. Avda.', 'a.aliquet@facilisiSedneque.net', '2027-01-18'),
 	(260, '5842137', 'Ciaran Melendez', '2015-05-18', 'Martinique', '(830) 671-2708', '(868) 284-5087', 'Apdo.:168-505 Vulputate Ctra.', 'Apdo.:655-4024 Diam Avda.', 'purus@anteipsum.com', '2024-10-17'),
 	(261, '7356169', 'Holmes Osborn', '2011-12-18', 'Malaysia', '(413) 854-8674', '(959) 115-1169', '8903 Nulla C.', 'Apartado núm.: 720, 5464 In, Av.', 'auctor.odio.a@metusIn.ca', '2019-10-18'),
 	(262, '35008791', 'Holmes Love', '2003-03-18', 'Afghanistan', '(871) 924-6044', '(437) 588-7324', '4249 Tellus C/', '6805 Lorem Ctra.', 'ante.dictum@sedfacilisisvitae.com', '2017-01-18'),
@@ -1697,7 +1684,6 @@ INSERT INTO `usuario` (`Id_Usuario`, `Dni`, `Nom_Ape`, `Fec_Nac`, `Nacionalidad`
 	(296, '30421169', 'Isaac Peck', '2012-05-19', 'Ecuador', '(637) 792-3877', '(955) 781-4726', 'Apdo.:100-1736 Mollis. Av.', '7572 Libero. C/', 'enim.Suspendisse.aliquet@eget.ca', '2027-05-19'),
 	(297, '28171850', 'Carter York', '2017-08-18', 'Barbados', '(154) 615-2643', '(522) 384-1441', 'Apartado núm.: 861, 9749 Dui Calle', 'Apartado núm.: 386, 6249 Aenean Ctra.', 'auctor.ullamcorper@pulvinar.org', '2018-06-18'),
 	(298, '40791736', 'Knox Cantrell', '2024-02-19', 'Saint Pierre and Miquelon', '(339) 331-5129', '(468) 507-5775', '867-4115 Auctor, ', '988-6888 Dictum ', 'penatibus.et@velit.co.uk', '2030-08-18'),
-	(299, '24709752', 'Ahmed Alston', '2002-09-17', 'Solomon Islands', '(509) 360-7354', '(292) 936-8349', 'Apartado núm.: 616, 7371 Malesuada C/', 'Apdo.:474-2158 Nec, Avda.', 'Duis@Integereu.net', '2012-03-19'),
 	(300, '7103792', 'Camden Hanson', '2013-11-18', 'Yemen', '(338) 671-2706', '(317) 356-3316', '444-5693 Mi, Ctra.', 'Apdo.:574-1014 Risus. Calle', 'lobortis.quis.pede@Donec.co.uk', '2002-04-19'),
 	(301, '33112776', 'Graiden Dean', '2011-12-17', 'Gambia', '(767) 677-4761', '(310) 938-4272', 'Apdo.:475-9196 Quisque Carretera', 'Apartado núm.: 547, 3479 Ut Carretera', 'Etiam.ligula.tortor@quisarcuvel.ca', '2012-10-18'),
 	(302, '31069348', 'Coby Merrill', '2019-05-18', 'Hungary', '(133) 689-4393', '(708) 376-2253', '5853 Pharetra, C.', 'Apartado núm.: 499, 7835 Suspendisse Carretera', 'mus.Proin.vel@natoque.com', '2002-05-18'),
@@ -1705,13 +1691,9 @@ INSERT INTO `usuario` (`Id_Usuario`, `Dni`, `Nom_Ape`, `Fec_Nac`, `Nacionalidad`
 	(304, '18861050', 'Jasper Bonner', '2026-07-19', 'Svalbard and Jan Mayen Islands', '(798) 266-0278', '(397) 309-0098', 'Apdo.:509-3421 Mus. Av.', '1476 In Av.', 'Nulla.eu@velit.ca', '2025-03-18'),
 	(305, '36289300', 'Hashim Bradshaw', '2004-11-17', 'Bahamas', '(400) 956-4640', '(492) 370-4512', '811-7978 Enim Calle', 'Apartado núm.: 910, 9568 At C/', 'ullamcorper@semmagna.com', '2005-08-18'),
 	(306, '33538616', 'Vaughan Osborne', '2007-05-18', 'India', '(523) 392-7642', '(485) 283-7804', '1653 Et, ', 'Apartado núm.: 795, 2089 Dictum Calle', 'mus.Proin@fringillaornareplacerat.ca', '2004-09-18'),
-	(307, '15492012', 'Alan Mayer', '2015-01-18', 'Afghanistan', '(220) 242-1208', '(626) 521-1412', '583-9273 Faucibus C.', '5716 Ultrices C/', 'Aenean.sed.pede@scelerisquelorem.co.uk', '2010-08-17'),
 	(308, '5111532', 'Leroy Donovan', '2023-10-18', 'Saint Martin', '(185) 180-6056', '(642) 623-0566', 'Apdo.:330-9071 Quam. Carretera', '7870 Donec ', 'dignissim.tempor.arcu@acrisusMorbi.co.uk', '2025-06-19'),
-	(309, '27010469', 'Abraham Campos', '2007-07-18', 'Bhutan', '(746) 847-8916', '(655) 545-1529', 'Apdo.:836-9418 Magna. Calle', 'Apartado núm.: 186, 7577 Ultrices C.', 'adipiscing.elit@Nullatemporaugue.com', '2008-06-18'),
 	(310, '46081840', 'Gil Herring', '2030-08-17', 'Guam', '(307) 108-5065', '(890) 203-1307', 'Apdo.:987-6276 Pharetra C.', 'Apdo.:651-3505 Curabitur Av.', 'et@blandit.com', '2023-03-19'),
-	(311, '17738079', 'Armand Buckley', '2024-12-17', 'Poland', '(156) 370-9013', '(321) 665-2273', '646 Adipiscing Av.', 'Apdo.:939-3737 Sed, Avda.', 'dolor.Quisque@turpisegestasAliquam.co.uk', '2009-07-18'),
 	(312, '22183408', 'Ralph Compton', '2005-01-19', 'Mali', '(883) 703-0833', '(923) 144-7275', '414-4271 Nunc Calle', 'Apdo.:792-2607 Enim. Ctra.', 'imperdiet@Curabiturvellectus.co.uk', '2005-09-17'),
-	(313, '10747267', 'Austin Dennis', '2021-10-18', 'Burundi', '(660) 437-1717', '(599) 249-1458', 'Apartado núm.: 496, 4631 Dictum Avenida', '372-448 Congue. Av.', 'placerat.velit@faucibusorci.edu', '2021-04-19'),
 	(314, '28738104', 'Jermaine Carrillo', '2018-11-18', 'Oman', '(817) 505-5044', '(258) 117-1015', '215-6128 Aenean Carretera', 'Apdo.:377-9937 Fermentum ', 'ultrices.Duis.volutpat@netuset.co.uk', '2023-07-18'),
 	(315, '45053414', 'Coby Moss', '2008-04-19', 'Iraq', '(420) 939-9126', '(244) 389-2503', 'Apartado núm.: 123, 4893 Dapibus Calle', 'Apdo.:354-9317 Nec, Ctra.', 'elit@egetlaoreet.co.uk', '2024-11-18'),
 	(316, '33353559', 'Brock Terry', '2018-12-18', 'Barbados', '(153) 843-9200', '(188) 248-6959', '927-2246 Lorem. Avenida', '5483 Aliquet C/', 'varius.Nam.porttitor@nisl.com', '2014-05-19'),

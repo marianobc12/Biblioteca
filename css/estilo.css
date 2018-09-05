@@ -331,7 +331,7 @@ body{
 .form-busquedausuario input{
 	display: block;
 	margin: auto;
-	width: 50%;
+	width: 80%;
 }
 .form-busquedausuario i{
 	color: #EBEBD3;
@@ -646,6 +646,29 @@ body{
     outline: 0;
     border: 0px;
 }
+
+/* ELIMINAR USUARIO MODAL */
+.eliminar-libro{
+	padding: 20px;
+}
+.eliminar-libro .eliminar{
+	width: 100%;
+	background: #EE964B;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.eliminar-libro .cancelar{
+	width: 100%;
+	background: #EE964B;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.eliminar-libro .eliminar:hover , .eliminar-usuario .cancelar:hover{
+	box-shadow: 0px 5px 40px black;
+    outline: 0;
+    border: 0px;
+}
+
 
 
 /* TABLA DE PRESTAMO */

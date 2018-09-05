@@ -482,4 +482,14 @@ function Devoluciones(){
 	return $res;
 }
 
+function Eliminar_Libro(){
+	$Num_Inventario=$_POST['Num_Inventario'];
+
+	$link=Conexion();
+
+	$sql="DELETE FROM libro WHERE Num_Inventario='$Num_Inventario'";
+
+	$res=mysqli_query($link,$sql);
+
+}
 ?>

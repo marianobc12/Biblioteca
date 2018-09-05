@@ -14,6 +14,23 @@ function cancelar_cliente() {
     $(".tarjeta-usuario :input:not([type=button])").prop("disabled", true);
 }
 
+
+function modificar_libro() {
+    $("#guardar-mod-libro").fadeIn();
+    $("#cancelar-mod-libro").fadeIn();
+    $("#modificar-mod-libro").hide();
+    $("#eliminar-mod-libro").hide();
+    $(".tarjeta-usuario :input:not([type=button])").prop("disabled", false);
+}
+
+function cancelar_libro() {
+    $("#guardar-mod-libro").hide();
+    $("#cancelar-mod-libro").hide();
+    $("#modificar-mod-libro").fadeIn();
+    $("#eliminar-mod-libro").fadeIn();
+    $(".tarjeta-usuario :input:not([type=button])").prop("disabled", true);
+}
+
 function verificar_login() {
     var Dni = document.getElementById("Dni").value;
     var Contraseña = document.getElementById("Contraseña").value;
@@ -37,6 +54,10 @@ function cambio_contraseña() {
 
 function eliminar_usuario() {
     $('#Modal-Eliminar_Usuario').modal();
+}
+
+function eliminar_libro() {
+    $('#Modal-Eliminar_Libro').modal();
 }
 
 function eliminar_prestamo(){
