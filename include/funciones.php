@@ -497,4 +497,7 @@ function Eliminar_Libro(){
 	$res=mysqli_query($link,$sql);
 
 }
+
+
+
 ?>
