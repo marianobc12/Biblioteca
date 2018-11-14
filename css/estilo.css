@@ -1,7 +1,7 @@
 /* importacion de fuente */
 @font-face {
-font-family: LibreBaskerville-Regular;
-src: url(../fonts/LibreBaskerville-Regular.ttf);
+font-family: Roboto-Light;
+src: url(../fonts/Roboto-Light.ttf);
 }
 
 
@@ -126,14 +126,14 @@ body{
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	font-family: LibreBaskerville-Regular;
+	font-family: Roboto-Light;
 }
 
 
 /* formulario login*/
 .formulario-login{
 	background-color:#683D2C;
-	margin-top: 150px;
+	margin-top: 20px;
 	animation: zoomIn 0.5s forwards;
 	border:2px solid #EE964B;
 	box-shadow: 0px 5px 40px black;
@@ -141,16 +141,16 @@ body{
 .formulario-login h1{
 	text-align: center;
 	color: #EBEBD3;
-	font-size: 40px;
+	font-size: 30px;
 }
 .formulario-login h2{
 	text-align: center;
 	color: #EBEBD3;
-	font-size: 30px;
+	font-size: 20px;
 }
 .formulario-login .campos-login h1{
 	text-align: center;
-	font-size: 20px;
+	font-size: 18px;
 }
 .formulario-login .campos-login input{
 	display: block;
@@ -267,7 +267,7 @@ body{
 	background: #683D2C;
 	padding-top:20px;
 	padding-bottom: 40px;
-	margin-top: 70px;
+	margin-top: 20px;
 	margin-bottom: 50px;
 	box-shadow: 0px 5px 40px black;
 	border: 2px solid #EE964B;

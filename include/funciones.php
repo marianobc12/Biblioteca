@@ -1,7 +1,9 @@
 <?php
-mb_internal_encoding("UTF-8");
+/*mb_internal_encoding("UTF-8");*/
 function Conexion(){
 	$link	= mysqli_connect('localhost', 'root','root','biblioteca')or die('No se pudo conectar a la DB'. mysqli_error($link));
+	mysqli_set_charset($link,"utf8");
+	header('Content-type: text/html; charset=utf-8');
 	return $link;
 }
 /* ('localhost', 'id6360398_baa','biblioteca','id6360398_baa')  coneccion*/
@@ -78,6 +80,7 @@ function Nuevo_Usuario(){
 	$Escuela_Trabajo=$_POST['Escuela_Trabajo'];
 	$Email=$_POST['Email'];
 	$Fecha_Alta=date("Y/m/d");
+	$Observacion=$_POST['Observacion'];
 
 	$link=Conexion();
 
@@ -90,7 +93,7 @@ function Nuevo_Usuario(){
 		$Existe="Si";
 	}else{
 		$Existe="No";
-		$sql="INSERT INTO usuario (Dni,Nom_Ape,Fec_Nac,Nacionalidad,Telefono,Celular,Domicilio,Domicilio_Seg,Email,Fecha_Alta) VALUES ('$Dni','$Nom_Ape','$Fecha_Nac','$Nacionalidad','$Telefono','$Celular','$Domicilio','$Escuela_Trabajo','$Email','$Fecha_Alta')";
+		$sql="INSERT INTO usuario (Dni,Nom_Ape,Fec_Nac,Nacionalidad,Telefono,Celular,Domicilio,Domicilio_Seg,Email,Fecha_Alta,Observacion) VALUES ('$Dni','$Nom_Ape','$Fecha_Nac','$Nacionalidad','$Telefono','$Celular','$Domicilio','$Escuela_Trabajo','$Email','$Fecha_Alta','$Observacion')";
 		$res=mysqli_query($link,$sql);
 	}
 
@@ -110,6 +113,7 @@ function Modificar_Usuario(){
 	$Domicilio=$_POST['Domicilio'];
 	$Escuela_Trabajo=$_POST['Escuela_Trabajo'];
 	$Email=$_POST['Email'];
+	$Observacion=$_POST['Observacion'];
 
 	$link=Conexion();
 
@@ -119,7 +123,7 @@ function Modificar_Usuario(){
 
 	if ($row['Dni']==$Dni) {
 		$Existe="Si";
-		$sql="UPDATE usuario SET Nom_Ape='$Nom_Ape',Fec_Nac='$Fecha_Nac',Nacionalidad='$Nacionalidad',Telefono='$Telefono',Celular='$Celular',Domicilio='$Domicilio',Domicilio_Seg='$Escuela_Trabajo',Email='$Email' WHERE Dni='$Dni'";
+		$sql="UPDATE usuario SET Nom_Ape='$Nom_Ape',Fec_Nac='$Fecha_Nac',Nacionalidad='$Nacionalidad',Telefono='$Telefono',Celular='$Celular',Domicilio='$Domicilio',Domicilio_Seg='$Escuela_Trabajo',Email='$Email',Observacion='$Observacion' WHERE Dni='$Dni'";
 		$res=mysqli_query($link,$sql);
 	}else{
 		$Existe="No";
@@ -150,6 +154,7 @@ function Nuevo_Libro(){
 	$Editorial=$_POST['Editorial'];
 	$Genero=$_POST['Genero'];
 	$Tipo_Operacion=$_POST['Tipo_Operacion'];
+	 
 
 	$link=Conexion();
 

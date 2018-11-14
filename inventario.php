@@ -117,8 +117,8 @@
                     <th>Autor</th>
                     <th>Editorial</th>
                     <th>Fecha de Ingreso</th>
-                    <th>Operación</th>
-                    <th>Género</th>
+                    <th>Adquisición</th>
+                    <th>Género - Clasificación</th>
                     <th>Disponibilidad</th>
                 </thead>
                 <tbody>

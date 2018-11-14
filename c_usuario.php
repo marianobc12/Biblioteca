@@ -80,7 +80,7 @@
             </div>
         </div>
     </nav>
-    <form class="col-md-6 col-md-offset-3 tarjeta-usuario" method="post" action="m_usuario.php" id="tarjeta-usuario">
+    <form class="col-md-10 col-md-offset-1 tarjeta-usuario" method="post" action="m_usuario.php" id="tarjeta-usuario">
         <div class="col-md-12">
             <h1><i class="fas fa-user"></i> <?php echo $resdatos['Nom_Ape']; ?></h1>
         </div>
@@ -100,27 +100,27 @@
                 <button class="btn" type="button" id="cancelar-mod-cliente" style="display: none;" onclick="cancelar_cliente();"><i class="fas fa-times fa-lg"></i> Cancelar</button>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2><i class="fas fa-id-card"></i> D.N.I</h2>
             <input class="form-control input-lg" type="number" name="Dni" value="<?php echo $resdatos['Dni']; ?>">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2><i class="fas fa-user"></i> Nombre</h2>
             <input class="form-control input-lg" type="text" name="Nom_Ape" value="<?php echo $resdatos['Nom_Ape']; ?>" >
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2><i class="fas fa-calendar-alt"></i> Fecha de nacimiento</h2>
             <input class="form-control input-lg" type="date" name="Fecha_Nac" value="<?php echo $resdatos['Fec_Nac']; ?>">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2><i class="far fa-flag"></i> Nacionalidad</h2>
             <input class="form-control input-lg" type="text" name="Nacionalidad" value="<?php echo $resdatos['Nacionalidad']; ?>">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2><i class="fas fa-phone-volume"></i> Teléfono</h2>
             <input class="form-control input-lg" type="text" name="Telefono" value="<?php echo $resdatos['Telefono']; ?>">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2><i class="fas fa-mobile-alt"></i> Celular</h2>
             <input class="form-control input-lg" type="text" name="Celular" value="<?php echo $resdatos['Celular']; ?>">
         </div>
@@ -132,12 +132,16 @@
             <h2><i class="fas fa-map-marker-alt"></i> Escuela o Lugar de trabajo</h2>
             <input class="form-control input-lg" type="text" name="Escuela_Trabajo" value="<?php echo $resdatos['Domicilio_Seg']; ?>">
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2><i class="fas fa-envelope"></i> Email</h2>
             <input class="form-control input-lg" type="text" name="Email" value="<?php echo $resdatos['Email']; ?>">
         </div>
+        <div class="col-md-6">
+				<h2><i class="fas fa-pencil-alt"></i> Observacion</h2>
+				<textarea name="Observacion" class="form-control input-lg"  placeholder="Escriba la observación...."><?php echo $resdatos['Observacion']; ?></textarea>
+		</div>
     </form>
-    <form action="devoluciones.php" method="post" class="col-md-6 col-md-offset-3 form-devoluciones">
+    <form action="devoluciones.php" method="post" class="col-md-10 col-md-offset-1 form-devoluciones">
         <input type="text" value="<?php echo $resdatos['Id_Usuario']; ?>" style="display:none;" name="Id_Usuario">
         <button type="submit" class="btn ver-devoluciones"><i class="fas fa-arrow-down"></i> Ver Devoluciones</button>
     </form>

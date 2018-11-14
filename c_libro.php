@@ -80,7 +80,7 @@
             </div>
         </div>
     </nav>
-    <form class="col-md-6 col-md-offset-3 tarjeta-usuario" method="post" action="m_libro.php" id="tarjeta-usuario">
+    <form class="col-md-10 col-md-offset-1 tarjeta-usuario" method="post" action="m_libro.php" id="tarjeta-usuario">
         <div class="col-md-12">
             <h1><i class="fas fa-book"></i> <?php echo $rowlibro['Titulo'] ?></h1>
         </div>
@@ -100,15 +100,15 @@
                 <button class="btn" type="button" id="cancelar-mod-libro" style="display: none;" onclick="cancelar_libro();"><i class="fas fa-times fa-lg"></i> Cancelar</button>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2><i class="fas fa-id-card"></i> Nº de Inventario</h2>
             <input class="form-control input-lg" type="number" name="Num_Inventario" value="<?php echo $rowlibro['Num_Inventario'] ?>">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2><i class="fas fa-id-card"></i> Fecha Entrada</h2>
             <input class="form-control input-lg" type="date" name="Fecha_Entrada" value="<?php echo $rowlibro['Fecha_Entrada'] ?>">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2><i class="fas fa-id-card"></i> Autor</h2>
             <input class="form-control input-lg" type="text" name="Autor" value="<?php echo $rowlibro['Autor'] ?>">
         </div>
@@ -125,10 +125,10 @@
             <input class="form-control input-lg" type="text" name="Genero" value="<?php echo $rowlibro['Genero'] ?>">
         </div>
         <div class="col-md-6">
-            <h2><i class="fas fa-id-card"></i> Operación</h2>
+            <h2><i class="fas fa-id-card"></i> Adquisición</h2>
             <select class="form-control input-lg" name="Operacion" id="">
-                <option <?php if($rowlibro['Tipo_Operacion']=="Comprado"){echo "selected";} ?> value="Comprado">Comprado</option>
-                <option <?php if($rowlibro['Tipo_Operacion']=="Donado"){echo "selected";} ?> value="Donado">Donado</option>
+                <option <?php if($rowlibro['Tipo_Operacion']=="Compra"){echo "selected";} ?> value="Compra">Compra</option>
+                <option <?php if($rowlibro['Tipo_Operacion']=="Donación"){echo "selected";} ?> value="Donación">Donación</option>
             </select>
         </div>
     </form>
