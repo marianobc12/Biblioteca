@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/funciones.js"></script>
+	<script type="text/javascript" src="js/validacion-nuevo-usuario.js"></script>
 	<title>Menú Principal - Biblioteca Adolfo Alsina</title>
 </head>
 <body>
@@ -73,30 +74,30 @@
 </nav>
 <div class="container-fluid">
 <div class="row">
-	<form class="col-md-10 col-md-offset-1 col-sm-12 form-altausuario" action="g_usuario.php" method="post">
+	<form onsubmit="return Validar_Usuario();" class="col-md-10 col-md-offset-1 col-sm-12 form-altausuario" action="g_usuario.php" method="post">
 		<h1><i class="fas fa-user"></i> Usuario</h1>
 		<div class="row">
 			<div class="col-md-4 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-id-card"></i> D.N.I </h2>
-				<input class="form-control input-lg" type="text" name="Dni" required="" maxlength="8" placeholder="Ingresar D.N.I" minlength="8" >
+				<input class="form-control input-lg" type="text" name="Dni" id="Dni" required=""  maxlength="8" placeholder="Ingresar D.N.I" minlength="8" >
 			</div>
 			<div class="col-md-4 col-sm-6  contenedor-campos">
 				<h2><i class="fas fa-user"></i> Nombre y Apellido </h2>
-				<input class="form-control input-lg" type="text" name="Nom_Ape" required="" maxlength="60" placeholder="Ingresar Nombre y Apellido">
+				<input class="form-control input-lg" type="text" name="Nom_Ape" required=""  maxlength="60" placeholder="Ingresar Nombre y Apellido">
 			</div>
 			<div class="col-md-4 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-calendar-alt"></i> Fecha de Nacimiento </h2>
-				<input class="form-control input-lg" type="date" name="Fecha_Nac" required="">
+				<input class="form-control input-lg" type="date" required=""  name="Fecha_Nac">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-sm-6 contenedor-campos">
 				<h2><i class="far fa-flag"></i> Nacionalidad</h2>
-				<input class="form-control input-lg" type="text" name="Nacionalidad" required="" maxlength="50" placeholder="Ej: Argentina">
+				<input class="form-control input-lg" type="text" name="Nacionalidad" required=""   maxlength="50" placeholder="Ej: Argentina">
 			</div>
 			<div class="col-md-4 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-phone-volume"></i> Teléfono</h2>
-				<input class="form-control input-lg" type="text" name="Telefono" required="" maxlength="20" placeholder="Ej: 4253254">
+				<input class="form-control input-lg" type="text" name="Telefono" required=""  maxlength="20" placeholder="Ej: 4253254">
 			</div>
 			<div class="col-md-4 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-mobile-alt"></i> Celular</h2>
@@ -106,7 +107,7 @@
 		<div class="row">
 			<div class="col-md-6 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-map-marker-alt"></i> Domicilio </h2>
-				<input class="form-control input-lg" type="text" name="Domicilio" required="" maxlength="100" placeholder="Ej: 4 e/ 37 y 38">
+				<input class="form-control input-lg" type="text" name="Domicilio" required=""  maxlength="100" placeholder="Ej: 4 e/ 37 y 38">
 			</div>
 			<div class="col-md-6 col-sm-6 contenedor-campos">
 				<h2><i class="fas fa-map-marker-alt"></i> Escuela o lugar de trabajo</h2>
@@ -130,7 +131,29 @@
 		</div>
 	</form>
 	</div>
-</div>	
+</div>
+
+<div id="Modal-Alerta" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h2 class="modal-title">¡Recuerde!</h2>
+	      </div>
+	      <div class="modal-body">
+	        <p id="contenido-modal"></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button"  class="btn btn-default" data-dismiss="modal">Cerrar</button>
+	      </div>
+	    </div>
+  		</div>
+</div>
+
+
+
+
+
 </body>
 </html>
 
