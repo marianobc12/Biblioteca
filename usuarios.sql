@@ -11,11 +11,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
-
--- Volcando estructura de base de datos para biblioteca
-CREATE DATABASE IF NOT EXISTS `biblioteca` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
-USE `biblioteca`;
-
 -- Volcando estructura para tabla biblioteca.usuario
 DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
@@ -34,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   UNIQUE KEY `Dni` (`Dni`)
 ) ENGINE=InnoDB AUTO_INCREMENT=113 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Datos de los usuarios';
 
--- Volcando datos para la tabla biblioteca.usuario: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla biblioteca.usuario: ~111 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`Id_Usuario`, `Dni`, `Nom_Ape`, `Fec_Nac`, `Nacionalidad`, `Telefono`, `Celular`, `Domicilio`, `Domicilio_Seg`, `Email`, `Fecha_Alta`) VALUES
 	(1, '22630340', 'Gervasi, Sandra Elizabeth', '0272-12-11', 'Argentina', '2215754887', '', '3 N° 1311', 'Lola , Bojanovich ( Destreza)', '', '2018-09-15'),

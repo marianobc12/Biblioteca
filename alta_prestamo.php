@@ -147,13 +147,14 @@
                             <h2><i class="fas fa-book"></i> Buscar libro</h2>
                             <input class="form-control input-lg" list="buscador-libros" name="Num_Inventario" required="" maxlength="60" placeholder="Escriba nombre" autocomplete="off">
                             <datalist id="buscador-libros">
-                            <?php
-                                while ($row=$nombreslibros->fetch_assoc()) {
-                            ?>
-                                <option value="<?php echo $row['Num_Inventario']; ?>"><?php echo $row['Titulo']; ?></option>
-                            <?php
-                                }
-                            ?>
+                                <?php
+                                    while($row=$nombreslibros->fetch_assoc()){
+                                ?>
+                                    <option value="<?php echo $row['Num_Inventario']; ?>"><?php echo $row['Titulo']; ?></option>
+                                <?php
+                                    }
+                                ?>
+                            </datalist>
                         </div>
                     </div>
                     <div class="row">
