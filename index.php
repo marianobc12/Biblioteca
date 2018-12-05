@@ -26,7 +26,7 @@
 		<h2>Acceso al sistema</h2>
 		<div class="col-md-12 col-sm-12 campos-login">
 			<h1><i class="fas fa-id-card fa-lg"></i> D.N.I</h1>
-			<input type="number" name="Dni" id="Dni" class="form-control">
+			<input type="text" maxlength="8" minlength="8" name="Dni" id="Dni" class="form-control">
 		</div>
 		<div class="col-md-12 col-sm-12 campos-login">
 			<h1><i class="fas fa-unlock-alt"></i> Contraseña</h1>
@@ -82,7 +82,7 @@
         <h4 class="modal-title"><img src="img/logo-md.png" alt="MutantDevs" class="logo-md"> MutantDevs</h4>
       </div>
       <div class="modal-body">
-					<h1 class="text-center titulo-desarrolladores"> Desarrolladores</h1>
+					<h1 class="text-center titulo-desarrolladores"><i class="fas fa-code"></i> Desarrolladores</h1>
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-md-6 programador">

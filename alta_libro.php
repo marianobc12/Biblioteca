@@ -164,8 +164,8 @@
                     <div class="col-md-6  contenedor-campos">
                         <h2>
                             <i class="fas fa-donate"></i> Adquisición</h2>
-                        <select name="Tipo_Operacion" class="form-control input-lg">
-                            <option value="0">Seleccionar Operación</option>
+                        <select required name="Tipo_Operacion" class="form-control input-lg">
+                            <option value="">Seleccionar Operación</option>
                             <option value="Compra">Compra</option>
                             <option value="Donación">Donación</option>
                         </select>

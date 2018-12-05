@@ -125,11 +125,11 @@
                     <div class="row">
                         <div class="col-md-5">
                             <h2><i class="fas fa-id-card"></i> D.N.I</h2>
-                            <input type="number" class="form-control input-lg" name="Dni" required>
+                            <input type="text" class="form-control input-lg" autocomplete="off" name="Dni" required maxlength="8" minlength="8">
                         </div>
                         <div class="col-md-7">
                             <h2><i class="fas fa-user"></i> Nombre y Apellido</h2>
-                            <input type="text" class="form-control input-lg" name="Nom_Ape" required>
+                            <input type="text" class="form-control input-lg" name="Nom_Ape" required maxlength="60" minlength="2">
                         </div>
                     </div>
                     <div class="row">

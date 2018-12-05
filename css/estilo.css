@@ -793,7 +793,7 @@ body{
 	outline: none;	
 }
 .Modal-Desarrolladores{
-	animation:lightSpeedIn 1s forwards;
+	animation:fadeIn 1s forwards;
 }
 .Modal-Desarrolladores .logo-md{
 	height: 50px;

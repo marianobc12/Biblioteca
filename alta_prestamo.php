@@ -164,11 +164,11 @@
                         ?>
                         <div class="col-md-6">
                             <h2><i class="fas fa-calendar-alt"></i> Inicio del prestamo</h2>
-                            <input class="form-control input-lg" type="date" name="Fecha_Prestamo" value="<?php echo $fecha_actual; ?>">
+                            <input required class="form-control input-lg" type="date" name="Fecha_Prestamo" value="<?php echo $fecha_actual; ?>">
                         </div>
                         <div class="col-md-6">
                             <h2><i class="fas fa-calendar-alt"></i> Fin del prestamo</h2>
-                            <input class="form-control input-lg" type="date" name="Fecha_Fin_Prestamo">
+                            <input required class="form-control input-lg" type="date" name="Fecha_Fin_Prestamo">
                         </div>
                     </div>
                     <div class="row">
