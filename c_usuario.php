@@ -123,7 +123,7 @@
         </div>
         <div class="col-md-4">
             <h2><i class="fas fa-mobile-alt"></i> Celular</h2>
-            <input class="form-control input-lg" type="text" name="Celular" required="" minlength="5"  maxlength="20" value="<?php echo $resdatos['Celular']; ?>">
+            <input class="form-control input-lg" type="text" name="Celular"  minlength="5"  maxlength="20" value="<?php echo $resdatos['Celular']; ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-map-marker-alt"></i> Domicilio</h2>
