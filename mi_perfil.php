@@ -82,11 +82,11 @@
 			<div class="row">
 				<div class="col-md-6">
 					<h2><i class="fas fa-id-card"></i> D.N.I</h2>
-					<input class="form-control input-lg" type="number" name="Dni" value="<?php echo $rowcuenta['Dni'] ?>" id=Dni>
+					<input required="" maxlength="8" minlength="8" class="form-control input-lg" type="text" name="Dni" value="<?php echo $rowcuenta['Dni'] ?>" id=Dni>
 				</div>
 				<div class="col-md-6">
 					<h2><i class="fas fa-user"></i> Nombre y Apellido</h2>
-					<input class="form-control input-lg" type="text" name="Nom_Ape" value="<?php echo $rowcuenta['Nom_Ape'] ?>">
+					<input required="" minlength="2" maxlength="60" class="form-control input-lg" type="text" name="Nom_Ape" value="<?php echo $rowcuenta['Nom_Ape'] ?>">
 				</div>
 			</div>
 			<div class="row">
@@ -96,7 +96,7 @@
 				</div>
 				<div class="col-md-6">
 					<h2><i class="fas fa-envelope"></i> Email</h2>
-					<input class="form-control input-lg" type="email" name="Email" value="<?php echo $rowcuenta['Email'] ?>">
+					<input required="" class="form-control input-lg" type="email" name="Email" value="<?php echo $rowcuenta['Email'] ?>">
 				</div>
 			</div>
 			<div class="row">
