@@ -77,25 +77,25 @@
 		<h1><i class="fas fa-user"></i> Usuario</h1>
 		<div class="row">
 			<div class="col-md-4 col-sm-6 contenedor-campos">
-				<h2><i class="fas fa-id-card"></i> D.N.I </h2>
+				<h2><i class="fas fa-id-card"></i> * D.N.I </h2>
 				<input class="form-control input-lg" type="text" name="Dni" id="Dni" pattern="[0-9]+" required=""   maxlength="8" placeholder="Ingresar D.N.I" minlength="8" >
 			</div>
 			<div class="col-md-4 col-sm-6  contenedor-campos">
-				<h2><i class="fas fa-user"></i> Nombre y Apellido </h2>
+				<h2><i class="fas fa-user"></i> * Nombre y Apellido </h2>
 				<input class="form-control input-lg" type="text" name="Nom_Ape" required="" minlength="4"  maxlength="100" placeholder="Ingresar Nombre y Apellido">
 			</div>
 			<div class="col-md-4 col-sm-6 contenedor-campos">
-				<h2><i class="fas fa-calendar-alt"></i> Fecha de Nacimiento </h2>
+				<h2><i class="fas fa-calendar-alt"></i> * Fecha de Nacimiento </h2>
 				<input class="form-control input-lg" type="date" required=""  min="1900-01-01" name="Fecha_Nac">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-sm-6 contenedor-campos">
-				<h2><i class="far fa-flag"></i> Nacionalidad</h2>
+				<h2><i class="far fa-flag"></i> * Nacionalidad</h2>
 				<input class="form-control input-lg" type="text" name="Nacionalidad" required="" minlength="2"   maxlength="50" placeholder="Ej: Argentina">
 			</div>
 			<div class="col-md-4 col-sm-6 contenedor-campos">
-				<h2><i class="fas fa-phone-volume"></i> Teléfono</h2>
+				<h2><i class="fas fa-phone-volume"></i> * Teléfono</h2>
 				<input class="form-control input-lg" type="text" name="Telefono" required="" minlength="5"  maxlength="20" placeholder="Ej: 4253254">
 			</div>
 			<div class="col-md-4 col-sm-6 contenedor-campos">
@@ -105,7 +105,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-sm-6 contenedor-campos">
-				<h2><i class="fas fa-map-marker-alt"></i> Domicilio </h2>
+				<h2><i class="fas fa-map-marker-alt"></i> * Domicilio </h2>
 				<input class="form-control input-lg" type="text" name="Domicilio" minlength="4" required=""  maxlength="100" placeholder="Ej: 4 e/ 37 y 38">
 			</div>
 			<div class="col-md-6 col-sm-6 contenedor-campos">

@@ -103,7 +103,8 @@
         </div>
         <div class="col-md-4">
             <h2><i class="fas fa-id-card"></i> Nº de Inventario</h2>
-            <input required="" max="99999"  class="form-control input-lg" type="number" name="Num_Inventario" value="<?php echo $rowlibro['Num_Inventario'] ?>">
+            <h2><?php echo $rowlibro['Num_Inventario'] ?></h2>
+            <input style="display:none;" required="" max="99999"  class="form-control input-lg" type="number" name="Num_Inventario" value="<?php echo $rowlibro['Num_Inventario'] ?>">
         </div>
         <div class="col-md-4">
             <h2><i class="fas fa-id-card"></i> Fecha Entrada</h2>
