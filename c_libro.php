@@ -112,19 +112,19 @@
         </div>
         <div class="col-md-4">
             <h2><i class="fas fa-id-card"></i> Autor</h2>
-            <input class="form-control input-lg" maxlength="60" required="" type="text" name="Autor" value="<?php echo $rowlibro['Autor'] ?>">
+            <input class="form-control input-lg" maxlength="90" required="" type="text" name="Autor" value="<?php echo $rowlibro['Autor'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Título</h2>
-            <input class="form-control input-lg" maxlength="100" required="" type="text" name="Titulo" value="<?php echo $rowlibro['Titulo'] ?>">
+            <input class="form-control input-lg" maxlength="200" required="" type="text" name="Titulo" value="<?php echo $rowlibro['Titulo'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Editorial</h2>
-            <input class="form-control input-lg" maxlength="60" required="" type="text" name="Editorial" value="<?php echo $rowlibro['Editorial'] ?>">
+            <input class="form-control input-lg" maxlength="90" required="" type="text" name="Editorial" value="<?php echo $rowlibro['Editorial'] ?>">
         </div>
         <div class="col-md-6">
-            <h2><i class="fas fa-id-card"></i> Género</h2>
-            <input class="form-control input-lg" type="text" required="" name="Genero" value="<?php echo $rowlibro['Genero'] ?>">
+            <h2><i class="fas fa-id-card"></i> Género - Clasificación</h2>
+            <input class="form-control input-lg" type="text" required="" maxlength="90" name="Genero" value="<?php echo $rowlibro['Genero'] ?>">
         </div>
         <div class="col-md-6">
             <h2><i class="fas fa-id-card"></i> Adquisición</h2>

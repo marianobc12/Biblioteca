@@ -140,26 +140,26 @@
                     <div class="col-md-4 col-sm-6 contenedor-campos">
                         <h2>
                             <i class="fas fa-user"></i> Autor </h2>
-                        <input class="form-control input-lg" type="text" name="Autor" maxlength="60" placeholder="Ej: Jorge Luis Borges" required="">
+                        <input class="form-control input-lg" type="text" name="Autor" maxlength="90" placeholder="Ej: Jorge Luis Borges" required="">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 contenedor-campos">
                         <h2>
                             <i class="fas fa-book"></i> Título</h2>
-                        <input class="form-control input-lg" type="text" name="Titulo" maxlength="100" required="" placeholder="Ej: El Aleph">
+                        <input class="form-control input-lg" type="text" name="Titulo" maxlength="200" required="" placeholder="Ej: El Aleph">
                     </div>
                     <div class="col-md-6 col-sm-6 contenedor-campos">
                         <h2>
                             <i class="fas fa-id-card"></i> Editorial</h2>
-                        <input class="form-control input-lg" type="text" name="Editorial" maxlength="60" required="" placeholder="Ej: Santillana">
+                        <input class="form-control input-lg" type="text" name="Editorial" maxlength="90" required="" placeholder="Ej: Santillana">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 contenedor-campos">
                         <h2>
                             <i class="fas fa-user"></i> Género - Clasificación</h2>
-                        <input class="form-control input-lg" type="text" name="Genero" required="" placeholder="Ej: 82-32">
+                        <input class="form-control input-lg" type="text" name="Genero" required="" maxlength="90" placeholder="Ej: 82-32">
                     </div>
                     <div class="col-md-6  contenedor-campos">
                         <h2>
