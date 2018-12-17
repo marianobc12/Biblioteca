@@ -33,6 +33,17 @@ function Traer_Datos_Cuenta(){
 	return $row;
 }
 
+function Traer_Clave(){
+	$Email=$_POST['Email'];
+	$link=Conexion();
+	$sql="SELECT Dni,Clave FROM cuenta WHERE Email='$Email'";
+	$res=mysqli_query($link,$sql);
+	$row=$res->fetch_assoc();
+	$clave=$row['Clave'];
+	return $clave;
+
+}
+
 function Recuperar_Cuenta(){
 	$Email=$_POST['Email'];
 	$link=Conexion();

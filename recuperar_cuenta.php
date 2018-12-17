@@ -2,6 +2,7 @@
 	session_start();
 	include('include/funciones.php');
 	$Cuenta=Recuperar_Cuenta();
+	$Clave=Traer_Clave();
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,10 +53,10 @@
 			<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">¡Mensaje Enviado!</h4>
+				<h4 class="modal-title">¡Clave recuperada!</h4>
 			</div>
 			<div class="modal-body">
-				<p>¡Por favor ingrese a su correo , para ver los datos de su cuenta!</p>
+				<p>Su clave es : <?php echo $Clave; ?></p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
