@@ -1,7 +1,7 @@
 <?php
 /*mb_internal_encoding("UTF-8");*/
 function Conexion(){
-	$link	= mysqli_connect('localhost', 'root','root','biblioteca')or die('No se pudo conectar a la DB'. mysqli_error($link));
+	$link	= mysqli_connect("localhost", "root", "", "biblioteca")or die('No se pudo conectar a la DB'. mysqli_error($link));
 	mysqli_set_charset($link,"utf8");
 	header('Content-type: text/html; charset=utf-8');
 	return $link;
